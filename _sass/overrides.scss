@@ -1,0 +1,30 @@
+//
+// Custom overrides from a user.
+//
+
+.className {color: rgb(60, 149, 250); font-weight: bold; }
+.fcnName {color:#44a8fa; }
+.structName {color:rgb(19, 104, 38); font-weight: bold;}
+.structProp {color:rgb(30, 141, 54); font-style: italic;}
+    
+.highlight .c1 {
+color: #93a1a1;
+font-style:italic ;
+} // comment.single //
+.highlight .n {
+    color: #586e75;
+} // name //
+
+.head-custom{ 
+    font-family: 'Roboto', sans-serif;
+}
+.head-custom-blue{
+    color: #44a8fa;
+}
+
+.simple{
+    font-family: 'Roboto', sans-serif;
+}
+.foc{
+    color: #44a8fa;
+}
