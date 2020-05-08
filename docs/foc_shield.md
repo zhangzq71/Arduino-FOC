@@ -38,7 +38,7 @@ An example electrical connection schematic for BLDC motor with an Encoder as pos
  <img src="extras/Images/top_shield.jpg" style="height:200px"><img src="extras/Images/back_shield.jpg" style="height:200px"></p>
 
 ### Electrical connection
- <img src="extras/Images/foc_shield_v12.jpg" style="height:500px">
+ <img src="extras/Images/foc_shield_v12.jpg" style="max-height:500px">
 
  
 More information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc.html).

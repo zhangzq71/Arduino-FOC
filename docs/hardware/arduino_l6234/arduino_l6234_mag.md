@@ -11,7 +11,7 @@ grand_parent: Electrical connections
 ## Arduino UNO + L6234 driver + Magentic sensor  AS5048
 
 <p>
- <img src="extras/Images/arduino_connection_magnetic.png" style="height:">
+ <img src="extras/Images/arduino_connection_magnetic.png">
 </p>  
 
 ### Magnetic sensor

@@ -10,8 +10,8 @@ grand_parent: Electrical connections
 
 ## Arduino UNO + L6234 driver + Encoder
 <p>
- <img src="extras/Images/arduino_connection.png" style="height:">
- <img src="extras/Images/uno_l6234.jpg" style="height:500px">
+ <img src="extras/Images/arduino_connection.png" >
+ <img src="extras/Images/uno_l6234.jpg" style="max-height:500px">
 </p>  
 
 ### Encoder
