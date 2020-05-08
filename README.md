@@ -11,7 +11,7 @@ Therefore this is an attempt to:
 - Develop a modular BLDCdriver boards: [Arduino SimpleFOC shield](https://askuric.github.io/Arduino-FOC/arduino_simplefoc_shield_showcase).
 
 ## Arduino SimpleFOC Shield
-<p> <img src="extras/Images/shield_top_v13.png" height="300px">   <img src="extras/Images/shield_v13.png"  height="300px"></p>
+<p> <img src="https://askuric.github.io/Arduino-FOC/extras/Images/shield_top_v13.png" height="300px">   <img src="https://askuric.github.io/Arduino-FOC/extras/Images/shield_v13.png"  height="300px"></p>
 
 ### Features
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
@@ -60,16 +60,13 @@ The simplest way to get hold of the library is direclty by using Arduino IDE and
 - Serarch for `Simple FOC` library and install the lates version.
 - Reopen Arduino IDE and you should have the library examples in `File > Examples > Simple FOC`.
 
-### Installation from Github
-If you don't want to use the Arduino IDE and Library manager you can direclty download the library from the [github repository](https://github.com/askuric/Arduino-FOC). 
-
-#### Using Github website 
+### Using Github website 
 - Go to the [github repository](https://github.com/askuric/Arduino-FOC)
 - Click first on `Clone or Download > Download ZIP`. 
 - Unzip it and place it in `Arduino Libraries` forlder. Windows: `Documents > Arduino > libraries`.  
 - Reopen Arduino IDE and you should have the library examples in `File > Examples > Simple FOC`.
 
-#### Using terminal
+### Using terminal
 - Open terminal and run
 ```sh  
 cd *arduino libraries folder*
@@ -77,17 +74,17 @@ git clone https://github.com/askuric/Arduino-FOC.git
 ```
 - Reopen Arduino IDE and you should have the library examples in `File > Examples > Simple FOC`.
 
-# <span class="simple">Simple<span class="foc">FOC</span>library</span> minimal code
+###  SimpleFOC library minimal scketch example
 
 For those willing to experiment and to modify the code I suggest using the [minimal version](https://github.com/askuric/Arduino-FOC/tree/minimal) of the code. 
  > This code is completely indepenedet and you can run it as any other Arduino Schetch without the need for any libraries. 
 
-## Github webiste downlaod
+#### Github webiste downlaod
 - Go to [minimal branch](https://github.com/askuric/Arduino-FOC/tree/minimal) 
 - Downlaod the code by clicking on the `Clone or Download > Download ZIP`.
 - Unzip it and open the schetch in Arduino IDE. 
 
-## Using terminal
+#### Using terminal
 - Open the terminal:
   ```sh
   cd *to you desired directory*
