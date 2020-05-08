@@ -11,7 +11,7 @@ permalink: /
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Simple%20FOC.svg?)](https://www.ardu-badge.com/badge/Simple%20FOC.svg)
 
-Proper low-cost and low-powert FOC supporting boards are very hard to find these days and even may not exist. Even harder to find is a stable and simple FOC algorithm code capable of running on Arduino devices. 
+Proper low-cost and low-power FOC supporting boards are very hard to find today and even may not exist. Even harder to find is a stable and simple FOC algorithm code capable of running on Arduino devices. 
 Therefore this is an attempt to: 
 - Demistify FOC algorithm and make a robust but simple Arduino library: [Arduino SimpleFOC library](#arduino-simplefoclibrary)
 - Develop a modular BLDCdriver boards: [Arduino SimpleFOC shield](arduino_simplefoc_shield_showcase).
@@ -42,3 +42,14 @@ This video demonstrates the Simple FOC library basic usage, electronic connectio
   - Supports as many [sensors ,  BLDC motors  and  driver boards](electrical_connections) as possible
   - Supports as many applicaiton requirements as possible
 - **Plug & play**: Arduino SimpleFOC shield
+
+## Alternative FOC supporting projects
+These are some of the alternative FOC supporting projects which provide hardware and software solutions. 
+
+<a href="https://odriverobotics.com/" >Odroid</a> | <a href="https://www.youtube.com/watch?v=g2BHEdvW9bU">Trinamic</a> | <a href="https://www.infineon.com/cms/en/product/evaluation-boards/bldc_shield_tle9879/" >Infineon</a> | <a href="https://github.com/gouldpa/FOC-Arduino-Brushless">FOC-Arduino-Brushless</a>
+------------ | ------------- | ------------ | -------------
+<img src="https://static1.squarespace.com/static/58aff26de4fcb53b5efd2f02/t/5c2c766921c67c143049cbd3/1546417803031/?format=1200w" width="400px"> | <img src="http://i3.ytimg.com/vi/g2BHEdvW9bU/maxresdefault.jpg" width="400px"> | <img src="https://www.infineon.com/export/sites/default/_images/product/evaluation-boards/BLDC_Motor_Shild_with_TLE9879QXA40.jpg_1711722916.jpg" width="400px">| <img src="https://hackster.imgix.net/uploads/attachments/998086/dev_kit_89eygMekks.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max" width="400px">
+✔️ Open Source | ❌ Open Source | ❌ Open Source | ✔️ Open Source
+✔️Simple to use | ✔️ Simple to use | ✔️Simple to use | ❌ Simple to use
+❌ Low cost ($100) | ❌ Low cost ($100) | ✔️Low cost ($40) | ✔️ Low cost
+❌ Low power (>50A) | ✔️ Low power  | ✔️  Low power | ✔️ Low power
