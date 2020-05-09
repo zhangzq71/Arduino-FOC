@@ -11,7 +11,7 @@ Therefore this is an attempt to:
 - Develop a modular BLDCdriver boards: [Arduino SimpleFOC shield](https://askuric.github.io/Arduino-FOC/arduino_simplefoc_shield_showcase).
 
 ## Arduino SimpleFOC Shield
-<p><img src="extras/Images/shield_to_v13.jpg" height="220px">   <img src="extras/Images/shield_bo_v13.jpg"  height="220px"> <img src="extras/Images/simple_foc_shield_v13_small.gif"  height="220"></p>
+<p align="center"><img src="https://askuric.github.io/Arduino-FOC/extras/Images/shield_to_v13.jpg" height="240px">   <img src="https://askuric.github.io/Arduino-FOC/extras/Images/shield_bo_v13.jpg"  height="240px"> <img src="https://askuric.github.io/Arduino-FOC/extras/Images/simple_foc_shield_v13_small.gif"  height="240"></p>
 
 ### Features
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
@@ -22,7 +22,7 @@ Therefore this is an attempt to:
 ##### If you are interested in this board, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc.html)
 
 ## Arduino SimpleFOClibrary
-[![](extras/Images/youtube.png)](https://youtu.be/N_fRYf7Z80k)
+[![](https://askuric.github.io/Arduino-FOC/extras/Images/youtube.png)](https://youtu.be/N_fRYf7Z80k)
 
 This video demonstrates the Simple FOC library basic usage, electronic connections and shows its capabilities.
 
