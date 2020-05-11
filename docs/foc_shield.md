@@ -20,7 +20,7 @@ We already have prototypes of the board and we are in the testing phase. We will
 - **Encoder interface**: Integrated pullups (configurable)
 - **Configurable pinout**: Hardware configuration - soldering connections
   
-More information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc.html).
+More information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc).
 
 <p> <img src="extras/Images/shield_top_v13.png" style="height:300px">   <img src="extras/Images/shield_v13.png" style="height:300px">
 </p>
@@ -41,5 +41,5 @@ An example electrical connection schematic for BLDC motor with an Encoder as pos
  <img src="extras/Images/foc_shield_v12.jpg" style="max-height:500px">
 
  
-More information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc.html).
+Preorder your Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  on: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product).
 

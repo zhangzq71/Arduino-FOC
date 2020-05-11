@@ -25,7 +25,7 @@ Therefore this is an attempt to:
 - **Open Source**: Gerber files and BOM available
 - **Stackable**: running 2 motors in the same time
 
-##### If you are interested in this board, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc.html)
+##### If you are interested in this board, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product.html)
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
 <iframe style="height:350px;width:100%; " src="https://www.youtube.com/embed/N_fRYf7Z80k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

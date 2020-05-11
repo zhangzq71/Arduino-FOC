@@ -33,7 +33,7 @@ This library will be compatible with the most of the 3 phase bldc motor dirvers.
 
 Examples | Description | Link | Price
 ---- | ---- | ---- | ---
-[<img src="extras/Images/shield_top_v13.png" style="height:100px">](https://askuric.github.io/simplefoc.html)| Arduino Simple FOC shield | [More info](https://askuric.github.io/simplefoc.html) | 35$
+[<img src="extras/Images/shield_top_v13.png" style="height:100px">](https://askuric.github.io/simplefoc_shield_product)| Arduino Simple FOC shield | [More info](https://askuric.github.io/simplefoc_shield_product) | 35$
 [<img src="extras/Images/l6234.jpg" style="height:100px">](https://www.ebay.com/itm/L6234-Breakout-Board/153204519965?hash=item23abb3741d:g:LE4AAOSwe35bctgg) | Dorotek L6234 breakout board| [Drotek](https://store-drotek.com/212-brushless-gimbal-controller-l6234.html), [Ebay](https://www.ebay.fr/itm/L6234-Breakout-Board-/153204519965) | 30$
 [<img src="extras/Images/pinout.jpg" style="height:100px">](https://www.ebay.com/itm/HMBGC-V2-0-3-Axle-Gimbal-Controller-Control-Plate-Board-Module-with-Sensor/351497840990?hash=item51d6e7695e:g:BAsAAOSw0QFXBxrZ:rk:1:pf:1) | HMBGC V2.2 | [Ebay](https://www.ebay.com/itm/HMBGC-V2-0-3-Axle-Gimbal-Controller-Control-Plate-Board-Module-with-Sensor/351497840990?hash=item51d6e7695e:g:BAsAAOSw0QFXBxrZ:rk:1:pf:1) | 20$
 

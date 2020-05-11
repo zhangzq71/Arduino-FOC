@@ -38,7 +38,7 @@ aux_links:
   "Arduino SimpleFOC on GitHub":
     - "//github.com/askuric/Arduino-FOC"
   "Order Arduino SimpleFOC Shield":
-    - "//askuric.github.io/simplefoc.html"
+    - "//askuric.github.io/simplefoc_shield_product"
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2020. Distributed by an <a href=\"https://github.com/askuric/Arduino-FOC/tree/master/LICENSE\">MIT license.</a>"
