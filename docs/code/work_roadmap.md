@@ -9,7 +9,7 @@ permalink: /roadmap
 ##  Roadmap
 ### In progress
 #### Usability 
-- [ ] Proper introduction of the **Arudino FOC Shield**
+- [ ] Proper introduction of the **Arduino FOC Shield**
 - [ ] VIDEO: Publish a video tutorial fir using the library and the samples  
 - [x] VIDEO: Initial video with simple demonstration
 - [ ] VIDEO: Coding setup and procedure video
@@ -21,15 +21,15 @@ permalink: /roadmap
 - [ ] Implement support for MOSFET control low and high pairs
 
 ### Completed Work
-- [x] Make the library accesible in the Arduino Library Manager 
+- [x] Make the library accessible in the Arduino Library Manager 
 - [x] Make minimal version of the arduino code - all in one arduino file
 - [x] Encoder index proper implementation
-- [x] Enable more dirver types 
+- [x] Enable more driver types 
 - [x] Make support for magnetic encoder AS5048 ABI
 - [x] Make support for magnetic encoder AS5048 SPI
 - [x] Add support for acceleration ramping
 - [x] Velocity Low pass filter
 - [x] Timer interrupt execution rather than in the `loop()`
-  - FAIL: Perfromance not improved
+  - FAIL: Performance not improved
 - [x] Sine wave lookup table implementation
 - [x] Documentation separation from README

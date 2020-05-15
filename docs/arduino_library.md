@@ -9,11 +9,11 @@ permalink: /arduino_simplefoc_library_showcase
 
 # Arduino <span class="simple">Simple<span class="foc">FOC</span></span>library
 
-This Arduino library implements Field Oriented Control algorihm for BLDC motors. FOC algorithm produces very shooth rotation patterns and very high deegree of torque, velocity and position control.
-Additionally this library is intended both for beginners and advanced users:
+This Arduino library implements Field Oriented Control algorithm for BLDC motors. FOC algorithm produces very smooth rotation patterns and very high degree of torque, velocity and position control.
+Additionally this library is intended both for beginners and advanced users:c
 
 ## Features
-- **Arduino compatibe**: Arduino library code version 
+- **Arduino compatible**: Arduino library code version 
   - Arduino Library Manager integration
 - **Open-Source**: Full code and documentation available on github
 - **Easy to setup and configure**: 
@@ -21,7 +21,7 @@ Additionally this library is intended both for beginners and advanced users:
   - Easy [tuning the control loops](control_loops)
 - **Modular**:
   - Supports as many [sensors ,  BLDC motors  and  driver boards](electrical_connections) as possible
-  - Supports as many applicaiton requirements as possible
+  - Supports as many application requirements as possible
 - **Plug & play**: Arduino SimpleFOC shield
 
 ## Demonstration video

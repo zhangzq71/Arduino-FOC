@@ -10,12 +10,12 @@ permalink: /minimal_download
 # <span class="simple">Simple<span class="foc">FOC</span>library</span> minimal code
 
 For those willing to experiment and to modify the code I suggest using the [minimal version](https://github.com/askuric/Arduino-FOC/tree/minimal) of the code. 
- > This code is completely indepenedet and you can run it as any other Arduino Schetch without the need for any libraries. 
+ > This code is completely independent and you can run it as any other Arduino Sketch without the need for any libraries. 
 
-## Github webiste downlaod
+## Github website download
 - Go to [minimal branch](https://github.com/askuric/Arduino-FOC/tree/minimal) 
-- Downlaod the code by clicking on the `Clone or Download > Download ZIP`.
-- Unzip it and open the schetch in Arduino IDE. 
+- Download the code by clicking on the `Clone or Download > Download ZIP`.
+- Unzip it and open the sketch in Arduino IDE. 
 
 ## Using terminal
 - Open the terminal:

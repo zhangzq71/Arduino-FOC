@@ -20,7 +20,7 @@ Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>  i
 
 ## BLDC motor 
 
-This library is compatible with any 3 phase BLDC motor out there. Feel free to choose anything that suites your applications. The most tests have been done using gimbal morots (up to 2A).
+This library is compatible with any 3 phase BLDC motor out there. Feel free to choose anything that suites your applications. The most tests have been done using gimbal motors (up to 2A).
 
 Examples | Description | Link | Price 
 ---- | ---- | ---- | ----
@@ -29,7 +29,7 @@ Examples | Description | Link | Price
  [<img src="extras/Images/mot3.jpg" style="height:100px">](https://www.ebay.com/itm/Alloy-2208-90KV-Gimbal-Brushless-Motor-for-Gopro3-RC-Drone-Camera-100-200g/223195701385?hash=item33f7802089:g:cjUAAOSw1iVbyccJ) | 2208 90KV Gimbal motor | [Ebay](https://www.ebay.com/itm/Alloy-2208-90KV-Gimbal-Brushless-Motor-for-Gopro3-RC-Drone-Camera-100-200g/223195701385?hash=item33f7802089:g:cjUAAOSw1iVbyccJ) | 15$
  
 ## BLDC motor driver 
-This library will be compatible with the most of the 3 phase bldc motor dirvers. Such as L6234, DRV8305 or L293.  Alternatively, you can find gimbal controller boards with integrated BLDC drivers and mictrocontroller chips such as HMBGC V2.2 and similar boards.
+This library will be compatible with the most of the 3 phase BLDC motor drivers. Such as L6234, DRV8305 or L293.  Alternatively, you can find gimbal controller boards with integrated BLDC drivers and microcontroller chips such as HMBGC V2.2 and similar boards.
 
 Examples | Description | Link | Price
 ---- | ---- | ---- | ---
@@ -44,7 +44,7 @@ This library supports two types of position sensors:
 - [Magnetic sensor (AS5048/47)](#magnetic-sensors--spi--interface).
 
 ### Encoders
-Encoders are by far most popular position sensors, both in industry and in hobby community. The main benefits are the precision, standardisation and very low noise level. The main problem with encoders is the code efficiency, since you need to continously count the impulses in order to have precise position.
+Encoders are by far most popular position sensors, both in industry and in hobby community. The main benefits are the precision, standardization and very low noise level. The main problem with encoders is the code efficiency, since you need to continuously count the impulses in order to have precise position.
 
 Examples  | Description | Link | Price
 ---- | ---- | ---- | ----
@@ -54,7 +54,7 @@ Examples  | Description | Link | Price
 
       
 ### Magnetic sensors | SPI  interface
-Magentic position sensor has many benefits over the encoders:
+Magnetic position sensor has many benefits over the encoders:
 - Very efficient position calculation ( no counting ) 
 - Time of execution doesn't depend on velocity or number of sensors
 - No need for interrupt hardware
@@ -65,5 +65,5 @@ Magentic position sensor has many benefits over the encoders:
 Examples  | Description | Link | Price
 ---- | ---- | ---- | ----
 [<img src="extras/Images/mag.jpg"  style="height:100px">](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) | Margetic encoder <br> AS5047<br> absolute <br>16384cpr |  [Mouser](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) | 15$
-[<img src="extras/Images/mag2.jpg"  style="height:100px">](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | Margetic encoder <br> AS5048<br> absolute <br>16384cpr |  [Ebay](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | 10$
+[<img src="extras/Images/mag2.jpg"  style="height:100px">](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | Magnetic encoder <br> AS5048<br> absolute <br>16384cpr |  [Ebay](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | 10$
 

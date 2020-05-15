@@ -13,11 +13,11 @@ permalink: /control_theory_corner
 
 
 ## PI controller theory
-Transfer funciton of the PI contorller this library implements is:
+Transfer function of the PI controller this library implements is:
 
 <p><img src="./extras/Images/cont_PI.png" /></p>
 
-Continiuos PI is discretized using Tustin transform. The final discrete equation becomes:
+Continuos PI is transformed to the discrete domain using Tustin transformation. The final discrete equation becomes:
 
 <p><img src="./extras/Images/dis_PI.png" /></p>
 
@@ -26,7 +26,7 @@ Where the <i>u(k)</i> is the control signal (voltage <i>U<sub>q</sub></i> in our
 <p><img src="./extras/Images/track.png" /></p>
 
 ## Low-Pass velocity filter theory
-Transfer funciton of the Low pass filter is contorller is:
+Transfer function of the Low pass filter is controller is:
 
 <p><img src="./extras/Images/cont_LPF.png" /></p>
 In it discrete form it becomes:
@@ -42,12 +42,12 @@ where:
 
 <p><img src="./extras/Images/alpha.png" /></p>
 
-This makes it a bit more clear what the time constat `Tf` of the Low pass filter stands for. If your sample time is around 1millisecond (for arduino UNO this can be taken as an average) then setting the
+This makes it a bit more clear what the time constant `Tf` of the Low pass filter stands for. If your sample time is around 1millisecond (for arduino UNO this can be taken as an average) then setting the
 `Tf` value to `Tf = 0.01` will result in:
 
 ```cpp
 alpha = 0.01/(0.01 + 0.001) = 0.91
 ```
 
-Which means that your actual velocity measurement <i>v</i> will influence the filtered value <i>v<sub>f</sub><i> with the coeficient `1-alpha = 0.09` which is going to smooth the velocity values considerably (maybe even too muuch, depends of the application).
+Which means that your actual velocity measurement <i>v</i> will influence the filtered value <i>v<sub>f</sub><i> with the coefficient `1-alpha = 0.09` which is going to smooth the velocity values considerably (maybe even too much, depends of the application).
 

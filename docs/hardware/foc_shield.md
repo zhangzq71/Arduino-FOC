@@ -9,7 +9,7 @@ permalink: /arduino_simplefoc_shield
 
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span> example
-The SimpleFOC shiled, being Arduino UNO shield, is compatible with any type of board with the same headers.
+The SimpleFOC shield, being Arduino UNO shield, is compatible with any type of board with the same headers.
 Essentially, it is a L6234 chip breakout board made in a form of Arduino Shield.
 
 <p> <img src="extras/Images/shield_top_v13.png" style="height:300px">   <img src="extras/Images/shield_v13.png" style="height:300px">
@@ -17,7 +17,7 @@ Essentially, it is a L6234 chip breakout board made in a form of Arduino Shield.
 
 ### Connector types
  - Terminal connectors 
-    - motor pahse lines `a`,`b` and `c`
+    - motor phase lines `a`,`b` and `c`
     - power supply cables (12V to 24V)
  - Encoder connector
     - Integrated configurable pull-ups
@@ -34,7 +34,7 @@ More information on this link: [Arduino Simple FOC Shield](arduino_simplefoc_shi
 
 ### Motor
 - Motor phases `a`, `b` and `c` are connected directly the motor terminal connector `TB_M1`
-- `a`,`b`,`c` and encoder channels `A` and `B` have to be oriented right for the algorightm to work. But don't worry about it too much. Connect it in initialy as you wish and then if it doesnt move reverse pahse `a` and `b` of the motor, that should be enogh.
+- `a`,`b`,`c` and encoder channels `A` and `B` have to be oriented right for the algorithm to work. But don't worry about it too much. Connect it in initially as you wish and then if it doesn't move reverse phase `a` and `b` of the motor, that should be enough.
 
 
 ## Arduino SimpleFOC Shield V1.2 example

@@ -10,18 +10,18 @@ permalink: /library_download
 # Installing <span class="simple">Simple<span class="foc">FOC</span>library</span>
 
 ## Arduino Library Manager 
-The simplest way to get hold of the library is direclty by using Arduino IDE and its integrated Library Manager. 
+The simplest way to get hold of the library is directly by using Arduino IDE and its integrated Library Manager. 
 - Open Arduino IDE and start Arduino Library Manager by clicking: `Tools > Manage Libraries...`.
-- Serarch for `Simple FOC` library and install the lates version.
+- Search for `Simple FOC` library and install the latest version.
 - Reopen Arduino IDE and you should have the library examples in `File > Examples > Simple FOC`.
 
 ## Installation from Github
-If you don't want to use the Arduino IDE and Library manager you can direclty download the library from the [github repository](https://github.com/askuric/Arduino-FOC). 
+If you don't want to use the Arduino IDE and Library manager you can directly download the library from the [github repository](https://github.com/askuric/Arduino-FOC). 
 
 ### Using Github website 
 - Go to the [github repository](https://github.com/askuric/Arduino-FOC)
 - Click first on `Clone or Download > Download ZIP`. 
-- Unzip it and place it in `Arduino Libraries` forlder. Windows: `Documents > Arduino > libraries`.  
+- Unzip it and place it in `Arduino Libraries` folder. Windows: `Documents > Arduino > libraries`.  
 - Reopen Arduino IDE and you should have the library examples in `File > Examples > Simple FOC`.
 
 ### Using terminal

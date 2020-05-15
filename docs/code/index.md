@@ -8,7 +8,7 @@ has_children: True
 ---
 
 # Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> code
-The code is organised into a library. The library contains main BLDC motor class `BLDCmotor` and  two sensor classes `Endcoder` and `MagneticSensor`. `BLDCmotor` contains all the necessary FOC algorithm funcitons as well as PI controllers for the velocity and angle control.  `Encoder`  deals with the encoder interupt funcitons, calcualtes motor angle and velocity ( using the [Mixed Time Frequency Method](https://github.com/askuric/Arduino-Mixed-Time-Frequency-Method)). The `Encoder` class will support any type of otpical and magnetic encoder. `MagneticEncoder` class deals with all the necessary communication and calculation infrastructure to handle the magnetic position sensors such as AS5048 and similar. 
+The code is organized into a library. The library contains main BLDC motor class `BLDCmotor` and  two sensor classes `Encoder` and `MagneticSensor`. `BLDCmotor` contains all the necessary FOC algorithm functions as well as PI controllers for the velocity and angle control.  `Encoder`  deals with the encoder interrupt functions, calculates motor angle and velocity ( using the [Mixed Time Frequency Method](https://github.com/askuric/Arduino-Mixed-Time-Frequency-Method)). The `Encoder` class will support any type of optical and magnetic encoder. `MagneticEncoder` class deals with all the necessary communication and calculation infrastructure to handle the magnetic position sensors such as AS5048 and similar. 
 
 ## <span class="simple">Simple<span class="foc">FOC</span>library</span> source structure:
 ```shell
@@ -19,7 +19,7 @@ The code is organised into a library. The library contains main BLDC motor class
 │ ├─ BLDCMotor.cpp/h           # BLDCMotor class implementing all the FOC operations
 │ │ 
 │ ├─ Sensor.h                  # Abstract Sensor class that all the sensors implement
-│ ├─ Encoder.cpp/h             # Enocder class implementing the Quadrature encoder operations
+│ ├─ Encoder.cpp/h             # Encoder class implementing the Quadrature encoder operations
 │ ├─ MagneticSensor.cpp/h      # class implementing SPI angle read and interface for AS5047/8 type sensors
 │ │ 
 │ └─ FOCutils.cpp/h            # Utility functions 

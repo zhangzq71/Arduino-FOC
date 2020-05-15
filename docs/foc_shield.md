@@ -9,7 +9,7 @@ permalink: /arduino_simplefoc_shield_showcase
 
 # Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span> 
 
-At this moment we are developing an open source version of Arduin shiled specifically for FOC motor control. 
+At this moment we are developing an open source version of Arduino shield specifically for FOC motor control. 
 We already have prototypes of the board and we are in the testing phase. We will be coming out with the details very soon!
 
 ### Features
@@ -28,7 +28,7 @@ More information on this link: [Arduino Simple FOC Shield](https://askuric.githu
 ### Connection schematic
 An example electrical connection schematic for BLDC motor with an Encoder as position sensor. 
  <img src="extras/Images/foc_shield_v13.png" >
- For more information about the electical connections check the [Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span> connection example](arduino_simplefoc_shield).
+ For more information about the electrical connections check the [Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span> connection example](arduino_simplefoc_shield).
 
 ## Arduino SimpleFOC Shield V1.2 (test version)
  

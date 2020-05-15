@@ -11,4 +11,4 @@ permalink: /arduino_l6234
 
 
 ## Arduino UNO + L6234 driver
-The code is simple enough to be run on Arudino Uno board. 
+The code is simple enough to be run on Arduino Uno board. 

@@ -13,7 +13,7 @@ permalink: /
 
 Proper low-cost and low-power FOC supporting boards are very hard to find today and even may not exist. Even harder to find is a stable and simple FOC algorithm code capable of running on Arduino devices. 
 Therefore this is an attempt to: 
-- Demistify FOC algorithm and make a robust but simple Arduino library: [Arduino SimpleFOC library](#arduino-simplefoclibrary)
+- Demystify FOC algorithm and make a robust but simple Arduino library: [Arduino SimpleFOC library](#arduino-simplefoclibrary)
 - Develop a modular BLDCdriver board: [Arduino SimpleFOC shield](arduino_simplefoc_shield_showcase).
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span>
@@ -25,7 +25,7 @@ Therefore this is an attempt to:
 - **Open Source**: Gerber files and BOM available
 - **Stackable**: running 2 motors in the same time
 
-##### If you are interested in this board, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product.html)
+##### If you are interested in this board, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product)
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
 <iframe style="height:350px;width:100%; " src="https://www.youtube.com/embed/N_fRYf7Z80k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -34,13 +34,13 @@ This video demonstrates the Simple FOC library basic usage, electronic connectio
 
 
 ### Features
-- **Arduino compatibe**: Arduino library code
+- **Arduino compatible**: Arduino library code
 - **Easy to setup and configure**: 
   - Easy hardware configuration
   - Easy [tuning the control loops](control_loops)
 - **Modular**:
   - Supports as many [sensors ,  BLDC motors  and  driver boards](electrical_connections) as possible
-  - Supports as many applicaiton requirements as possible
+  - Supports as many application requirements as possible
 - **Plug & play**: Arduino SimpleFOC shield
 
 ## Alternative FOC supporting projects
