@@ -14,7 +14,7 @@ permalink: /
 Proper low-cost and low-power FOC supporting boards are very hard to find today and even may not exist. Even harder to find is a stable and simple FOC algorithm code capable of running on Arduino devices. 
 Therefore this is an attempt to: 
 - Demystify FOC algorithm and make a robust but simple Arduino library: [Arduino SimpleFOC library](#arduino-simplefoclibrary)
-- Develop a modular BLDCdriver board: [Arduino SimpleFOC shield](arduino_simplefoc_shield_showcase).
+- Develop a modular BLDC driver board: [Arduino SimpleFOC shield](arduino_simplefoc_shield_showcase).
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span>
 <p> <img src="extras/Images/shield_top_v13.png" style="height:300px">   <img src="extras/Images/shield_v13.png" style="height:300px"></p>
