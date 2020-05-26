@@ -100,6 +100,7 @@ For those willing to experiment and to modify the code I suggest using the [mini
 This is a simple Arduino code example implementing the velocity control program of a BLDC motor with encoder. 
 
 NOTE: This program uses all the default control parameters.
+
 ```cpp
 #include <SimpleFOC.h>
 
@@ -146,6 +147,25 @@ void loop() {
   motor.monitor();
 }
 ```
+You can find more details in the [SimpleFOC documentation](https://askuric.github.io/Arduino-FOC/).
+
+## Example projects
+Here are some of the SimpleFOC application examples. 
+### Arduino Field Oriented Controlled Reaction Wheel Inverted Pendulum
+This is a very cool open-source project of one of the simplest setups of the Reaction wheel inverted pendulum. Check out all the components and projects notes in the [github repository](https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum).  
+<p align="">
+<a href="https://youtu.be/Ih-izQyXJCI">
+<img src="https://askuric.github.io/Arduino-FOC/extras/Images/youtube_pendulum.png"  height="350px">
+</a>
+</p>
+
+**The main benefits of using the BLDC motor in this project are:**
+- High torque to weight ratio
+  - The lighter the better
+- Lots of torque for low angular velocities
+  - No need to spin the motor to very high PRM to achieve high torques
+- No gearboxes and backlash
+  - Very smooth operation = very stable pendulum
 
 
 ## Documentation
