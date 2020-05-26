@@ -96,6 +96,58 @@ For those willing to experiment and to modify the code I suggest using the [mini
   ```
 - Then you just open it with the Arduino IDE and run it.
 
+## Arduino code example
+This is a simple Arduino code example implementing the velocity control program of a BLDC motor with encoder. 
+
+NOTE: This program uses all the default control parameters.
+```cpp
+#include <SimpleFOC.h>
+
+//  BLDCMotor( pin_pwmA, pin_pwmB, pin_pwmC, pole_pairs, enable (optional))
+BLDCMotor motor = BLDCMotor(9, 10, 11, 11, 8);
+//  Encoder(pin_A, pin_B, CPR)
+Encoder encoder = Encoder(arduinoInt1, arduinoInt2, 2048);
+// channel A and B callbacks
+void doA(){encoder.handleA();}
+void doB(){encoder.handleB();}
+
+
+void setup() {  
+  // initialize encoder hardware
+  encoder.init();
+  // hardware interrupt enable
+  encoder.enableInterrupts(doA, doB);
+
+  // set control loop type to be used
+  motor.controller = ControlType::velocity;
+  
+  // use debugging with the BLDCMotor
+  // debugging port
+  motor.useDebugging(Serial);
+
+  // link the motor to the sensor
+  motor.linkSensor(&encoder);
+
+  // initialize motor
+  motor.init();
+  // align encoder and start FOC
+  motor.initFOC();
+}
+
+void loop() {
+  // FOC algorithm function
+  motor.loopFOC();
+
+  // velocity control loop function
+  // setting the target velocity or 2rad/s
+  motor.move(2);
+
+  // debugging function outputting motor variables to the serial terminal 
+  motor.monitor();
+}
+```
+
+
 ## Documentation
 Find out more information about the Arduino SimpleFOC project in [docs website](https://askuric.github.io/Arduino-FOC/) 
 
