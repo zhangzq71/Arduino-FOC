@@ -17,7 +17,7 @@ Therefore this is an attempt to:
 - Develop a modular BLDC driver board: [Arduino SimpleFOC shield](arduino_simplefoc_shield_showcase).
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
-<iframe width="600" height="300" src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube"  src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Features
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
@@ -27,10 +27,10 @@ Therefore this is an attempt to:
 
 ##### If you are interested in this board as a product, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product)
 
-<p> <img src="extras/Images/shield_top_v13.png" style="height:220px">   <img src="extras/Images/shield_v13.png" style="height:220px"> <img src="extras/Images/simple_foc_shield_v13_small.gif" style="height:220px"></p>
+<p> <img src="extras/Images/shield_to_v13.jpg" class="img200 img_half" ><img src="extras/Images/shield_bo_v13.jpg" class="img200 img_half" ><img src="extras/Images/simple_foc_shield_v13_small.gif" class="img200" ></p>
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
-<iframe width="600" height="300" src="https://www.youtube.com/embed/N_fRYf7Z80k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube"  src="https://www.youtube.com/embed/N_fRYf7Z80k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video demonstrates the Simple FOC library basic usage, electronic connections and shows its capabilities.
 

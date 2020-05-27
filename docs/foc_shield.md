@@ -15,7 +15,7 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
 
 ### YouTube demonstration video
 
-<iframe width="600" height="300" src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Features
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
@@ -27,15 +27,15 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
   
 For more information about the board and the ways to purchase it please follow the link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc).
 
-<p><img src="extras/Images/simple_foc_shield_v13_small.gif" style="height:200px"><img src="extras/Images/shield_to_v13.jpg" style="height:200px"><img src="extras/Images/shield_bo_v13.jpg" style="height:200px"></p>
+<p><img src="extras/Images/shield_bo_v13.jpg" class="img300"><img src="extras/Images/shield_to_v13.jpg" class="img300"></p>
 
 
 ### Connection schematic
 An electrical connection schematic for BLDC motor with an Encoder as position sensor. 
-<img src="extras/Images/foc_shield_v13.png" ><br>
+<p><img src="extras/Images/simple_foc_shield_v13_small.gif" class="img300"><img src="extras/Images/foc_shield_v13.png" class="img300"></p>
 For more information about the electrical connections check the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> [connection example](arduino_simplefoc_shield).
 
-### Board fabrication 
-Please visit the [board fabrication](arduino_simplefoc_shield_fabrication) to find out how to manufacture the board yourself!<br>
-Otherwise, you can order your own fully tested and assembled Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  from our [shop](https://askuric.github.io/simplefoc_shield_product).
+## How to get hold of the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
+- **Fabricate the board yourself**:  Please visit the [board fabrication](arduino_simplefoc_shield_fabrication) to find out how to manufacture the board yourself!<br>
+- **Order the funished and tested board**:  Check out our [shop](https://askuric.github.io/simplefoc_shield_product).
 

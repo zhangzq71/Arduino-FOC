@@ -32,3 +32,34 @@ font-style:italic ;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+
+
+// responsive images and videos.img300{
+.img200{
+    height: 200px;
+}
+.img300{
+    height: 300px;
+}
+.youtube{
+    width: 600px;
+    height: 350px;
+}
+@media (max-width: 600px) {
+    .youtube{
+        width: 100%;
+        height: 250px;
+    }
+    .img300{
+        height:inherit;
+        width: 100%;
+    }
+    .img200{
+        height:inherit;
+        width: 100%;
+    }
+    .img200.img_half{
+        height:inherit;
+        width: 50%;
+    }
+}

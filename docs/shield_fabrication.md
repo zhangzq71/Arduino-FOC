@@ -11,7 +11,7 @@ permalink: /arduino_simplefoc_shield_fabrication
 Here is a quick guide how to fabricate the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> version V1.3. 
 
 
-<p><img src="extras/Images/shield_top_v13.png" style="height:300px"><img src="extras/Images/shield_v13.png" style="height:300px"></p>
+<p><img src="extras/Images/shield_top_v13.png" class="img300"><img src="extras/Images/shield_v13.png" class="img300"></p>
 
 ## Fabrication files and schematics
 Download the files by clicking on links:
