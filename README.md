@@ -14,7 +14,7 @@ Therefore this is an attempt to:
 
 <p align="">
 <a href="https://youtu.be/G5pbo0C6ujE">
-<img src="https://askuric.github.io/Arduino-FOC/extras/Images/foc_shield_video.jpg"  height="350px">
+<img src="https://askuric.github.io/Arduino-FOC/extras/Images/foc_shield_video.jpg"  height="320px">
 </a>
 </p>
 
@@ -33,7 +33,7 @@ Therefore this is an attempt to:
 
 <p align="">
 <a href="https://youtu.be/N_fRYf7Z80k">
-<img src="https://askuric.github.io/Arduino-FOC/extras/Images/youtube.png"  height="350px">
+<img src="https://askuric.github.io/Arduino-FOC/extras/Images/youtube.png"  height="320px">
 </a>
 </p>
 
@@ -156,7 +156,7 @@ Here are some of the SimpleFOC application examples.
 This is a very cool open-source project of one of the simplest setups of the Reaction wheel inverted pendulum. Check out all the components and projects notes in the [github repository](https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum).  
 <p align="">
 <a href="https://youtu.be/Ih-izQyXJCI">
-<img src="https://askuric.github.io/Arduino-FOC/extras/Images/youtube_pendulum.png"  height="350px">
+<img src="https://askuric.github.io/Arduino-FOC/extras/Images/youtube_pendulum.png"  height="320px">
 </a>
 </p>
 

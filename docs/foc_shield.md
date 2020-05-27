@@ -1,45 +1,41 @@
 ---
 layout: default
-title: Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span>
+title: Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 2
 permalink: /arduino_simplefoc_shield_showcase
+has_children: True
 ---
 
 
-# Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span> 
+# Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
 
-At this moment we are developing an open source version of Arduino shield specifically for FOC motor control. 
-We already have prototypes of the board and we are in the testing phase. We will be coming out with the details very soon!
+This is an open-source low-cost Brushless DC (BLDC) motor driver board intended primarily for low-power FOC applications up to 5Amps. The board is fully compatible with the Arduino UNO and all the boards with the standard Arduino headers.
+The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in combinations with  the <span class="simple">Simple<span class="foc">FOC</span>library</span> provides "user-friendly" way to control BLDC motors both in hardware and software.    
+
+### YouTube demonstration video
+
+<iframe width="600" height="300" src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Features
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
-- **Low-cost**: Price in the range of \$20-\$40
-- **Open Source**: Gerber files and BOM available
+- **Low-cost**: Price of €20 - [Check the pricing](https://askuric.github.io/simplefoc_shield_product) 
+- **Open Source**: Fully available [Gerber files and BOM](arduino_simplefoc_shield_fabrication)
 - **Stackable**: running 2 motors in the same time
-- **Encoder interface**: Integrated pullups (configurable)
+- **Encoder interface**: Integrated 3kOhm pullups (configurable)
 - **Configurable pinout**: Hardware configuration - soldering connections
   
-More information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc).
+For more information about the board and the ways to purchase it please follow the link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc).
 
-<p> <img src="extras/Images/shield_top_v13.png" style="height:300px">   <img src="extras/Images/shield_v13.png" style="height:300px">
-</p>
+<p><img src="extras/Images/simple_foc_shield_v13_small.gif" style="height:200px"><img src="extras/Images/shield_to_v13.jpg" style="height:200px"><img src="extras/Images/shield_bo_v13.jpg" style="height:200px"></p>
+
 
 ### Connection schematic
-An example electrical connection schematic for BLDC motor with an Encoder as position sensor. 
- <img src="extras/Images/foc_shield_v13.png" >
- For more information about the electrical connections check the [Arduino <span class="simple">Simple<span class="foc">FOC</span> Shield</span> connection example](arduino_simplefoc_shield).
+An electrical connection schematic for BLDC motor with an Encoder as position sensor. 
+<img src="extras/Images/foc_shield_v13.png" ><br>
+For more information about the electrical connections check the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> [connection example](arduino_simplefoc_shield).
 
-## Arduino SimpleFOC Shield V1.2 (test version)
- 
-<p> <img src="extras/Images/side_shield.jpg" style="height:200px">
- <img src="extras/Images/side2_shield.jpg" style="height:200px"></p>
- <p>
- <img src="extras/Images/top_shield.jpg" style="height:200px"><img src="extras/Images/back_shield.jpg" style="height:200px"></p>
-
-### Electrical connection
- <img src="extras/Images/foc_shield_v12.jpg" style="max-height:500px">
-
- 
-Preorder your Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  on: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product).
+### Board fabrication 
+Please visit the [board fabrication](arduino_simplefoc_shield_fabrication) to find out how to manufacture the board yourself!<br>
+Otherwise, you can order your own fully tested and assembled Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  from our [shop](https://askuric.github.io/simplefoc_shield_product).
 
