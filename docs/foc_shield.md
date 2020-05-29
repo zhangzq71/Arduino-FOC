@@ -4,7 +4,8 @@ title: Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</sp
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 2
 permalink: /arduino_simplefoc_shield_showcase
-has_children: True
+has_children: true
+has_toc: false
 ---
 
 
@@ -27,15 +28,15 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
   
 For more information about the board and the ways to purchase it please follow the link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc).
 
-<p><img src="extras/Images/shield_bo_v13.jpg" class="img300"><img src="extras/Images/shield_to_v13.jpg" class="img300"></p>
+<p><img src="extras/Images/shield_bo_v13.jpg" class="img300 img_half"><img src="extras/Images/shield_to_v13.jpg" class="img300  img_half"></p>
 
 
 ### Connection schematic
 An electrical connection schematic for BLDC motor with an Encoder as position sensor. 
-<p><img src="extras/Images/simple_foc_shield_v13_small.gif" class="img300"><img src="extras/Images/foc_shield_v13.png" class="img300"></p>
+<p><img src="extras/Images/foc_shield_v13.jpg" class="img300 img_half"><img src="extras/Images/foc_shield_v13.png" class="img300 img_half"></p>
 For more information about the electrical connections check the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> [connection example](arduino_simplefoc_shield).
 
 ## How to get hold of the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
 - **Fabricate the board yourself**:  Please visit the [board fabrication](arduino_simplefoc_shield_fabrication) to find out how to manufacture the board yourself!<br>
-- **Order the funished and tested board**:  Check out our [shop](https://askuric.github.io/simplefoc_shield_product).
+- **Order the finished and tested board**:  Check out our [shop](https://askuric.github.io/simplefoc_shield_product).
 

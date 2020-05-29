@@ -18,7 +18,9 @@ html {
 
 body {
   font-family: $body-font-family;
-  font-size: inherit;
+  font-size: 0.93em;
+  font-weight: 300;
+  font-style: normal;
   line-height: $body-line-height;
   color: $body-text-color;
   background-color: $body-background-color;
@@ -65,7 +67,7 @@ p {
 
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 a:not([class]) {

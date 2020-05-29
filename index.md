@@ -41,7 +41,7 @@ This video demonstrates the Simple FOC library basic usage, electronic connectio
   - Easy hardware configuration
   - Easy [tuning the control loops](control_loops)
 - **Modular**:
-  - Supports as many [sensors ,  BLDC motors  and  driver boards](electrical_connections) as possible
+  - Supports as many [sensors ,  BLDC motors  and  driver boards](supported_hardware) as possible
   - Supports as many application requirements as possible
 - **Plug & play**: Arduino SimpleFOC shield
 
