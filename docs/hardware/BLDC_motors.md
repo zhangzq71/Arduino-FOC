@@ -9,10 +9,9 @@ permalink: /bldc_motors
 
 # BLDC motors 
 
-The Field Oriented Control algorithm doesn't really change too much in between low KV (higher resistance ~10 Ohm) gimbal motors and high KV (lower resistance <1 Ohm ) high power motors. Therefore in general this library can be used with any 3 phase BLDC motor there is.
+The Field Oriented Control algorithm doesn't really change too much in between low KV (higher resistance ~10 Ohm) gimbal motors and high KV (lower resistance <1 Ohm ) high performance motors. Therefore in general this library can be used with any 3 phase BLDC motor there is.
 
-But, since this library does not implement current control loop ([version 1.2.0](https://github.com/askuric/Arduino-FOC/releases)) and since it is primarily intended to be used with low-cost, low-power [BLDC motor drivers](bldc_drivers) we suggest 
-you to use it with gimbal motors with no more than 5Amp peak current. 
+But, since this library does not implement current control loop ([version 1.2.0](https://github.com/askuric/Arduino-FOC/releases)) and since it is primarily intended to be used with low-cost, low-power [BLDC motor drivers](bldc_drivers) we suggest you to use it with gimbal motors with no more than 5Amp peak current. 
 
 Here are some examples of the different price range motors that have been successfully tested with this library.
 

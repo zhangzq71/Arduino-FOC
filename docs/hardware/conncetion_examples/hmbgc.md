@@ -37,5 +37,5 @@ Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <
 <blockquote class="danger"> HMBGC board doesn't support magnetic sensors because it doesn't have necessary SPI infrastructure.</blockquote>
 
 ## Example connection
-<p><img src="extras/Images/hmbgc_v22.jpg" class="img400">
+<p><img src="extras/Images/hmbgc_v22.jpg" class="width80">
 </p>
