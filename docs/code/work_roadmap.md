@@ -14,9 +14,9 @@ permalink: /roadmap
 - [ ] VIDEO: Two motors running on HMBGC example
 
 #### Features
-- [ ] Implement support for MOSFET control low and high pairs
-- [ ] FOC using IMU - encoderless control for camera gimbal and similar applications
-- [ ] Support for fully open-loop operation (no sensor)
+- [ ] Driver support: Implement support for MOSFET control low and high pairs
+- [ ] Motor control: FOC using IMU - encoderless control for camera gimbal and similar applications
+- [ ] Motor control: Support for fully open-loop operation (no sensor)
 - [ ] Device specific code separation: Easier porting in between devices
 - [ ] Device specific: STM32 Nucleo support
 - [ ] Device specific: STM32 BLuepill support

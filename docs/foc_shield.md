@@ -32,9 +32,9 @@ For more information about the board and the ways to purchase it please follow t
 
 
 ### Connection schematic
-An electrical connection schematic for BLDC motor with an Encoder as position sensor. 
-<p><img src="extras/Images/foc_shield_v13.jpg" class="img300 img_half"><img src="extras/Images/foc_shield_v13.png" class="img300 img_half"></p>
-For more information about the electrical connections check the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> [connection example](arduino_simplefoc_shield).
+An electrical connection example of a BLDC motor with an encoder as position sensor. 
+<p><img src="extras/Images/foc_shield_v13.jpg" class="width80"></p>
+For more information about how to connect you hardware to your shield, check the full [connection example](arduino_simplefoc_shield).
 
 ## How to get hold of the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
 - **Fabricate the board yourself**:  Please visit the [board fabrication](arduino_simplefoc_shield_fabrication) to find out how to manufacture the board yourself!<br>
