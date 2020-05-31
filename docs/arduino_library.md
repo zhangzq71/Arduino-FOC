@@ -27,7 +27,7 @@ The library is intended both for:
 - **Plug & play**: Especially in combination with the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
 
 ## YouTube demonstration video
-<iframe class="youtube" src="https://www.youtube.com/embed/N_fRYf7Z80k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" src="https://www.youtube.com/embed/Y5kLeqTc6Zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video demonstrates the <span class="simple">Simple<span class="foc">FOC</span>library</span> basic usage, electronic connections and shows its basic capabilities.
 
