@@ -66,37 +66,6 @@ In the `setup()` function we initialize the encoder and enable interrupts:
 ```
 And that is it, let's setup the motor.
 
-## Encoder code
-First, we define the `Encoder` class with the A and B channel pins and number of impulses per revolution.
-```cpp
-// define Encoder
-Encoder encoder = Encoder(A0, A1, 2048);
-```
-Then we define the buffering callback functions.
-```cpp
-// channel A and B callbacks
-void doA(){encoder.handleA();}
-void doB(){encoder.handleB();}
-```
-Next we define the `PciManager` pin change listeners:
-```cpp
-// pin change listeners
-PciListenerImp listenerA(encoder.pinA, doA);
-PciListenerImp listenerB(encoder.pinB, doB);
-``` 
-In the `setup()` function first we initialize the encoder:
-```cpp
-  // initialize encoder hardware
-  encoder.init();
-```
-And then instead of calling `encoder.enableInterrupt()` function we use the `PciManager` library interface to attach the interrupts.
-```cpp
-  // interrupt initialization
-  PciManager.registerListener(&listenerA);
-  PciManager.registerListener(&listenerB);
-```
-And that is it, let's setup the motor.
-
 <blockquote class="info">For more configuration parameters of the encoders please check the <code>Encoder</code> class <a href="encoder">docs</a>.</blockquote>
 
 
