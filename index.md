@@ -11,6 +11,8 @@ permalink: /
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Simple%20FOC.svg?)](https://www.ardu-badge.com/badge/Simple%20FOC.svg)
 
+Field Oriented Control is one of the most powerful and most 
+
 Proper low-cost and low-power FOC supporting boards are very hard to find today and even may not exist. Even harder to find is a stable and simple FOC algorithm code capable of running on Arduino devices. 
 Therefore this is an attempt to: 
 - Demystify FOC algorithm and make a robust but simple Arduino library: [Arduino SimpleFOC library](#arduino-simplefoclibrary)

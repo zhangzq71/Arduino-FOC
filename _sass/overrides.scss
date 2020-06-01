@@ -127,18 +127,23 @@ blockquote.warning{
 
 .image_icon{
     position: relative;
+    width:50%;
+    display:inline-block;
 } 
 .image_icon img{
     display: block; 
+    width:100%;
 }
 .image_icon .fa {
     position: absolute; 
     bottom:10px; 
     left:10px; 
+    opacity: 0.4;
 }
 .image_icon a{
     color: #686969;
 }
-.image_icon a:hover{
+.image_icon a:hover .fa{
     color: #44a8fa;
+    opacity: 1;
 }

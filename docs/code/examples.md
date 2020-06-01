@@ -3,7 +3,7 @@ layout: default
 title: Library Examples
 parent: Code
 nav_order: 6
-permalink: /examples
+permalink: /library_examples
 ---
 
 
