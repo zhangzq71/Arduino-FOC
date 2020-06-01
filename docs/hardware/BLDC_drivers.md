@@ -17,7 +17,7 @@ Here are some BLDC driver boards that work with the library *off-the-shelf*.
 Examples | Description | Specifications | Link | Price
 ---- | ---- | ---- | ---
 [<img src="extras/Images/hor_cad_shield.jpg" style="height:100px">](https://askuric.github.io/simplefoc_shield_product)| Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>| - L6234 chip <br> - 1 motor <br>- Arduino Shield <br> - Encoder Pullups | [More info](https://askuric.github.io/simplefoc_shield_product) | 20€
-[<img src="extras/Images/l6234.jpg" style="height:100px">](https://www.ebay.com/itm/L6234-Breakout-Board/153204519965?hash=item23abb3741d:g:LE4AAOSwe35bctgg) | Dorotek L6234<br> breakout board | - L6234 chip <br> - 1 motor <br> - 25x25mm | [Drotek](https://store-drotek.com/212-brushless-gimbal-controller-l6234.html)<br> [Ebay](https://www.ebay.fr/itm/L6234-Breakout-Board-/153204519965) | 30€
+[<img src="extras/Images/l6234.jpg" style="height:100px">](https://www.ebay.com/itm/L6234-Breakout-Board/153204519965?hash=item23abb3741d:g:LE4AAOSwe35bctgg) | Drotek L6234<br> breakout board | - L6234 chip <br> - 1 motor <br> - 25x25mm | [Drotek](https://store-drotek.com/212-brushless-gimbal-controller-l6234.html)<br> [Ebay](https://www.ebay.fr/itm/L6234-Breakout-Board-/153204519965) | 30€
 
 Alternatively, you can find gimbal controller boards with integrated BLDC drivers and microcontroller chips such as HMBGC V2.2 and BGC 3.0 similar boards.
 
