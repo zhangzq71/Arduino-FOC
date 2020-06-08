@@ -16,7 +16,7 @@
 title: Arduino-FOC
 description: An Arduino Bases Field Oriented Control(FOC) library documentation
 baseurl: "/Arduino-FOC"  
-url: "https://askuric.github.io" 
+url: "https://docs.simplefoc.com" 
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
@@ -36,9 +36,9 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Arduino SimpleFOC on GitHub":
-    - "//github.com/askuric/Arduino-FOC"
+    - "https://github.com/askuric/Arduino-FOC"
   "Order Arduino SimpleFOC Shield":
-    - "//askuric.github.io/simplefoc_shield_product"
+    - "https://docs.simplefoc.com/simplefoc_shield_product"
 
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2020. Distributed by an <a href=\"https://github.com/askuric/Arduino-FOC/tree/master/LICENSE\">MIT license.</a>"
