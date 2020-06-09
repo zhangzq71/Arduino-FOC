@@ -36,4 +36,4 @@ Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <
 </blockquote>
 
 ## Example connection
-<p><img src="extras/Images/foc_shield_v13.jpg" class="width80"></p>
+<p><img src="extras/Images/foc_shield_v13.jpg" class="width60"></p>

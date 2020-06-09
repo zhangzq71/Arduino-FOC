@@ -5,11 +5,11 @@ nav_order: 1
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /
 ---
-# Arduino Simple Field Oriented Control (FOC)  
+# Arduino Simple Field Oriented Control (FOC) project
 
 ![Library Compile](https://github.com/askuric/Arduino-FOC/workflows/Library%20Compile/badge.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![arduino-library-badge](https://www.ardu-badge.com/badge/Simple%20FOC.svg?)](https://www.ardu-badge.com/badge/Simple%20FOC.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![arduino-library-badge](https://www.ardu-badge.com/badge/Simple%20FOC.svg?)
 
 
 Proper low-cost and low-power FOC supporting boards are very hard to find today and even may not exist. Even harder to find is a stable and simple FOC algorithm code capable of running on Arduino devices. 
@@ -24,9 +24,9 @@ Therefore this is an attempt to:
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
 - **Open Source**: Fully available [Gerber files and BOM](arduino_simplefoc_shield_fabrication)
 - **Stackable**: Running 2 motors in the same time
-- **Low-cost**: Price of €20  - [Check the pricing](https://askuric.github.io/simplefoc_shield_product) 
+- **Low-cost**: Price of €20  - [Check the pricing](https://simplefoc.com/simplefoc_shield_product) 
 
-##### If you are interested in this board as a product, find more information on this link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc_shield_product)
+##### If you are interested in this board as a product, find more information on this link: [Arduino Simple FOC Shield](https://simplefoc.com/simplefoc_shield_product)
 
 <p><img src="extras/Images/simple_foc_shield_v13_small.gif" class="img200" ><img src="extras/Images/shield_to_v13.jpg" class="img200 img_half" ><img src="extras/Images/shield_bo_v13.jpg" class="img200 img_half" ></p>
 
@@ -50,7 +50,7 @@ These are some of the alternative FOC supporting projects which provide hardware
 
 <a href="https://odriverobotics.com/" >Odrive</a> | <a href="https://www.youtube.com/watch?v=g2BHEdvW9bU">Trinamic</a> | <a href="https://www.infineon.com/cms/en/product/evaluation-boards/bldc_shield_tle9879/" >Infineon</a> | <a href="https://github.com/gouldpa/FOC-Arduino-Brushless">FOC-Arduino-Brushless</a>
 ------------ | ------------- | ------------ | -------------
-<img src="https://static1.squarespace.com/static/58aff26de4fcb53b5efd2f02/t/5c2c766921c67c143049cbd3/1546417803031/?format=1200w" width="400px"> | <img src="https://i3.ytimg.com/vi/g2BHEdvW9bU/maxresdefault.jpg" width="400px"> | <img src="https://www.infineon.com/export/sites/default/_images/product/evaluation-boards/BLDC_Motor_Shild_with_TLE9879QXA40.jpg_1711722916.jpg" width="400px">| <img src="https://hackster.imgix.net/uploads/attachments/998086/dev_kit_89eygMekks.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max" width="400px">
+<img src="https://static1.squarespace.com/static/58aff26de4fcb53b5efd2f02/t/5c2c766921c67c143049cbd3/1546417803031/?format=1200w" style="max-width:250px"  > | <img src="https://i3.ytimg.com/vi/g2BHEdvW9bU/maxresdefault.jpg" style="max-width:250px"  > | <img src="https://www.infineon.com/export/sites/default/_images/product/evaluation-boards/BLDC_Motor_Shild_with_TLE9879QXA40.jpg_1711722916.jpg" style="max-width:250px"  >| <img src="https://hackster.imgix.net/uploads/attachments/998086/dev_kit_89eygMekks.jpg?auto=compress%2Cformat&w=1280&h=960&fit=max" style="max-width:250px"  >
 ✔️ Open Source | ❌ Open Source | ❌ Open Source | ✔️ Open Source
 ✔️Simple to use | ✔️ Simple to use | ✔️Simple to use | ❌ Simple to use
 ❌ Low cost ($100) | ❌ Low cost ($100) | ✔️Low cost ($40) | ✔️ Low cost

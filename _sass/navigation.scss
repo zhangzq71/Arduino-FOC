@@ -45,16 +45,25 @@
   margin: 0;
 
   @include mq(md) {
-    @include fs-3;
+    @include fs-4;
   }
   
   .grand-child-list {
     display: none;
   }
+  .child-list {
+    display: none;
+  }
 
   &.active {
-    .grand-child-list{
+    .child-list {
       display: block;
+
+      &.active{
+        .grand-child-list{
+          display: block;
+        }
+      }
     }
   }
 }
@@ -64,7 +73,8 @@
   display: block;
   padding-top: $sp-1;
   padding-bottom: $sp-1;
-  color:$nav-child-link-color;
+  //color: $nav-child-link-color;
+  color: #616161;
 
   &.active {
     font-weight: 600;

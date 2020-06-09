@@ -9,6 +9,10 @@ permalink: /arduino_simplefoc_library_showcase
 
 # Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
 
+![Library Compile](https://github.com/askuric/Arduino-FOC/workflows/Library%20Compile/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![arduino-library-badge](https://www.ardu-badge.com/badge/Simple%20FOC.svg?)
+
 This Arduino library implements Field Oriented Control (FOC) algorithm for BLDC motors. FOC algorithm produces incomparably smooth operation and high degree of torque, velocity and position control.
 The library is intended both for: 
 - Beginners searching for a simple and *user-friendly* way to learn how to control BLDC motors 
@@ -26,13 +30,13 @@ The library is intended both for:
   - Supports as many application requirements as possible
 - **Plug & play**: Especially in combination with the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
 
-## YouTube demonstration video
+### YouTube demonstration video
 <iframe class="youtube" src="https://www.youtube.com/embed/Y5kLeqTc6Zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video demonstrates the <span class="simple">Simple<span class="foc">FOC</span>library</span> basic usage, electronic connections and shows its basic capabilities.
 
 **The video hardware setup consists of:**
-<ul class="width80">
+<ul class="width60">
 <li> 
 HMBGC V2.2 board <a class="pull-right" href="https://www.ebay.com/itm/HMBGC-V2-0-3-Axle-Gimbal-Controller-Control-Plate-Board-Module-with-Sensor/351497840990?hash=item51d6e7695e:g:BAsAAOSw0QFXBxrZ">Ebay link <span class="fa fa-link"></span></a>
 </li>
@@ -44,3 +48,30 @@ BLDC Gimbal Motor  <a class="pull-right" href="https://fr.aliexpress.com/item/32
 </li>
 </ul> 
 
+
+
+## Getting started
+Here are some basic links where you can find more information how to get started with the <span class="simple">Simple<span class="foc">FOC</span>library</span>.
+
+## Installation
+There are two ways to install this Arduino library, depending of your plans with the code and your particular application.
+- [Full library installation](library_download) - for plug & play functionality with many examples 
+- [Minimal sketch installation](minimal_download) - Arduino sketch with integrated complete library
+    - Easier experimentation and interaction with the library code directly
+<p><img src="extras/Images/alm.gif" class="img300"></p>  
+
+
+## Supported hardware
+Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> is made modular and will support most of the motor + sensor combinations out there, as well as many low-cost bldc driver boards.
+Please see the [supported hardware documentation](supported_hardware) to learn more!
+<p><img src="extras/Images/connection.gif" class="img300"></p>
+
+## Using the code
+This library code is written in a way to be as simple sa possible to use and to leave a lot of space for configuration and fine tuning for specific applications. 
+Please see the api [code documentation](code) to learn how simple it is to use!
+
+## Project Examples 
+We are very happy to provide you with several projects multiple hardware configurations and fully documented and explained code!
+Go see the [examples](examples)!
+
+<a href="position_control_example"><img src="extras/Images/position_control_example.jpg" class="img200 img_half"></a><a href="velocity_control_example"><img src="extras/Images/uno_l6234_velocity.jpg"  class="img200 img_half"></a><a href="gimbal_velocity_example"><img src="extras/Images/hmbgc_v22_velocity_control.jpg" class="img200 img_half"></a><a href="simplefoc_pendulum"><img src="extras/Images/foc_pendulum.jpg" class="img200 img_half"></a>

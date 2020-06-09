@@ -8,7 +8,7 @@ nav_order: 3
 has_children: True
 ---
 
-## Control loops
+# Control loops
 The SimpleFOC library gives you the choice of using 4 different plug and play control loops: 
 - voltage control loop
 - velocity control loop

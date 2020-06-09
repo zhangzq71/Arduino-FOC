@@ -1,3 +1,9 @@
+var libraires =[
+    "SimpleFOC",
+    "PciManager",
+    "PciListenerImp"
+]
+
 var classNames = [
     "BLDCMotor",
     "Encoder",
@@ -42,6 +48,10 @@ var funcNames = [
     "getAngle",
     "loopFOC",
     "move",
+    "constrainAngle",
+    "controllerLQR",
+    "sign",
+    "shaftVelocity"
 ];
 var structNames = [
     "Pullup",
@@ -58,23 +68,31 @@ var structProps = [
     "voltage",
 ];
 jtd.onReady(function(){
-document.querySelectorAll('.n').forEach(function(e) {
-    if(classNames.indexOf(e.innerHTML) >= 0 ){
-        e.classList.remove("n");
-        e.classList.add("className");
-    } else if(funcNames.indexOf(e.innerHTML) >= 0 ){
-        e.classList.remove("n");
-        e.classList.add("fcnName");
-    } else if(structNames.indexOf(e.innerHTML) >= 0 ){
-        e.classList.remove("n");
-        e.classList.add("structName");
-    } else if(structProps.indexOf(e.innerHTML) >= 0 ){
-        e.classList.remove("n");
-        e.classList.add("structProp");
-    } else if(classProps.indexOf(e.innerHTML) >= 0 ){
-        e.classList.remove("n");
-        e.classList.add("fcnName");
-    }
-    // return html.replace(reg, '<span class="red">$1</span>', html)
-});
+    document.querySelectorAll('.n').forEach(function(e) {
+        if(classNames.indexOf(e.innerHTML) >= 0 ){
+            e.classList.remove("n");
+            e.classList.add("className");
+        } else if(funcNames.indexOf(e.innerHTML) >= 0 ){
+            e.classList.remove("n");
+            e.classList.add("fcnName");
+        } else if(structNames.indexOf(e.innerHTML) >= 0 ){
+            e.classList.remove("n");
+            e.classList.add("structName");
+        } else if(structProps.indexOf(e.innerHTML) >= 0 ){
+            e.classList.remove("n");
+            e.classList.add("structProp");
+        } else if(classProps.indexOf(e.innerHTML) >= 0 ){
+            e.classList.remove("n");
+            e.classList.add("classProps");
+        }
+    });
+
+    //include style
+    document.querySelectorAll('.cp').forEach(function(e) {
+        var str = e.innerHTML;
+        libraires.forEach(function(lib){
+            str = str.replace( lib ,"<span class='incLib'>" +lib + "</span>" );
+        }); 
+        e.innerHTML = str;
+    });
 });

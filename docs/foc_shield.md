@@ -20,23 +20,23 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
 
 ### Features
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
-- **Low-cost**: Price of €20 - [Check the pricing](https://askuric.github.io/simplefoc_shield_product) 
+- **Low-cost**: Price of €20 - [Check the pricing](https://simplefoc.com/simplefoc_shield_product) 
 - **Open Source**: Fully available [Gerber files and BOM](arduino_simplefoc_shield_fabrication)
 - **Stackable**: running 2 motors in the same time
 - **Encoder interface**: Integrated 3kOhm pullups (configurable)
 - **Configurable pinout**: Hardware configuration - soldering connections
   
-For more information about the board and the ways to purchase it please follow the link: [Arduino Simple FOC Shield](https://askuric.github.io/simplefoc).
+For more information about the board and the ways to purchase it please follow the link: [Arduino Simple FOC Shield](https://simplefoc.com/simplefoc).
 
 <p><img src="extras/Images/shield_bo_v13.jpg" class="img300 img_half"><img src="extras/Images/shield_to_v13.jpg" class="img300  img_half"></p>
 
 
 ### Connection schematic
 An electrical connection example of a BLDC motor with an encoder as position sensor. 
-<p><img src="extras/Images/foc_shield_v13.jpg" class="width80"></p>
+<p><img src="extras/Images/foc_shield_v13.jpg" class="width60"></p>
 For more information about how to connect you hardware to your shield, check the full [connection example](arduino_simplefoc_shield).
 
 ## How to get hold of the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
 - **Fabricate the board yourself**:  Please visit the [board fabrication](arduino_simplefoc_shield_fabrication) to find out how to manufacture the board yourself!<br>
-- **Order the finished and tested board**:  Check out our [shop](https://askuric.github.io/simplefoc_shield_product).
+- **Order the finished and tested board**:  Check out our [shop](https://simplefoc.com/simplefoc_shield_product).
 

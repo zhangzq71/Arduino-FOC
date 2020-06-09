@@ -8,7 +8,7 @@ nav_order: 4
 permalink: /index_search_loop
 ---
 
-### Index search routine
+# Index search routine
 Finding the encoder index is performed only if the constructor of the `Encoder` class has been provided with the `index` pin. The search is performed by setting a constant velocity of the motor until it reaches the index pin. To set the desired searching velocity alter the parameter:
 ```cpp
 // index search velocity - default 1rad/s

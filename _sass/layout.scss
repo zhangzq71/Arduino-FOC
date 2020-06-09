@@ -67,6 +67,9 @@
 .js-main-content:focus {
   outline: none;
 }
+.page-content:focus {
+  outline: none;
+}
 
 .page {
   @include container;
@@ -81,21 +84,21 @@
 
 .page-header {
   @include container;
-  display: none;
-  padding-top: $gutter-spacing-sm;
-  padding-bottom: $gutter-spacing-sm;
+  display: inline-block;
+  // padding-top: $gutter-spacing-sm;
+  // padding-bottom: $gutter-spacing-sm;
   background-color: $sidebar-color;
 
   @include mq(md) {
-    display: flex;
-    justify-content: flex-end;
+    display: block;
+    // justify-content: flex-start;
     height: $header-height;
-    background-color: $body-background-color;
+    background-color: $sidebar-color;
     border-bottom: $border $border-color;
   }
 
   &.nav-open {
-    display: block;
+    display: inline-block;
 
     @include mq(md) {
       display: flex;

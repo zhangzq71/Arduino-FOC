@@ -279,9 +279,12 @@ function initSearch() {
   }
 }
 
-function pageFocus() {
-  var mainContent = document.querySelector('.js-main-content');
-  mainContent.focus();
+function pageFocus(){
+  if ( window.innerWidth < 850) {  
+    // var mainContent = document.querySelector('.js-main-content');
+    var mainContent = document.querySelector('#main-content');
+    mainContent.focus(); 
+  }
 }
 
 // Document ready

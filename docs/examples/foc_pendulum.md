@@ -21,11 +21,7 @@ This is a very fun project in many ways, and it is intended:
 - Everyone with a bit of free time and a motivation to create something cool :D
 
 ### YouTube demonstration video :D
-<p align="">
-<a href="https://youtu.be/Ih-izQyXJCI">
-<img src="https://askuric.github.io/Arduino-FOC/extras/Images/youtube_pendulum.png"  class="img300">
-</a>
-</p>
+<iframe class="youtube"  src="https://www.youtube.com/embed/Ih-izQyXJCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 But for me, the most exciting part of this project was the ability to use the Field Oriented Control algorithm. 
 

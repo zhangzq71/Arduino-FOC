@@ -19,7 +19,7 @@ Download the files by clicking on links:
 - <b><a class="docs_link" href="extras/fabrication/BOM.xlsx"  download="simple_foc_shield_BOM"><i class="fa fa-file"></i> Bill Of Materials (BOM)</a></b> - Excel sheet
 - <b><a class="docs_link" href="extras/fabrication/3d_model.zip" download="simple_foc_shield_3Dmodel"><i class="fa fa-file"></i> 3D model</a></b> -  3D PDF & STEP file
 
-The board was designed in Altium Designer 2019, please contact me directly if you are interested in the project files: [contact](https://askuric.github.io/conctact).
+The board was designed in Altium Designer 2019, please contact me directly if you are interested in the project files: [contact](https://simplefoc.com/contact).
 
 ## Fabrication procedure and cost
 The price of the fabrication will highly depend of the number of boards and the companies you decide to use both as PCB manufacturers and the component suppliers. Here are two nice articles explaining how to approach the problem choosing the PCB manufacturer form [electronics-notes.com](https://www.electronics-notes.com/articles/constructional_techniques/printed-circuit-board-pcb/how-to-choose-right-best-pcb-manufacturer.php) and component supplier from [pcbonline.com](https://www.pcbonline.com/blog/How_to_Choose_a_PCB_Component_Supplier_165.html). 
@@ -175,5 +175,5 @@ The price for 100 pcs is around 1000$ on [seeedstrudio.com](https://www.seeedstu
    
 
 ## Fully assembled versions
-Order your own fully tested and assembled Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  from our [shop](https://askuric.github.io/simplefoc_shield_product).
+Order your own fully tested and assembled Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  from our [shop](https://simplefoc.com/simplefoc_shield_product).
 

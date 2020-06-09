@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Minimal Code Version
-parent: Getting Started
+parent: Installation
 nav_order: 2
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /minimal_download
@@ -29,4 +29,4 @@ This version of the code you can access directly using github interface.
 
 ## <i class="fa fa-desktop"></i> Minimal code in Arduino IDE
 Once when you have opened the code in the Arduino IDE you will be able to see the full library code in your IDE tabs. And you will be able to change code, adapt the classes to your specific hardware, add additional functionalities and similar.  Here is how it will look in Arduino IDE.
-<p><img src="extras/Images/minimal.gif" ></p>
+<p><img src="extras/Images/minimal.gif" class="width80"></p>

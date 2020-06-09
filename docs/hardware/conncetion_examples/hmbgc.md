@@ -9,10 +9,10 @@ grand_parent: Supported Hardware
 ---
 
 
-# HMBGC V2.2
+# HMBGC V2.2 example
 To use HMBGC controller for vector control (FOC) you need to connect motor to one of the motor terminals and connect the encoder to the analog pins. Following pictures show the schematic of the HMBGC board necessary connections and the one real example of the connection.
 
-<p>	<img src="extras/Images/hmbgc_connection.png" class="img400"> </p>
+<p>	<img src="extras/Images/hmbgc_connection.png" class="img50p"> </p>
  
  
 ## Encoder
@@ -37,5 +37,5 @@ Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <
 <blockquote class="danger"> HMBGC board doesn't support magnetic sensors because it doesn't have necessary SPI infrastructure.</blockquote>
 
 ## Example connection
-<p><img src="extras/Images/hmbgc_v22.jpg" class="width80">
+<p><img src="extras/Images/hmbgc_v22.jpg" class="width60">
 </p>

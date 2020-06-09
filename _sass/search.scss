@@ -8,9 +8,13 @@
   flex-grow: 1;
   height: 100%;
   margin-bottom: $sp-3;
+  width:100%;
+  max-width: 400px;
+  float: left; 
 
   @include mq(md) {
     margin-bottom: 0;
+    width:100%;
   }
 }
 

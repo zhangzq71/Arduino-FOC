@@ -2,18 +2,42 @@
 // Custom overrides from a user.
 //
 
-.className {color: rgb(60, 149, 250); font-weight: bold; }
-.fcnName {color:#44a8fa; }
-.structName {color:rgb(19, 104, 38); font-weight: bold;}
-.structProp {color:rgb(30, 141, 54); font-style: italic;}
-    
+.className {
+    //color: rgb(60, 149, 250); 
+    color: #0c56a9;
+    font-weight: bold;
+ }
+.fcnName {
+    color:#0061b1; 
+}
+.classProps {
+    color:#0061b1;
+ }
+.structName {
+    //color:rgb(19, 104, 38); 
+    color: #bb3a66;
+    font-weight: bold;
+}
+.structProp {
+    //color:rgb(30, 141, 54); 
+    color: #c51551;
+    font-style: italic;
+}
+.highlight .n {
+    color:#3a3a3a !important;
+}
 .highlight .c1 {
 color: #93a1a1;
 font-style:italic ;
 } // comment.single //
-.highlight .n {
-    color: #586e75;
-} // name //
+.highlight .cp {
+    color: #3a3a3a;
+}
+span.incLib{
+    color:#c51551;
+}
+
+
 
 .head-custom{ 
     font-family: 'Roboto', sans-serif;
@@ -36,7 +60,35 @@ font-style:italic ;
 }
 
 
+// image icon
+
+.image_icon{
+    position: relative;
+    width:40%;
+    display:inline-block;
+} 
+.image_icon img{
+    display: block; 
+    width:100%;
+}
+.image_icon .fa {
+    position: absolute; 
+    bottom:10px; 
+    left:10px; 
+    opacity: 0.4;
+}
+.image_icon a{
+    color: #686969;
+}
+.image_icon a:hover .fa{
+    color: #44a8fa;
+    opacity: 1;
+}
+
 // responsive images and videos{
+.width60{
+    width:60%;
+}
 .width80{
     width:80%;
 }
@@ -87,9 +139,20 @@ font-style:italic ;
     .width80{
         width:100%;
     }
+    .width60{
+        width:100%;
+    }
     .img_half{
         height:inherit;
         width: 50%;
+    }
+    .img_third{
+        height:inherit;
+        width: 30%;
+    }
+
+    .image_icon{
+        width:100%
     }
 }
 a{
@@ -125,25 +188,109 @@ blockquote.warning{
     background-color: rgba(255,221,102,.1);
 }
 
-.image_icon{
-    position: relative;
-    width:50%;
-    display:inline-block;
-} 
-.image_icon img{
-    display: block; 
+
+// custom navigation 
+ul.nav-custom {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+ul.nav-custom-bottom {
     width:100%;
+    float: none;
+    text-align: center;
 }
-.image_icon .fa {
-    position: absolute; 
-    bottom:10px; 
-    left:10px; 
-    opacity: 0.4;
+
+li.nav-item{
+    color: #5c5962;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    font-size: 1.1em;
 }
-.image_icon a{
-    color: #686969;
+li.nav-item a{
+    padding: 16px;
+    display: inline-block;
+    font-weight: 700;
+    color: #5c5962;
+    text-decoration: none;
+    background-image: none;
 }
-.image_icon a:hover .fa{
-    color: #44a8fa;
-    opacity: 1;
+ul.nav-custom-bottom li.nav-item{
+    float: none;
+    display: inline-block;
+    text-decoration: none;
+    background-image: none;
+}
+ul.nav-custom-bottom li.nav-item a{
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+li.nav-item svg{
+    fill: #5c5962;
+}
+li.nav-item:hover {
+  background-color: #0099da;
+}
+li.nav-item:hover a{
+    color:white;
+}
+li.nav-item:hover svg{
+    fill:white;
+}
+
+@media (max-width: 1200px) {
+    li.rm-md span{
+        display:none;
+    }
+    .contact-rm{
+        display:none;
+    }
+}
+@media (min-width: 853px) and (max-width: 1200px) {
+    .search{
+        max-width:225px;
+    }
+    
+    li.nav-item span{
+        display:block;
+    }
+    li.nav-item a{
+        padding:5px;
+        padding-left:10px;
+        padding-right: 10px;
+    }
+}
+@media (max-width: 853px) {
+    .search{
+        max-width: none;
+    }
+    .page-header{
+        width:100%;
+        padding-top: $gutter-spacing-sm;
+        text-align: center;
+    }
+    
+    .page-header ul.nav-custom{
+        float: none;
+        width: 100%;
+    }
+    .page-header ul.nav-custom li.nav-item{
+        float: none;
+        display: inline-block;
+        text-decoration: none;
+        background-image: none;
+    }
+    li.nav-item span{
+        display:block;
+    }
+    li.contact-rm{
+        display:none !important;
+    }
+    ul.nav-custom-bottom{
+        display:none !important;
+    }
 }

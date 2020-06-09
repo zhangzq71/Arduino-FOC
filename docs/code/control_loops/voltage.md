@@ -8,7 +8,7 @@ permalink: /voltage_loop
 nav_order: 1
 ---
 
-### Voltage control loop
+# Voltage control loop
 This control loop allows you to run the BLDC motor as it is simple DC motor using Park transformation. This mode is enabled by:
 ```cpp
 // voltage control loop

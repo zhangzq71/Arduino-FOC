@@ -8,7 +8,7 @@ permalink: /velocity_loop
 nav_order: 2
 ---
 
-### Velocity control loop
+# Velocity control loop
 This control loop allows you to spin your BLDC motor with desired velocity.  This mode is enabled by:
 ```cpp
 // velocity control loop
@@ -19,7 +19,7 @@ motor.controller = ControlType::velocity;
 
 You can test this algorithm by running the example `velocity_control.ino`.
 The velocity control is created by adding a PI velocity controller. This controller reads the motor velocity <i>v</i>, filters it to <i>v<sub>f</sub></i> and sets the <i>u<sub>q</sub></i> voltage to the motor in a such manner that it reaches and maintains the target velocity <i>v<sub>d</sub></i>, set by the user. 
-#### PI controller parameters
+## PI controller parameters
 To change the parameters of your PI controller to reach desired behavior you can change `motor.PI_velocity` structure:
 ```cpp
 // controller configuration based on the control type 

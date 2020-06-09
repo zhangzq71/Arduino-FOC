@@ -11,7 +11,7 @@ has_toc: false
 #  <span class="simple">Simple<span class="foc">FOC</span>library</span> supported hardware
 
 <p>
-<img src="extras/Images/connection.gif">
+<img src="extras/Images/connection.gif" class="width60">
 </p>
 
 The components you need to have in order to run any Field Oriented Control algorithm as well as this library:
@@ -23,3 +23,10 @@ The components you need to have in order to run any Field Oriented Control algor
 
 
 Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> is made modular and will support most of the motor + sensor combinations out there, as well as many low-cost bldc driver boards.
+
+## Connection examples
+For more information how to connect the BLDC motor, driver, microcontroller and the sensor please check the [connection examples](connection_examples) page.  
+
+<a href="arduino_simplefoc_shield"><img src="extras/Images/foc_shield_v13.jpg" class="img200 img_third"> </a>
+<a href="arduino_l6234"> <img src="extras/Images/uno_l6234.jpg" class="img200 img_third"> </a>
+<a href="hmbgc"><img src="extras/Images/hmbgc_v22.jpg" class="img200 img_third"> </a>

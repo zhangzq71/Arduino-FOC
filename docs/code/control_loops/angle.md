@@ -8,7 +8,7 @@ nav_order: 3
 permalink: /angle_loop
 ---
 
-### Angle control loop
+# Angle control loop
 This control loop allows you to move your BLDC motor to the desired angle in real time.   This mode is enabled by:
 ```cpp
 // angle control loop
@@ -20,7 +20,7 @@ motor.controller = ControlType::angle;
 You can test this algorithm by running the example `angle_control.ino`.
 The angle control loop is done by adding one more control loop in cascade on the velocity control loop like showed on the figure above. The loop is closed by using simple P controller. The controller reads the angle <i>a</i> from the motor and determines which velocity <i>v<sub>d</sub></i> the motor should move to reach desire angle <i>a<sub>d</sub></i> set by the user. And then the velocity controller reads the current filtered velocity from the motor <i>v<sub>f</sub></i> and sets the voltage <i>u<sub>q</sub></i> that is needed to reach the velocity <i>v<sub>d</sub></i>, set by the angle loop. 
 
-#### Controller parameters
+## Controller parameters
 To tune this control loop you can set the parameters to both angle P controller and velocity PI controller. 
 ``` csharp
 // controller configuration based on the control type 

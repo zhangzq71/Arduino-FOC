@@ -8,7 +8,7 @@ permalink: /contact
 # Contact
 Please do not hesitate to leave an issue or contact me directly by email.
 I will be very happy to hear your experiences.
-simplefoc@antunskuric.com
+<a Href="mailto:info@simplefoc.com"> info@simplefoc.com</a>
 
 Additionally you can find some updates on the website:
-[askuric.github.io](https://askuric.github.io)
+[simplefoc.com](https://simplefoc.com/contact)

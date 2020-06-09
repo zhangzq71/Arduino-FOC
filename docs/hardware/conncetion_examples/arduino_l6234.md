@@ -14,7 +14,7 @@ grand_parent: Supported Hardware
 - [Arduino UNO + Drotek L6234 + Margentic sensor AS5048A](#magnetic-sensor-as5048-example)
 
 ## Encoder example
-<p> <img src="extras/Images/arduino_connection.png" class="width80"></p>  
+<p> <img src="extras/Images/arduino_connection.png" class="width60"></p>  
 
 ### Encoder
 - Encoder channels `A` and `B` are connected to the Arduino's external interrupt pins `2` and `3`. 
@@ -35,12 +35,12 @@ Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <
 </blockquote>
 
 ### Example connection
-<p><img src="extras/Images/uno_l6234.jpg" class="width80"></p>
+<p><img src="extras/Images/uno_l6234.jpg" class="width60"></p>
 
 ## Magnetic sensor AS5048 example
 
 <p>
- <img src="extras/Images/arduino_connection_magnetic.png" class="width80">
+ <img src="extras/Images/arduino_connection_magnetic.png" class="img50p">
 </p>  
 
 ### Magnetic sensor

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Library Installation
-parent: Getting Started
+parent: Installation
 nav_order: 1
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /library_download
@@ -11,7 +11,7 @@ permalink: /library_download
 
 ## <i class="fa fa-desktop"></i> Arduino Library Manager installation
 The simplest way to get hold of the library is directly through `Arduino IDE` and *Arduino Library Manager*.
-<p><img src="extras/Images/alm.gif"></p>  
+<p><img src="extras/Images/alm.gif" class="width80"></p>  
 - Open Arduino IDE and start *Arduino Library Manager* by clicking: `Tools > Manage Libraries...`.
 - Search for *"Simple FOC"* library and install the [latest version <i class="fa fa-tag"></i>.](https://github.com/askuric/Arduino-FOC/releases)
 - Reopen Arduino IDE and you should have the library examples in `File > Examples > Simple FOC`.
