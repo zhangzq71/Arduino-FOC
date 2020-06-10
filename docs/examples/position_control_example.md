@@ -13,12 +13,12 @@ For this BLDC motor position control example we are going to be using this hardw
 
 [Arduino UNO](https://store.arduino.cc/arduino-uno-rev3) | [Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>](arduino_simplefoc_shield_showcase) | [AMT 103 encoder](https://www.mouser.fr/ProductDetail/CUI-Devices/AMT103-V?qs=%2Fha2pyFaduiAsBlScvLoAWHUnKz39jAIpNPVt58AQ0PVb84dpbt53g%3D%3D) | [IPower GBM4198H-120T](https://www.ebay.com/itm/iPower-Gimbal-Brushless-Motor-GBM4108H-120T-for-5N-7N-GH2-ILDC-Aerial-photo-FPV/254541115855?hash=item3b43d531cf:g:q94AAOSwPcVVo571)
 --- | --- | --- | --- 
-<img src="extras/Images/arduino_uno.jpg" style="width:150px"> |  <img src="extras/Images/shield_to_v13.jpg" style="width:150px">  | <img src="extras/Images/enc1.png" style="width:150px">  | <img src="extras/Images/mot.jpg" style="width:150px"> 
+<img src="extras/Images/arduino_uno.jpg" class="imgtable150"> |  <img src="extras/Images/shield_to_v13.jpg" class="imgtable150">  | <img src="extras/Images/enc1.png" class="imgtable150">  | <img src="extras/Images/mot.jpg" class="imgtable150"> 
 
 
 # Connecting everything together
 For a bit more in depth explanation of Arduino UNO and <span class="simple">Simple<span class="foc">FOC</span>Shield</span> connection please check the [connection examples](arduino_simplefoc_shield).
-<p><img src="extras/Images/foc_shield_v13.jpg" class="width80"></p>
+<p><img src="extras/Images/foc_shield_v13.jpg" class="width60"></p>
 
 For more information about the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> check the [docs](arduino_simplefoc_shield_showcase).
 
@@ -29,11 +29,11 @@ For more information about the <span class="simple">Simple<span class="foc">FOC<
 - Motor phases `a`, `b` and `c` are connected directly the motor terminal connector `TB_M1`
 
 <blockquote class="info"> <p class="heading">Alignment</p>
-Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <code>A</code> and <code>B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code>a</code> and <code>b</code> of the motor, that should be enough.
+Motor phases <code class="highlighter-rouge">a</code>,<code class="highlighter-rouge">b</code>,<code class="highlighter-rouge">c</code> and encoder channels <code class="highlighter-rouge">A</code> and <code class="highlighter-rouge">B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> of the motor, that should be enough.
 </blockquote>
 
 ### Small motivation :D
-<p><img src="extras/Images/simple_foc_shield_v13_small.gif" class="width80"></p>
+<p><img src="extras/Images/simple_foc_shield_v13_small.gif" class="width60"></p>
 
 # Arduino code 
 Let's go through the full code for this example and write it together.
@@ -59,14 +59,14 @@ void doB(){encoder.handleB();}
 ```
 In the `setup()` function we initialize the encoder and enable interrupts:
 ```cpp
-  // initialize encoder hardware
-  encoder.init();
-  // hardware interrupt enable
-  encoder.enableInterrupts(doA, doB);
+// initialize encoder hardware
+encoder.init();
+// hardware interrupt enable
+encoder.enableInterrupts(doA, doB);
 ```
 And that is it, let's setup the motor.
 
-<blockquote class="info">For more configuration parameters of the encoders please check the <code>Encoder</code> class <a href="encoder">docs</a>.</blockquote>
+<blockquote class="info">For more configuration parameters of the encoders please check the <code class="highlighter-rouge">Encoder</code> class <a href="encoder">docs</a>.</blockquote>
 
 
 ## Motor code
@@ -77,75 +77,75 @@ First we need to define the `BLDCMotor` class with the PWM pin numbers, number o
 BLDCMotor motor = BLDCMotor(9, 10, 11, 11, 8);
 ```
 
-<blockquote class="warning">If you are not sure what your pole pairs number is please check the  <code>find_pole_pairs.ino</code> example.</blockquote>
+<blockquote class="warning">If you are not sure what your pole pairs number is please check the  <code class="highlighter-rouge">find_pole_pairs.ino</code> example.</blockquote>
 
 Then in the `setup()` we configure first the voltage of the power supply if it is not `12` Volts.
 ```cpp
-  // power supply voltage
-  // default 12V
-  motor.voltage_power_supply = 12;
+// power supply voltage
+// default 12V
+motor.voltage_power_supply = 12;
 ```
 Then we tell the motor which control loop to run by specifying the `motor.controller` variable.
 ```cpp
-  // set control loop type to be used
-  // ControlType::voltage
-  // ControlType::velocity
-  // ControlType::angle
-  motor.controller = ControlType::angle;
+// set control loop type to be used
+// ControlType::voltage
+// ControlType::velocity
+// ControlType::angle
+motor.controller = ControlType::angle;
 ```
 Now we configure the velocity PI controller parameters
 ```cpp
-  // velocity PI controller parameters
-  // default P=0.5 I = 10
-  motor.PI_velocity.P = 0.2;
-  motor.PI_velocity.I = 20;
-  //default voltage_power_supply/2
-  motor.PI_velocity.voltage_limit = 6;
-  // jerk control using voltage voltage ramp
-  // default value is 300 volts per sec  ~ 0.3V per millisecond
-  motor.PI_velocity.voltage_ramp = 1000;
+// velocity PI controller parameters
+// default P=0.5 I = 10
+motor.PI_velocity.P = 0.2;
+motor.PI_velocity.I = 20;
+//default voltage_power_supply/2
+motor.PI_velocity.voltage_limit = 6;
+// jerk control using voltage voltage ramp
+// default value is 300 volts per sec  ~ 0.3V per millisecond
+motor.PI_velocity.voltage_ramp = 1000;
 ```
 Additionally we can configure the Low pass filter time constant `Tf`
 ```cpp
-  // velocity low pass filtering
-  // default 5ms - try different values to see what is the best. 
-  // the lower the less filtered
-  motor.LPF_velocity.Tf = 0.01;
+// velocity low pass filtering
+// default 5ms - try different values to see what is the best. 
+// the lower the less filtered
+motor.LPF_velocity.Tf = 0.01;
 ```
 Finally we configure position P controller gain and the velocity limit variable.
 ```cpp
-  // angle P controller 
-  // default P=20
-  motor.P_angle.P = 20;
-  //  maximal velocity of the position control
-  // default 20
-  motor.P_angle.velocity_limit = 4;
+// angle P controller 
+// default P=20
+motor.P_angle.P = 20;
+//  maximal velocity of the position control
+// default 20
+motor.P_angle.velocity_limit = 4;
 ```
 <blockquote class="info">For more information about the angle control loop parameters please check the  <a href="angle_loop">doc</a>.</blockquote>
 
 Next we connect the encoder to the motor, do the hardware init and init of the Field Oriented Control.
 ```cpp  
-  // link the motor to the sensor
-  motor.linkSensor(&encoder);
+// link the motor to the sensor
+motor.linkSensor(&encoder);
 
-  // initialize motor
-  motor.init();
-  // align encoder and start FOC
-  motor.initFOC();
+// initialize motor
+motor.init();
+// align encoder and start FOC
+motor.initFOC();
 ```
 The last peace of code important for the motor is of course the FOC routine in the `loop` function.
 ```cpp
 void loop() {
-  // iterative FOC function
-  motor.loopFOC();
+// iterative FOC function
+motor.loopFOC();
 
-  // iterative function setting and calculating the angle/position loop
-  // this function can be run at much lower frequency than loopFOC function
-  motor.move(target_angle);
+// iterative function setting and calculating the angle/position loop
+// this function can be run at much lower frequency than loopFOC function
+motor.move(target_angle);
 }
 ```
 That is it, let's see the full code now!
-<blockquote class="info">For more configuration parameters and control loops please check the <code>BLDCMotor</code> class <a href="motor_initialization">doc</a>.</blockquote>
+<blockquote class="info">For more configuration parameters and control loops please check the <code class="highlighter-rouge">BLDCMotor</code> class <a href="motor_initialization">doc</a>.</blockquote>
 
 ## Full Arduino code
 To the full code I have added a small serial communication code in the `serialEvent()` function,  to be able to change position/angle target value in real time.

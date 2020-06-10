@@ -31,7 +31,7 @@ grand_parent: Supported Hardware
 - Motor phases `a`, `b` and `c` are connected directly to the driver outputs
 
 <blockquote class="info"> <p class="heading">Alignment</p>
-Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <code>A</code> and <code>B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code>a</code> and <code>b</code> of the motor, that should be enough.
+Motor phases <code class="highlighter-rouge">a</code>,<code class="highlighter-rouge">b</code>,<code class="highlighter-rouge">c</code> and encoder channels <code class="highlighter-rouge">A</code> and <code class="highlighter-rouge">B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> of the motor, that should be enough.
 </blockquote>
 
 ### Example connection
@@ -40,7 +40,7 @@ Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <
 ## Magnetic sensor AS5048 example
 
 <p>
- <img src="extras/Images/arduino_connection_magnetic.png" class="img50p">
+ <img src="extras/Images/arduino_connection_magnetic.png" class="width50">
 </p>  
 
 ### Magnetic sensor
@@ -57,7 +57,7 @@ Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <
 - Motor phases `a`, `b` and `c` are connected directly to the driver outputs
 
 <blockquote class="info"> <p class="heading">Alignment</p>
-Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <code>A</code> and <code>B</code> and the magnetic sensor counting direction have to be oriented right for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place inverse <code>a</code> and <code>b</code> of the motor, that should be enough.
+Motor phases <code class="highlighter-rouge">a</code>,<code class="highlighter-rouge">b</code>,<code class="highlighter-rouge">c</code> and encoder channels <code class="highlighter-rouge">A</code> and <code class="highlighter-rouge">B</code> and the magnetic sensor counting direction have to be oriented right for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place inverse <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> of the motor, that should be enough.
 </blockquote>
 
 

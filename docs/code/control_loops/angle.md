@@ -56,7 +56,7 @@ The angle P controller can be updated by changing the `motor.P_angle` structure.
   
 For the angle control you will be able to see the influence of the velocity LPF filter as well. But the `Tf` value should not change much form the velocity control. So once you have it tuned for the velocity loop you can leave it as is.
 
-Additionally you can configure the `velocity_limit` value of the controller. This value prevents the controller to set too high velocities $v_d$ to the motor. 
+Additionally you can configure the `velocity_limit` value of the controller. This value prevents the controller to set too high velocities <i>v<sub>d</sub></i> to the motor. 
 - If you make your `velocity_limit` very low your motor will be moving in between desired positions with exactly this velocity. If you keep it high, you will not notice that this variable even exists. :D  
 
 Finally, each application is a bit different and the chances are you will have to tune the controller values a bit to reach desired behavior.

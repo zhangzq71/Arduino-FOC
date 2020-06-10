@@ -15,7 +15,7 @@ The SimpleFOC library gives you the choice of using 4 different plug and play co
 - angle control loop
 
 You set it by changing the `motor.controller` variable. If you want to control the motor angle you will set the `controller` to `ControlType::angle`, if you seek the DC motor behavior behavior by controlling the voltage use `ControlType::voltage`, if you wish to control motor angular velocity `ControlType::velocity`. 
-```cpp
+```sh
 // set FOC loop to be used
 // ControlType::voltage
 // ControlType::velocity

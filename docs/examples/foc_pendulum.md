@@ -12,9 +12,7 @@ permalink: /simplefoc_pendulum
 
 This is a project of designing and controlling the reaction wheel inverted pendulum based entirely on Arduino [SimpleFOC library and SimpleFOC shield](https://github.com/askuric/Arduino-FOC). 
 
-<p align="center">
-    <img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/swing-up.gif" class="img200">  <img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/stabilization.gif" class="img200">
-</p>
+<p><img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/swing-up.gif" class="width40">   <img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/stabilization.gif" class="width40"></p>
 
 This is a very fun project in many ways, and it is intended:
 - Students in search for a good testing platform for their advanced algorithms
@@ -36,10 +34,11 @@ But for me, the most exciting part of this project was the ability to use the Fi
 So far, FOC has been restricted to high-end applications due to the complexity and the cost of the hardware mostly, but also due to the lack of user-friendly, well documented software. Therefore I am very happy to show you the projects like this one, which directly benefit the FOC algorithm and BLDC motors and encourage you to use these techniques in your projects as well.
 
 ## What are the necessary components?
-Due to the using of the brushless motor and the SimpleFOC shield, this might be one of the simplest hardware setups of the reaction wheel inverted pendulum there is.
-<p align="center">
-    <img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/components.gif" class="img300">
-</p>
+<img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/img1.png" class="width60">
+
+Due to the using of the brushless motor and the <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, this might be one of the simplest hardware setups of the reaction wheel inverted pendulum there is.
+
+<img src="https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum/raw/master/images/components.gif" class="width60">
 
 Please check the [github repository](https://github.com/askuric/Arduino-FOC-reaction-wheel-inverted-pendulum) of this project for more details about the 3d printed components and hardware.
 
@@ -64,7 +63,7 @@ Arduino UNO doesn't have enough hardware interrupt pins for two encoders therefo
 - Motor phases `a`, `b` and `c` are connected directly the motor terminal connector `TB_M1`
 
 <blockquote class="info"> <p class="heading">Alignment</p>
-Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <code>A</code> and <code>B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code>a</code> and <code>b</code> of the motor, that should be enough.
+Motor phases <code class="highlighter-rouge">a</code>,<code class="highlighter-rouge">b</code>,<code class="highlighter-rouge">c</code> and encoder channels <code class="highlighter-rouge">A</code> and <code class="highlighter-rouge">B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> of the motor, that should be enough.
 </blockquote>
 
 
@@ -101,14 +100,14 @@ void doB(){encoder.handleB();}
 ```
 In the `setup()` function we initialize the encoder and enable interrupts:
 ```cpp
-  // initialize encoder hardware
-  encoder.init();
-  // hardware interrupt enable
-  encoder.enableInterrupts(doA, doB);
+// initialize encoder hardware
+encoder.init();
+// hardware interrupt enable
+encoder.enableInterrupts(doA, doB);
 ```
 And that is it, let's setup the pendulum encoder.
 
-<blockquote class="info">For more configuration parameters of the encoders please check the <code>Encoder</code> class <a href="encoder">docs</a>.</blockquote>
+<blockquote class="info">For more configuration parameters of the encoders please check the <code class="highlighter-rouge">Encoder</code> class <a href="encoder">docs</a>.</blockquote>
 
 
 ### Encoder 2 (pendulum) code
@@ -131,14 +130,14 @@ PciListenerImp listenerPB(pendulum.pinB, doPB);
 ``` 
 In the `setup()` function first we initialize the pendulum encoder:
 ```cpp
-  // initialize encoder hardware
-  pendulum.init();
+// initialize encoder hardware
+pendulum.init();
 ```
 And then instead of calling `pendulum.enableInterrupt()` function we use the `PciManager` library interface to attach the interrupts.
 ```cpp
-  // interrupt initialization
-  PciManager.registerListener(&listenerPA);
-  PciManager.registerListener(&listenerPB);
+// interrupt initialization
+PciManager.registerListener(&listenerPA);
+PciManager.registerListener(&listenerPB);
 ```
 And that is it the pendulum is ready, let's setup the motor.
 
@@ -150,47 +149,47 @@ First we need to define the `BLDCMotor` class with the PWM pin numbers, number o
 BLDCMotor motor = BLDCMotor(9, 10, 11, 11, 8);
 ```
 
-<blockquote class="warning">If you are not sure what your pole pairs number is please check the  <code>find_pole_pairs.ino</code> example.</blockquote>
+<blockquote class="warning">If you are not sure what your pole pairs number is please check the  <code class="highlighter-rouge">find_pole_pairs.ino</code> example.</blockquote>
 
 Then in the `setup()` we configure first the voltage of the power supply if it is not `12` Volts.
 ```cpp
-  // power supply voltage
-  // default 12V
-  motor.voltage_power_supply = 12;
+// power supply voltage
+// default 12V
+motor.voltage_power_supply = 12;
 ```
 Then we tell the motor which control loop to run by specifying the `motor.controller` variable.
 ```cpp
-  // set control loop type to be used
-  // ControlType::voltage
-  // ControlType::velocity
-  // ControlType::angle
-  motor.controller = ControlType::voltage;
+// set control loop type to be used
+// ControlType::voltage
+// ControlType::velocity
+// ControlType::angle
+motor.controller = ControlType::voltage;
 ```
 <blockquote class="info">For more information about the voltage control loop please check the  <a href="voltage_loop">doc</a>.</blockquote>
 
 Next we connect the encoder to the motor, do the hardware init and init of the Field Oriented Control.
 ```cpp  
-  // link the motor to the sensor
-  motor.linkSensor(&encoder);
+// link the motor to the sensor
+motor.linkSensor(&encoder);
 
-  // initialize motor
-  motor.init();
-  // align encoder and start FOC
-  motor.initFOC();
+// initialize motor
+motor.init();
+// align encoder and start FOC
+motor.initFOC();
 ```
 The last peace of code important for the motor is of course the FOC routine in the `loop` function.
 ```cpp
 void loop() {
-  // iterative FOC function
-  motor.loopFOC();
+// iterative FOC function
+motor.loopFOC();
 
-  // iterative function setting and calculating the angle/position loop
-  // this function can be run at much lower frequency than loopFOC function
-  motor.move(target_voltage);
+// iterative function setting and calculating the angle/position loop
+// this function can be run at much lower frequency than loopFOC function
+motor.move(target_voltage);
 }
 ```
 Now we are able to read the two encoders and set the voltage to the motor, now we need to write the stabilization algorithm.
-<blockquote class="info">For more configuration parameters and control loops please check the <code>BLDCMotor</code> class <a href="motor_initialization">doc</a>.</blockquote>
+<blockquote class="info">For more configuration parameters and control loops please check the <code class="highlighter-rouge">BLDCMotor</code> class <a href="motor_initialization">doc</a>.</blockquote>
 
 ### Control algorithm code
 
@@ -213,7 +212,7 @@ This is a very simple explanation of a relatively complex topic and I would like
 
 Also maybe interesting to say is that for a system like this one there is really no need to run it with the sample times less then 20ms. In my case I have run it at ~25ms, but you can go even to 50ms.
 
-<blockquote class="warning"><p class="heading">NOTE</p> The FOC algorithm <code>motor.loopFOC()</code> will run ~1ms but the control algorithm and the function <code>motor.move()</code> will be downsampled to ~25ms.</blockquote>
+<blockquote class="warning"><p class="heading">NOTE</p> The FOC algorithm <code class="highlighter-rouge">motor.loopFOC()</code> will run ~1ms but the control algorithm and the function <code class="highlighter-rouge">motor.move()</code> will be downsampled to ~25ms.</blockquote>
 
 #### Swing-up
 
@@ -235,24 +234,24 @@ I my case I have decided it is `0.5 radians`, `~30degrees`.
 So the full control algorithm code looks like this:
 ```cpp
 // control loop each ~25ms
-  if(loop_count++ > 25){
-    
-    // calculate the pendulum angle 
-    float pendulum_angle = constrainAngle(pendulum.getAngle() + M_PI);
+if(loop_count++ > 25){
+  
+  // calculate the pendulum angle 
+  float pendulum_angle = constrainAngle(pendulum.getAngle() + M_PI);
 
-    float target_voltage;
-    if( abs(pendulum_angle) < 0.5 ) // if angle small enough stabilize
-      target_voltage =  40*pendulum_angle + 7*pendulum.getVelocity() + 0.3*motor.shaftVelocity();
-    else // else do swing-up
-      // sets 40% of the maximal voltage to the motor in order to swing up
-      target_voltage = -sign(pendulum.getVelocity())*motor.voltage_power_supply*0.4;
+  float target_voltage;
+  if( abs(pendulum_angle) < 0.5 ) // if angle small enough stabilize
+    target_voltage =  40*pendulum_angle + 7*pendulum.getVelocity() + 0.3*motor.shaftVelocity();
+  else // else do swing-up
+    // sets 40% of the maximal voltage to the motor in order to swing up
+    target_voltage = -sign(pendulum.getVelocity())*motor.voltage_power_supply*0.4;
 
-    // set the target voltage to the motor
-    motor.move(target_voltage);
+  // set the target voltage to the motor
+  motor.move(target_voltage);
 
-    // restart the counter
-    loop_count=0;
-  }
+  // restart the counter
+  loop_count=0;
+}
 ```
 And that is it guys we can read our pendulum angle, we can control the motor, and we have our control algorithm. Lets write the full code! 
 

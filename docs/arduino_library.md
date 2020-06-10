@@ -58,13 +58,13 @@ There are two ways to install this Arduino library, depending of your plans with
 - [Full library installation](library_download) - for plug & play functionality with many examples 
 - [Minimal sketch installation](minimal_download) - Arduino sketch with integrated complete library
     - Easier experimentation and interaction with the library code directly
-<p><img src="extras/Images/alm.gif" class="img300"></p>  
+<p><img src="extras/Images/alm.gif" class="width50"></p>  
 
 
 ## Supported hardware
 Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> is made modular and will support most of the motor + sensor combinations out there, as well as many low-cost bldc driver boards.
 Please see the [supported hardware documentation](supported_hardware) to learn more!
-<p><img src="extras/Images/connection.gif" class="img300"></p>
+<p><img src="extras/Images/connection.gif" class="width50"></p>
 
 ## Using the code
 This library code is written in a way to be as simple sa possible to use and to leave a lot of space for configuration and fine tuning for specific applications. 
@@ -73,5 +73,6 @@ Please see the api [code documentation](code) to learn how simple it is to use!
 ## Project Examples 
 We are very happy to provide you with several projects multiple hardware configurations and fully documented and explained code!
 Go see the [examples](examples)!
-
-<a href="position_control_example"><img src="extras/Images/position_control_example.jpg" class="img200 img_half"></a><a href="velocity_control_example"><img src="extras/Images/uno_l6234_velocity.jpg"  class="img200 img_half"></a><a href="gimbal_velocity_example"><img src="extras/Images/hmbgc_v22_velocity_control.jpg" class="img200 img_half"></a><a href="simplefoc_pendulum"><img src="extras/Images/foc_pendulum.jpg" class="img200 img_half"></a>
+<p style="width:100%">
+<a href="position_control_example"><img src="extras/Images/position_control_example.jpg" class="img200 img_half"></a><a href="velocity_control_example"><img src="extras/Images/hmbgc_v22_velocity_control.jpg" class="img200 img_half"></a><a href="simplefoc_pendulum"><img src="extras/Images/foc_pendulum.jpg" class="img200 img_half"></a>
+</p>

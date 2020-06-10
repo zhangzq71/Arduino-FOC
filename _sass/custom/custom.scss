@@ -56,7 +56,8 @@ $sidebar-color: $white;
 //$search-background-color: $white;
 //$table-background-color: $white;
 //$code-background-color: $grey-lt-000;
-$code-background-color: #f9f9f9;
+//$code-background-color: #f9f9f9;
+$code-background-color: #30302f;
 
 //$body-text-color: $grey-dk-100;
 //$body-heading-color: $grey-dk-100;
@@ -113,7 +114,7 @@ $link-color: $blue-000;
 //$gutter-spacing: $sp-6;
 //$gutter-spacing-sm: $sp-4;
 $nav-width: 300px;
-//$nav-width-md: 248px;
+$nav-width-md: 270px;
 $content-width: 1200px;
 //$header-height: 60px;
 //$search-results-width: 500px;
@@ -122,10 +123,10 @@ $content-width: 1200px;
 //// Media queries in pixels
 ////
 
-//$media-queries: (
-//xs: 320px,
-//sm: 500px,
-//md: $content-width,
-//lg: $content-width + $nav-width,
-//xl: 1400px
-//);
+$media-queries: (
+    xs: 320px,
+    sm: 500px,
+    md: 800px,
+    lg: $content-width + $nav-width,
+    xl: 1400px
+);

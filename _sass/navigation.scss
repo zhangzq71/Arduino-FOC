@@ -50,9 +50,17 @@
   
   .grand-child-list {
     display: none;
+    @include fs-3;
   }
   .child-list {
     display: none;
+    @include fs-3;
+  }
+
+  @include mq(md) {
+    .child-list {
+      display: block;
+    }
   }
 
   &.active {

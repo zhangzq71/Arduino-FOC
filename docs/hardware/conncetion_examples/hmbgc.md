@@ -12,12 +12,12 @@ grand_parent: Supported Hardware
 # HMBGC V2.2 example
 To use HMBGC controller for vector control (FOC) you need to connect motor to one of the motor terminals and connect the encoder to the analog pins. Following pictures show the schematic of the HMBGC board necessary connections and the one real example of the connection.
 
-<p>	<img src="extras/Images/hmbgc_connection.png" class="img50p"> </p>
+<p>	<img src="extras/Images/hmbgc_connection.png" class="width50"> </p>
  
  
 ## Encoder
 <blockquote class="warning"> <p class="heading">Pinout restriction</p>
-HMBGC doesn't have access to the Arduino's external interrupt pins <code>2</code> and <code>3</code>, moreover the only pins we have access to are analog pins <code>A0-A7</code>. 
+HMBGC doesn't have access to the Arduino's external interrupt pins <code class="highlighter-rouge">2</code> and <code class="highlighter-rouge">3</code>, moreover the only pins we have access to are analog pins <code class="highlighter-rouge">A0-A7</code>. 
 Therefore we need to read the encoder channels using the software interrupt library, please check the  encoder <a href="encoder">code implementation </a> for more information. </blockquote>
 
 Please see the HMBGC code example (`HMBGC_example.ino`) to test all the functionalities.
@@ -30,7 +30,7 @@ Please see the HMBGC code example (`HMBGC_example.ino`) to test all the function
 - Motor terminal `M1` uses Arduino pins `9`,`10`,`11` and `M2` uses `3`,`5`,`6`
 
 <blockquote class="info"> <p class="heading">Alignment</p>
-Motor phases <code>a</code>,<code>b</code>,<code>c</code> and encoder channels <code>A</code> and <code>B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code>a</code> and <code>b</code> of the motor, that should be enough.
+Motor phases <code class="highlighter-rouge">a</code>,<code class="highlighter-rouge">b</code>,<code class="highlighter-rouge">c</code> and encoder channels <code class="highlighter-rouge">A</code> and <code class="highlighter-rouge">B</code> have to have the same orientation for the algorithm to work. But don't worry about it too much. Connect it initially as you wish and then if the motor locks in place reverse phase <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> of the motor, that should be enough.
 </blockquote>
 
 

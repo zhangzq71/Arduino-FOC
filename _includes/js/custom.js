@@ -1,7 +1,7 @@
 var libraires =[
-    "SimpleFOC",
-    "PciManager",
-    "PciListenerImp"
+    "SimpleFOC.h",
+    "PciManager.h",
+    "PciListenerImp.h"
 ]
 
 var classNames = [
