@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Control Theory Corner
-parent: Control loops
-grand_parent: Code
+parent: Motion Control
+grand_parent: Using the Code
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 5
 permalink: /control_theory_corner

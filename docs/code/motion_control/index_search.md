@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Index Search loop 
-parent: Control loops
-grand_parent: Code
+parent: Motion Control
+grand_parent: Using the Code
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 4
 permalink: /index_search_loop

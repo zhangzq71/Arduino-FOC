@@ -24,7 +24,7 @@ The library is intended both for:
 - **Open-Source**: Full code and documentation available on github
 - **Easy to setup and configure**: 
   - Easy hardware configuration ([sensors](sensors), [BLDC motors](motor_initialization))
-  - Easy [tuning the control loops](control_loops)
+  - Easy [tuning the control loops](motion_control)
 - **Modular**:
   - Supports as many [sensors ,  BLDC motors  and  driver boards](supported_hardware) as possible
   - Supports as many application requirements as possible

@@ -4,8 +4,9 @@ title: Position Sensors
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /sensors
 nav_order: 1
-parent: Code
+parent: Using the Code
 has_children: True
+has_toc: False
 ---
 
 # Position Sensors 

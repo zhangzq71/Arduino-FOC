@@ -2,7 +2,6 @@
 layout: default
 title: Work roadmap
 nav_order: 8
-parent: Code
 permalink: /roadmap
 ---
 
@@ -40,3 +39,6 @@ permalink: /roadmap
 - [x] Sine wave lookup table implementation
 - [X] Implement Space Vector Modulation method : Pure SVM
 - [x] Implement Space Vector Modulation method : PWM SVM
+
+
+

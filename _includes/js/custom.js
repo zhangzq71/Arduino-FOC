@@ -1,7 +1,24 @@
 var libraires =[
     "SimpleFOC.h",
     "PciManager.h",
-    "PciListenerImp.h"
+    "PciListenerImp.h",
+    "Encoder.h",
+    "FOCutils.h",
+    "BLDCMotor.h",
+    "MagneticSensor.h",
+    "Sensor.h"
+]
+
+var defines =[
+    "DEF_POWER_SUPPLY",
+    "DEF_PI_VEL_P",
+    "DEF_PI_VEL_I",
+    "DEF_P_ANGLE_P",
+    "DEF_PI_VEL_U_RAMP",
+    "DEF_P_ANGLE_VEL_LIM",
+    "DEF_INDEX_SEARCH_TARGET_VELOCITY",
+    "DEF_VOLTAGE_SENSOR_ALIGN",
+    "DEF_VEL_FILTER_Tf"
 ]
 
 var classNames = [
@@ -40,9 +57,10 @@ var funcNames = [
     "handleIndex",
     "registerListener",
     "linkSensor",
-    "useDebugging",
+    "useMonitoring",
     "monitor",
     "print",
+    "monitor_port",
     "println",
     "getVelocity",
     "getAngle",
@@ -51,12 +69,33 @@ var funcNames = [
     "constrainAngle",
     "controllerLQR",
     "sign",
-    "shaftVelocity"
+    "shaftVelocity",
+    "initRelativeZero",
+    "initAbsoluteZero",
+    "needsAbsoluteZeroSearch",
+    "hasAbsoluteZero",
+    "command",
+    "setPhaseVoltage",
+    "_delay",
+    "_micros",
+    "shaftAngle",
+    "absoluteZeroAlign",
+    "electricAngle",
+    "alignSensor",
+    "normalizeAngle",
+    "_sin",
+    "_cos",
+    "setPwm",
+    "positionP",
+    "velocityPI",
+    "controllerPI"
+
 ];
 var structNames = [
     "Pullup",
     "Quadrature",
-    "ControlType"
+    "ControlType",
+    "FOCModulationType"
 ];
 var structProps = [
     "EXTERN",
@@ -66,6 +105,8 @@ var structProps = [
     "angle",
     "velocity",
     "voltage",
+    "SpaceVectorPWM",
+    "SinePWM"
 ];
 jtd.onReady(function(){
     document.querySelectorAll('.n').forEach(function(e) {
@@ -90,9 +131,27 @@ jtd.onReady(function(){
     //include style
     document.querySelectorAll('.cp').forEach(function(e) {
         var str = e.innerHTML;
+
+        // show libraries
         libraires.forEach(function(lib){
             str = str.replace( lib ,"<span class='incLib'>" +lib + "</span>" );
         }); 
+
+        // show defines
+        defines.forEach(function(def){
+            str = str.replace( def ,"<span class='kt'>" +def + "</span>" );
+        }); 
+        
+        
+        // enable comments & defines
+        a = str.split('\n');
+        a.forEach((element,index) => {
+            element = element.replace( /(\/\/)/ ,"<span class='c1'> //" ) + "</span>";
+            a[index] = element.replace( "#define" ,"<span class='k'>#define </span> " );
+        });
+
+        str = a.join('\n');
+
         e.innerHTML = str;
     });
 });

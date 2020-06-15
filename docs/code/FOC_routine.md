@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Field Oriented Control 
-parent: Code 
+parent: Using the Code 
 permalink: /foc_routine
 nav_order: 4
 ---
 
 # Field Oriented Control routine 
-
+    
 ## Initializing - `setup()`
 After the motor and encoder are initialized and the driver and control loops are configured you initialize the FOC algorithm. 
 ```cpp

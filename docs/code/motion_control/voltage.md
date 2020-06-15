@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Voltage Control loop
-parent: Control loops
-grand_parent: Code
+title: Torque Control
+parent: Motion Control
+grand_parent: Using the Code
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /voltage_loop
 nav_order: 1

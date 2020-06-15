@@ -39,7 +39,7 @@ span.incLib{
 .highlight .n {
     color:#a1cdf0 !important;
 }
-.highlight .c1 {
+.highlight .c1 , .highlight .cm {
     color: #5cb65a;
     font-style:italic ;
 } // comment.single //
@@ -66,7 +66,9 @@ span.incLib{
 div.language-sh pre,  div.language-sh code ,div.language-shell pre,  div.language-shell code, code.highlighter-rouge{
     background-color: #f9f9f9;
 }
-
+.highlight .nl{
+    color: #268bd2;
+}
 
 
 .head-custom{ 
@@ -346,4 +348,15 @@ li.nav-item:hover svg{
 .imgtable150{
     width:100%;
     max-width: 150px;
+}
+
+
+.imgtable100{
+    width:100%;
+    max-width: 100px;
+}
+
+a.remove_dec{
+    text-decoration: none;
+    background-image: none;
 }

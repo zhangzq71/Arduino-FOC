@@ -5,11 +5,13 @@ description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /encoder
 nav_order: 1
 parent: Position Sensors
-grand_parent: Code
+grand_parent: Using the Code
 ---
 
 
-## Encoder setup
+# Encoder setup
+
+## Step 1. Instantiate `Encoder` class
 To initialize the encoder you need to provide the encoder `A` and `B` channel pins, encoder `PPR` and optionally `index` pin.
 ```cpp
 //  Encoder(int encA, int encB , int cpr, int index)
@@ -18,29 +20,38 @@ To initialize the encoder you need to provide the encoder `A` and `B` channel pi
 //  - index pin     - (optional input)
 Encoder encoder = Encoder(2, 3, 8192, A0);
 ```
-Next important feature of the encoder is enabling or disabling the `Quadrature` more. If the Encoder is run in the quadrature more its number of impulses per rotation(`PPR`) is quadrupled by detecting each `CHANGE` of the signals `A` and `B` - `CPR = 4xPPR`. In some applications, when the encoder `PPR` is high it can be too much for the Arduino to handle so it is preferable not to use `Quadrature` mode. By default all the encoders use `Quadrature` mode. If you would like to enable or disable this parameter do it in the Arduino setup function by running:
+## Step 2. Configuration
+When the Encoder class is instantiated, we need to configure it. First feature we can configure is enabling or disabling the `Quadrature` mode. If the Encoder is run in the quadrature mode its number of impulses per rotation(`PPR`) is quadrupled by detecting each `CHANGE` of the signals `A` and `B` - `CPR = 4xPPR`. In some applications, when the encoder `PPR` is high it can be too much for the Arduino to handle so it is preferable not to use `Quadrature` mode. By default all the encoders use `Quadrature` mode. If you would like to enable or disable this parameter do it in the Arduino `setup()` function before `init()` call:
 ```cpp
-// check if you need internal pullups
-//  Quadrature::ENABLE - CPR = 4xPPR  - default
-//  Quadrature::DISABLE - CPR = PPR
-encoder.quadrature = Quadrature::ENABLE;
+// Quadrature mode enabling and disabling
+//  Quadrature::ON - CPR = 4xPPR  - default
+//  Quadrature::OFF - CPR = PPR
+encoder.quadrature = Quadrature::OFF;
 ```
-Additionally the encoder has one more important parameters which is whether you want to use Arduino's internal pullup or you have external one. That is set by changing the value of the `encoder.pullup` variable. The default value is set to `Pullup::EXTERN`
+<blockquote class="warning"><p class="heading">CPR, PPR?!</p> PPR (pulses per revolution) - this is the physical number of impulses the encoder has per revolution. CPR (counts per revolution) - this is amount you are going to have in your counter after the full rotation of the encoder. Now depending on whether you use quadrature mode (counting each edge of the impulse) or not (counting just the rising edge) you will have different CPR for the same PPR. For quadrature mode you will have CPR = 4xPPR and if not using quadrature mode you will have CPR=PPR</blockquote>
+
+Additionally the encoder has one more important parameter and this is the pullup location. MAny encoders require pullups and in cases when you have an encoder that needs one and you don't have one on your hands you can use Arduino pullups. That is set by changing the value of the `encoder.pullup` variable. The default value is set to `Pullup::EXTERN` but if you would like to change it to use the MCU ones do:
 ```cpp
 // check if you need internal pullups
 // Pullup::EXTERN - external pullup added  - default
 // Pullup::INTERN - needs internal arduino pullup
-encoder.pullup = Pullup::EXTERN;
+encoder.pullup = Pullup::INTERN;
 ```
-### Encoder interrupt configuration
+<blockquote class="warning"><p class="heading">Arduino Pullup 20kOhm</p> Be careful when using internal pullups, Arduino has relatively high valued pullups around 20kOhm, which means that you might have some problems for higher velocities (for shorted impulse durations). Recommended pull-up values are in between 1kOhm and 5kOhm.</blockquote>
+
+## Step 3. Encoder interrupt setup
 There are two ways you can run encoders with Simple FOC library.
-- Using Arduino hardware external interrupt - for Arduino UNO pins  `2` and `3` 
-- Using software pin change interrupt by using a library such as [PciManager library](https://github.com/prampec/arduino-pcimanager)
+- Using [hardware external interrupt](#hardware-external-interrupt) 
+   - Arduino UNO pins  `2` and `3`
+   - STM32 boards any pin
+- Using [software pin change interrupt](#software-pin-change-interrupt) by using a library such as [PciManager library](https://github.com/prampec/arduino-pcimanager)
+   - Only for Arduino devices (Atmga328 and Atmage2560)
 
-> Using the hardware external interrupts usually results in a bit better and more reliable performance but software interrupts will work very good as well. 
+<blockquote class="warning"><p class="heading">Software interrupts</p> Using the hardware external interrupts usually results in better and more reliable performance but software interrupts will work very well for lower velocities. Especially on boards that just don't have enough hardware interrupt pins, having this functionality basically enables FOC on these boards.</blockquote>
 
-#### Arduino Hardware external interrupt
-Arduino UNO has two hardware external interrupt pins, pin `2` and `3`. And in order to use its functionalities the encoder channels `A` and `B` will have to be connected exactly on these pins.
+### Hardware external interrupt
+Arduino UNO has two hardware external interrupt pins, pin `2` and `3`,  Arduino Mega has 6 interrupt pins, pins `2`, `3`, `18`, `19`, `20`and `2` whereas STM32 boards such as Nucleo and Bluepill can use all their digital pins as interrupt pins, which makes implementation much easier.
+For Arduino Uno, the encoder channels `A` and `B` will have to be connected exactly to the pisn `2` and `3`, in order to use hardware interrupts.
 
 Simple FOC `Encoder` class already has implemented initialization and encoder `A` and `B` channel callbacks. 
 All you need to do is define two functions `doA()` and `doB()`, the buffering functions of encoder callback functions `encoder.handleA()` and `encoder.handleB()`. 
@@ -49,12 +60,12 @@ All you need to do is define two functions `doA()` and `doB()`, the buffering fu
 void doA(){encoder.handleA();}
 void doB(){encoder.handleB();}
 ```
-And supply those functions to the encoder interrupt init function `encoder.enableInterrupts()`
+And provide those functions to the encoder interrupt init function `encoder.enableInterrupts()`
 ```cpp
 // enable encoder hardware interrupts
 encoder.enableInterrupts(doA, doB)
 ```
-You can name the buffering functions as you wish. It is just important to supply them to the `encoder.init()` function. This procedure is a tradeoff in between scalability and simplicity. This allows you to have more than one encoder connected to the same arduino. All you need to do is to instantiate new `Encoder` class and create new buffer functions. For example:
+You can name the buffering functions as you wish. It is just important to provide them to the `encoder.init()` function. This procedure is a tradeoff in between scalability and simplicity. This allows you to have more than one encoder connected to the same arduino. All you need to do is to instantiate new `Encoder` class and create new buffer functions. For example:
 ```cpp
 // encoder 1
 Encoder enc1 =  Encoder(...);
@@ -75,14 +86,14 @@ void setup(){
 }
 ```
 
-##### Index pin configuration
-In order to read index pin efficiently Simple FOC algorithm enables you to use the same approach as for the channels `A` and `B`. First you need to provide the `Encoder` class the index pin number:
+#### Index pin configuration
+In order to read index pin efficiently Simple FOC library enables you to use the same approach as for the channels `A` and `B`. First you need to provide the `Encoder` class the index pin number:
 ```cpp
 Encoder encoder = Encoder(pinA, pinB, cpr, index_pin);
 ```
 If you are using Arduino board such as Arduino Mega and similar and if you have more tha 2 hardware interrupts you can connect your index pin to the hardware interrupt pin (example Arduino Mega pin `21`). Your code will look like:
 ```cpp
-Encoder encoder =  Encoder(2,3,600,A0);
+Encoder encoder =  Encoder(2,3,600,21);
 // A and B interrupt routine 
 void doA(){encoder.handleA();}
 void doB(){encoder.handleB();}
@@ -95,6 +106,7 @@ void setup(){
   }
 ```
 The function `enableInterrupts` will handle all the initialization for you. 
+
 If yo are using Arduino UNO to run this algorithm and you do not have enough hardware interrupt pins you will need to use software interrupt library such as  [PciManager library](https://github.com/prampec/arduino-pcimanager). Arduino UNO code for using an encoder with index can be:
 ```cpp
 Encoder encoder =  Encoder(2,3,600,A0);
@@ -115,12 +127,12 @@ void setup(){
   ...
   }
 ```
-The same procedure can be done for pins `A` and `B` if your application makes you run out of the hardware interrupt pins. Software interrupts are very powerful and produce very comparable results to the hardware interrupts, but in general they tend to have a bit worse performance. `index` pin produces an interrupt once per rotation, therefore it is not critical, so software or hardware interrupt doesn't change too much in terms of performance. 
+The same procedure can be done for pins `A` and `B` if your application makes you run out of the hardware interrupt pins. Software interrupts are very powerful and produce comparable results to the hardware interrupts especially if you have no other choice. `index` pin produces an interrupt once per rotation, therefore it is not critical, so software or hardware interrupt doesn't change too much in terms of performance. 
 
-To explore better the encoder algorithm an example is provided `encoder_example.ino`.
+To explore better the difference in the encoder functions with both hardware and software interrupt approach please check the examples `encoder_example.ino` and `encoder_software_interrupts_example.ino`.
 
-#### Arduino software pin change interrupt
-If you are not able to access your pins `2` and `3` of your Arduino UNO or if you want to use more than none encoder you will have to use the software interrupt approach. 
+### Software pin change interrupt
+If you are not able to access your pins `2` and `3` of your Arduino UNO or if you want to use more than one encoder you will have to use the software interrupt approach. 
 I suggest using the [PciManager library](https://github.com/prampec/arduino-pcimanager).
 
 The steps of using this library in code are very similar to [hardware interrupt](#arduino-hardware-external-interrupt).
@@ -152,7 +164,7 @@ encoder.init();
 PciManager.registerListener(&listenerA);
 PciManager.registerListener(&listenerB);
 ```
-And that is it, it is very simple. It if you want more than one encoder, you just initialize the new class instance, create the new `A` and `B` callbacks, intialize the new listeners. Here is a quick example:
+And that is it, it is very simple. It if you want more than one encoder, you just initialize the new class instance, create the new `A` and `B` callbacks, initialize the new listeners. Here is a quick example:
 ```cpp
 // encoder 1
 Encoder enc1 =  Encoder(9, 10, 8192);
@@ -182,12 +194,12 @@ void setup(){
 }
 ```
 You can look into the `HMBGC_example.ino` example to see this code in action. 
-##### Index pin configuration
+#### Index pin configuration
 Enabling index pin in the case of the software interrupt is very simple. You just need to provide it to the `Encoder` class initialization as additional parameter. 
 ```cpp
 Encoder encoder = Encoder(pinA, pinB, cpr, index_pin);
 ```
-Afterward you create the same type of callback buffering function as for `A` and `B` channels and using the `PCIManager` tools initialize and register the listener for the `index` channel as for the `A` and `B`. Here is a quick example:
+Afterwards you create the same type of callback buffering function as for `A` and `B` channels and using the `PCIManager` tools initialize and register the listener for the `index` channel as for the `A` and `B`. Here is a quick example:
 example:
 ```cpp
 // class init

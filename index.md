@@ -39,7 +39,7 @@ This video demonstrates the Simple FOC library basic usage, electronic connectio
 - **Arduino compatible**: Arduino library code
 - **Easy to setup and configure**: 
   - Easy hardware configuration
-  - Easy [tuning the control loops](control_loops)
+  - Easy [tuning the control loops](motion_control)
 - **Modular**:
   - Supports as many [sensors ,  BLDC motors  and  driver boards](supported_hardware) as possible
   - Supports as many application requirements as possible

@@ -2,7 +2,7 @@
 layout: default
 title: BLDC Motor
 nav_order: 2
-parent: Code
+parent: Using the Code
 permalink: /motor_initialization
 ---
 
@@ -39,3 +39,4 @@ motor.voltage_power_supply = 12;
 The `voltage_power_supply` value tells the FOC algorithm what is the maximum voltage it can output. Additionally since the FOC algorithm implemented in the Simple FOC library uses sinusoidal voltages the magnitudes of the sine waves exiting the Driver circuit is going to be  `[-voltage_power_supply/2, voltage_power_supply/2]`.
 
 <img src="../extras/Images/sine_foc.png" >
+

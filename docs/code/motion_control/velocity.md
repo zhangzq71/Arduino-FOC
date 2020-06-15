@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Velocity Control loop
-parent: Control loops
-grand_parent: Code
+title: Velocity Control
+parent: Motion Control
+grand_parent: Using the Code
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /velocity_loop
 nav_order: 2
@@ -27,8 +27,8 @@ To change the parameters of your PI controller to reach desired behavior you can
 // default P=0.5 I = 10
 motor.PI_velocity.P = 0.2;
 motor.PI_velocity.I = 20;
-//default voltage_power_supply/2
-motor.PI_velocity.voltage_limit = 6;
+//default voltage_power_supply
+motor.PI_velocity.voltage_limit = 8;
 // jerk control using voltage voltage ramp
 // default value is 300 volts per sec  ~ 0.3V per millisecond
 motor.PI_velocity.voltage_ramp = 1000;

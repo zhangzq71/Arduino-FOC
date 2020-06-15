@@ -27,7 +27,7 @@ Examples  | Description | Link | Price
 
 
 <blockquote class="warning">
-<p class="heading">Encoder CPR: Rule of thumb</p>
+<p class="heading">Encoder CPR: Rule of thumb for Arduino UNO</p>
 For Arduino UNO, the maximum number of pulses/second should not exceed 20,000. After this value it start to have execution issues. 
 Please take this in consideration when choosing the encoder and especially if using more than one motor.<br>
 <p class="heading">Example</p>

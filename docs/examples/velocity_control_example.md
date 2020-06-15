@@ -190,7 +190,7 @@ void setup() {
   // align encoder and start FOC
   motor.initFOC();
 
-  // debugging port
+  // monitoring port
   Serial.begin(115200);
   Serial.println("Motor ready.");
   Serial.println("Set the target velocity using serial terminal:");
