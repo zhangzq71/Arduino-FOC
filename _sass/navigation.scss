@@ -52,16 +52,15 @@
     display: none;
     @include fs-3;
   }
-  .child-list {
+  .grand-grand-child-list {
     display: none;
     @include fs-3;
   }
-
-  @include mq(md) {
-    .child-list {
-      display: block;
-    }
+  .child-list {
+    display: bock;
+    @include fs-4;
   }
+
 
   &.active {
     .child-list {
@@ -70,6 +69,12 @@
       &.active{
         .grand-child-list{
           display: block;
+          
+          &.active{
+            .grand-grand-child-list{
+              display: block;
+            }
+          }
         }
       }
     }
