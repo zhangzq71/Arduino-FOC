@@ -10,6 +10,9 @@ grand_grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</sp
 
 # Motor commands
 
+This is the full source implementation of the motor commands. You can see it is pretty simple.  
+
+Here is the code, and beneath the code see an [example of adding a new command](#adding-a-new-command-example--disable-motor---d).
 ```cpp
 /**
  * Function setting the configuration parameters  of the motor, target value of the control loop
@@ -20,35 +23,7 @@ grand_grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</sp
  * - set target values
  * - check all the configuration values 
  * 
- * To check the config value just enter the command letter.
- * For example: 
- * - to read velocity PI controller P gain run: P
- * - to set velocity PI controller P gain  to 1.2 run: P1.2
- * 
- * To change the target value just enter a number in the terminal:
- * For example: 
- * - to change the target value to -0.1453 enter: -0.1453
- * - to get the current target value enter: V3 
- * 
- * List of commands:
- *  - P: velocity PI controller P gain
- *  - I: velocity PI controller I gain
- *  - L: velocity PI controller voltage limit
- *  - R: velocity PI controller voltage ramp
- *  - F: velocity Low pass filter time constant
- *  - K: angle P controller P gain
- *  - N: angle P controller velocity limit
- *  - C: control loop 
- *    - 0: voltage 
- *    - 1: velocity 
- *    - 2: angle
- *  - V: get motor variables
- *    - 0: currently set voltage
- *    - 1: current velocity
- *    - 2: current angle
- *    - 3: current target value
- *
- * - Look into the documentation (docs.simplefoc.com) for more information.
+   ...
  * 
  * @param command String containing the user command
  * 
@@ -167,4 +142,38 @@ int BLDCMotor::command(String user_command) {
   return errorFlag;
 }
 
+```
+
+## Adding a new command example : disable motor - `D`.
+
+We will start by adding a new command just create a new case entry before `default:` entry. 
+
+```cpp
+  ....
+case 'D':
+
+  break;
+default:
+   ...  
+```
+
+Now let's add the disabling functionality:
+```cpp
+  ....
+case 'D':
+  disable();
+  break;
+default:
+   ...  
+```
+
+And we can add a monitoring output to notify the user that the motor is disabled:
+```cpp
+  ....
+case 'D':
+  if(monitor_port) monitor_port->print("Motor disabled!");
+  disable();
+  break;
+default:
+   ...  
 ```

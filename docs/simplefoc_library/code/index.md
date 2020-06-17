@@ -262,20 +262,19 @@ void loop() {
   // FOC execution
   // motion control loop
   
+  
   // user communication
-  serialReceiveUserCommand();
+  motor.command(serialReceiveUserCommand());
 }
 
-// utility function enabling serial communication function with the user
-// user can set the target values and set/get the motor configuration using motor commands 
-// see documentation for full command list 
-// 
-// this function can be implemented in serialEvent function as well
-void serialReceiveUserCommand() {
+// utility function enabling serial communication the user
+String serialReceiveUserCommand() {
   
   // a string to hold incoming data
   static String received_chars;
   
+  String command = "";
+
   while (Serial.available()) {
     // get the new byte:
     char inChar = (char)Serial.read();
@@ -286,12 +285,13 @@ void serialReceiveUserCommand() {
     if (inChar == '\n') {
       
       // execute the user command
-      motor.command(received_chars);
+      command = received_chars;
 
       // reset the command buffer 
       received_chars = "";
     }
   }
+  return command;
 }
 
 ```
@@ -431,19 +431,17 @@ This is the code of the library example `motor_full_control_serial_examples/magn
   <span class="mon_s com_s_hide"><span class="n">motor</span><span class="p">.</span><span class="n">monitor</span><span class="p">();</span></span> 
   
   <span class="com_s"><span class="c1">// user communication</span>
-  <span class="n">serialReceiveUserCommand</span><span class="p">();</span></span>
+  <span class="n">motor</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="n">serialReceiveUserCommand</span><span class="p">());</span></span>
 <span class="p">}</span>
 <span class="com_s">
-<span class="c1">// utility function enabling serial communication function with the user</span>
-<span class="c1">// user can set the target values and set/get the motor configuration using motor commands </span>
-<span class="c1">// see documentation for full command list </span>
-<span class="c1">// </span>
-<span class="c1">// this function can be implemented in serialEvent function as well</span>
-<span class="kt">void</span> <span class="nf">serialReceiveUserCommand</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">// utility function enabling serial communication the user</span>
+<span class="n">String</span> <span class="nf">serialReceiveUserCommand</span><span class="p">()</span> <span class="p">{</span>
   
   <span class="c1">// a string to hold incoming data</span>
   <span class="k">static</span> <span class="n">String</span> <span class="n">received_chars</span><span class="p">;</span>
   
+  <span class="n">String</span> <span class="n">command</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+
   <span class="k">while</span> <span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">())</span> <span class="p">{</span>
     <span class="c1">// get the new byte:</span>
     <span class="kt">char</span> <span class="n">inChar</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">Serial</span><span class="p">.</span><span class="n">read</span><span class="p">();</span>
@@ -454,13 +452,15 @@ This is the code of the library example `motor_full_control_serial_examples/magn
     <span class="k">if</span> <span class="p">(</span><span class="n">inChar</span> <span class="o">==</span> <span class="sc">'\n'</span><span class="p">)</span> <span class="p">{</span>
       
       <span class="c1">// execute the user command</span>
-      <span class="n">motor</span><span class="p">.</span><span class="n">command</span><span class="p">(</span><span class="n">received_chars</span><span class="p">);</span>
+      <span class="n">command</span> <span class="o">=</span> <span class="n">received_chars</span><span class="p">;</span>
 
       <span class="c1">// reset the command buffer </span>
       <span class="n">received_chars</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
+  <span class="k">return</span> <span class="n">command</span><span class="p">;</span>
 <span class="p">}</span>
+
 </span>
 
 </code></pre></div></div>

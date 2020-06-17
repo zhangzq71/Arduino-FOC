@@ -90,7 +90,9 @@ var funcNames = [
     "setPwm",
     "positionP",
     "velocityPI",
-    "controllerPI"
+    "controllerPI",
+    "serialReceiveUserCommand",
+    "disable"
 
 ];
 var structNames = [
