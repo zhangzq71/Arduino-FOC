@@ -2,7 +2,7 @@
 layout: default
 title: Library Examples
 parent: Library Source
-nav_order: 3
+nav_order: 5
 permalink: /library_examples
 grand_parent: Digging deeper
 grand_grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>

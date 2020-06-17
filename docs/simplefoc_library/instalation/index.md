@@ -12,25 +12,31 @@ has_toc: false
 
 # Installing the <span class="simple">Simple<span class="foc">FOC</span>library</span> 
 
+
 There are two ways to install this Arduino library, depending of your plans with the code and your particular application.
-- [Full library installation](library_download) - for plug & play functionality with many examples 
-- [Minimal sketch installation](minimal_download) - Arduino sketch with integrated complete library
-    - Easier experimentation and interaction with the library code directly
+
+- [Full Arduino library installation](library_download)
+    - Plug & play functionality 
+    - Many examples
+    - Easy to access through Arduino IDE
+- [Minimal sketch installation](minimal_download)
+    - Arduino sketch with integrated complete library
+    - Easier experimentation and interaction with the library source code directly
 
 
-<div class="image_icon width80" >
+<div class="image_icon width40" >
     <a href="library_download" >
-        <img src="extras/Images/community.png" >
+        <img src="extras/Images/library_.png" >
         <i class="fa fa-external-link-square fa-2x"></i>
+        <p >Full  Arduino library installation</p>
     </a>
 </div>
 
-
-
-<div class="image_icon width80" >
+<div class="image_icon width40" >
     <a href="minimal_download" >
-        <img src="extras/Images/community.png" >
+        <img src="extras/Images/library_min_.png" >
         <i class="fa fa-external-link-square fa-2x"></i>
+        <p >Minimal sketch installation</p>
     </a>
 </div>
 

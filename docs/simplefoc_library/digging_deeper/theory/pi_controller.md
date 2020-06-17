@@ -5,7 +5,7 @@ parent: Theory corner
 grand_parent: Digging deeper
 grand_grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
 description: "Arduino Simple Field Oriented Control (FOC) library ."
-nav_order: 1
+nav_order: 3
 permalink: /pi_controller
 ---
 

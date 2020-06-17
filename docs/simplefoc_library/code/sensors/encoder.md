@@ -1,16 +1,19 @@
 ---
 layout: default
-title: Encoders
+title: Encoder
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 permalink: /encoder
 nav_order: 1
-parent: Position Sensors
+parent: Position Sensor
 grand_parent: Using the Code
 grand_grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
 ---
 
 
 # Encoder setup
+<div class="width60">
+<img src="extras/Images/enc0.jpg" style="width:32%;display:inline"><img src="extras/Images/enc.jpg" style="width:32%;display:inline"><img src="extras/Images/enc1.png" style="width:32%;display:inline">
+</div>
 
 ## Step 1. Instantiate `Encoder` class
 To initialize the encoder you need to provide the encoder `A` and `B` channel pins, encoder `PPR` and optionally `index` pin.
@@ -222,5 +225,67 @@ void setup(){
   PciManager.registerListener(&listenerB);
   PciManager.registerListener(&listenerIndex);
 ...
+}
+```
+
+## Step 4. Using encoder in real-time
+
+There are two ways to use encoders implemented within this library:
+- As motor position sensor for FOC algorithm
+- As standalone position sensor
+
+### Position sensor for FOC algorithm
+
+To use the encoder sensor with the foc algorithm implemented in this library, once when you have initialized `encoder.init()` it and enabled interrupts `encoder.enableInterrupts(...)` you just have to link it to the BLDC motor by executing:
+```cpp
+motor.linkSensor(&encoder);
+```
+
+### Standalone sensor 
+
+To get the encoder angle and velocity at any given time you can use the public methods:
+```cpp
+class Encoder{
+ public:
+    // shaft velocity getter
+    float getVelocity();
+	  // shaft angle getter
+    float getAngle();
+}
+```
+
+Here is a quick example:
+```cpp
+#include <SimpleFOC.h>
+
+Encoder encoder = Encoder(2, 3, 8192);
+// interrupt routine initialization
+void doA(){encoder.handleA();}
+void doB(){encoder.handleB();}
+
+void setup() {
+  // monitoring port
+  Serial.begin(115200);
+
+  // enable/disable quadrature mode
+  encoder.quadrature = Quadrature::ON;
+
+  // check if you need internal pullups
+  encoder.pullup = Pullup::EXTERN;
+  
+  // initialize encoder hardware
+  encoder.init();
+  // hardware interrupt enable
+  encoder.enableInterrupts(doA, doB);
+
+  Serial.println("Encoder ready");
+  _delay(1000);
+}
+
+void loop() {
+  // display the angle and the angular velocity to the terminal
+  Serial.print(encoder.getAngle());
+  Serial.print("\t");
+  Serial.println(encoder.getVelocity());
 }
 ```

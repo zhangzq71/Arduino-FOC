@@ -6,6 +6,7 @@ var libraires =[
     "FOCutils.h",
     "BLDCMotor.h",
     "MagneticSensor.h",
+    "MySensor.h",
     "Sensor.h"
 ]
 
@@ -27,7 +28,8 @@ var classNames = [
     "MagneticSensor",
     "PciListenerImp",
     "PciManager",
-    "Serial"
+    "Serial",
+    "MySensor"
 ];
 
 var classProps = [

@@ -1,10 +1,12 @@
 ---
 layout: default
 title: Field Oriented Control 
-parent: Using the Code 
-permalink: /foc_routine
-nav_order: 4
-grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
+parent: Theory corner
+grand_parent: Digging deeper
+grand_grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
+description: "Arduino Simple Field Oriented Control (FOC) library ."
+nav_order: 1
+permalink: /foc_theory
 ---
 
 # Field Oriented Control routine 
@@ -45,3 +47,15 @@ It receives one parameter `BLDCMotor::move(float target)` which is current user 
 - If the user runs [velocity loop](/velocity_loop), `move` function will interpret `target` as the target velocity <i>v<sub>d</sub></i>.
 - If the user runs [angle loop](/angle_loop), `move` will interpret `target` parameter as the target angle<i>a<sub>d</sub></i>. 
 - If the user runs the [voltage loop](/voltage_loop), `move` function will interpret the `target` parameter as voltage <i>u<sub>d</sub></i>.
+
+
+## Power supply voltage
+The default  `voltage_power_supply`  value is set to `12V`. If you set your power supply to some other value, change it here for the control loops to adapt.
+```cpp
+// power supply voltage
+motor.voltage_power_supply = 12;
+```
+The `voltage_power_supply` value tells the FOC algorithm what is the maximum voltage it can output. Additionally since the FOC algorithm implemented in the Simple FOC library uses sinusoidal voltages the magnitudes of the sine waves exiting the Driver circuit is going to be  `[-voltage_power_supply/2, voltage_power_supply/2]`.
+
+<img src="../extras/Images/sine_foc.png" >
+

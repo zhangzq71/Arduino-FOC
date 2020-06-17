@@ -97,6 +97,14 @@ div.language-sh pre,  div.language-sh code ,div.language-shell pre,  div.languag
     position: relative;
     width:40%;
     display:inline-block;
+    border: 1px solid; 
+    border-color: #c0bfca;
+    margin-bottom: 0.5em;
+
+    @include mq(md) {   
+        margin-left: 0.5em;
+        margin-bottom: 0em;
+    }
 } 
 .image_icon img{
     display: block; 
@@ -115,6 +123,15 @@ div.language-sh pre,  div.language-sh code ,div.language-shell pre,  div.languag
     color: #44a8fa;
     opacity: 1;
 }
+.image_icon:hover {
+    border-color: #44a8fa;
+}
+.image_icon p{
+    margin-bottom:0.5em;
+    margin-top:0.5em;
+    font-weight: bold;
+    text-align: center;
+}
 
 // responsive images and videos{
 .width60{
@@ -125,6 +142,9 @@ div.language-sh pre,  div.language-sh code ,div.language-shell pre,  div.languag
 }
 .width40{
     width: 40%;
+}
+.width30{
+    width: 30%;
 }
 .width80{
     width:80%;
@@ -176,6 +196,9 @@ div.language-sh pre,  div.language-sh code ,div.language-shell pre,  div.languag
         width: 100%;
     }
     .width40{
+        width: 100%;
+    }
+    .width30{
         width: 100%;
     }
     .img_half{

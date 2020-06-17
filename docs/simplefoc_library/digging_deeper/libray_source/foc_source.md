@@ -35,7 +35,7 @@ motor.foc_modulation = FOCModulationType::SinePWM; // default
 motor.foc_modulation = FOCModulationType::SpaceVectorPWM;
 ```
 
-<blockquote class="info"> <p class="heading">NOTE: </p>For more info about the FOC algorithm theory, configuration and initialization visit <a href="foc_routine"> foc routine docs</a>. </blockquote>
+<blockquote class="info"> <p class="heading">NOTE: </p>For more info about the FOC algorithm theory, configuration and initialization visit <a href="foc_theory"> foc routine docs</a>. </blockquote>
 
 The two modulation types and phase voltage calculation is fully implemented in the `setPhaseVoltage()` function. Here's how it looks.
 ```cpp

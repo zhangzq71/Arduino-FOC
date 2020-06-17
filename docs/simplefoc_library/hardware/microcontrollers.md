@@ -37,4 +37,4 @@ It is always helpful to hear the stories/problems/suggestions of people implemen
         <img src="extras/Images/community.png" >
         <i class="fa fa-external-link-square fa-2x"></i>
     </a>
-    
+</div>

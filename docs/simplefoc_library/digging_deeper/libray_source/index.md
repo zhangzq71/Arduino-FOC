@@ -38,12 +38,14 @@ BLDCMotor class implementation
 - FOC algorithm functions and configuration: `loopFOC()`, `initFOC`,`foc_modulation`
 - PI controllers for the velocity and angle control: `PI_s`, `controllerPI()`,`velocityPI()`,`positionP`
 - Monitoring functions: `useMonitoring()`,`monitor()`,`monitor_port`
-- Communication interface with user in form of commands: `command()`  
+- Communication interface with user in form of motor commands: `command()`  
 
 <blockquote class="info"><a href="foc_implementation"><i class="fa fa-copy"></i> FOC implementation details</a> - Documentation of the procedures and detailed explanations of the code implementing FOC algorithm 
 </blockquote>
 <blockquote class="info">
      <a href="motion_control_implementation"><i class="fa fa-copy"></i> Motion control implementation details</a> - Documentation of the motion control algorithms and code implementation choices
+</blockquote><blockquote class="info">
+     <a href="commands_source"><i class="fa fa-copy"></i> Motor commands implementation </a> - Documentation of the motor commands functionality
 </blockquote>
 
 
