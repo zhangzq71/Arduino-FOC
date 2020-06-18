@@ -18,8 +18,8 @@ permalink: /roadmap
 - [ ] Motor control: FOC using IMU - encoderless control for camera gimbal and similar applications
 - [ ] Motor control: Support for fully open-loop operation (no sensor)
 - [ ] Device specific code separation: Easier porting in between devices
-- [ ] Device specific: STM32 Nucleo support
-- [ ] Device specific: STM32 BLuepill support
+- [x] Device specific: STM32 Nucleo support
+- [x] Device specific: STM32 BLuepill support
 
 ## Completed Work
 #### Usability 
