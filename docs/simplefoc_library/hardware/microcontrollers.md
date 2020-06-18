@@ -22,9 +22,12 @@ The <span class="simple">Simple<span class="foc">FOC</span>library</span> suppor
 [<img src="extras/Images/pinout.jpg" class="imgtable150">](https://www.ebay.com/itm/HMBGC-V2-0-3-Axle-Gimbal-Controller-Control-Plate-Board-Module-with-Sensor/351497840990?hash=item51d6e7695e:g:BAsAAOSw0QFXBxrZ:rk:1:pf:1) | HMBGC V2.2 |  ATMega328<br> -5V logic<br> - 6 PWMs <br>- 0 interrupts<br> - No SPI<br>- 16Mhz <br> - 2x BLDC driver | [Ebay](https://www.ebay.com/itm/HMBGC-V2-0-3-Axle-Gimbal-Controller-Control-Plate-Board-Module-with-Sensor/351497840990?hash=item51d6e7695e:g:BAsAAOSw0QFXBxrZ:rk:1:pf:1) | 20€
 [<img src="extras/Images/bgc_30.jpg" class="imgtable150">](https://fr.aliexpress.com/item/4000411471994.html?spm=a2g0o.productlist.0.0.5d047d57y4zGC4&algo_pvid=861ada4b-b12f-4019-be84-fae9870a12ed&algo_expid=861ada4b-b12f-4019-be84-fae9870a12ed-1&btsid=0ab6f83a15906954691168349e30d7&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | BGC 3.0 |  ATMega328<br>- 5V logic<br> - 6 PWMs <br>- 0 interrupts<br> - 16Mhz <br> - 2x BLDC driver | [Aliexpress](https://fr.aliexpress.com/item/4000411471994.html?spm=a2g0o.productlist.0.0.5d047d57y4zGC4&algo_pvid=861ada4b-b12f-4019-be84-fae9870a12ed&algo_expid=861ada4b-b12f-4019-be84-fae9870a12ed-1&btsid=0ab6f83a15906954691168349e30d7&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_) | 10€
 
-
-
 I have been in contact with people who have ported the library to the Maple boards, ESP32 boards, Arduino DUEs even to strom32 BGC v1.31, so I hope to be able to support much more boards in future.
+
+
+## STM32 boards support
+The STM32 boards are supported using the [STM32Duino package](https://github.com/stm32duino), it is completely open-source and can be installed directly through the `Arduino Board Manager`.
+Please check the [STM32Duino wiki](https://github.com/stm32duino/wiki/wiki/Getting-Started) to see a detailed guide how to install the package and all its functionalities.
 
 <h2><i class="fa fa-lg"><svg id="fab-discourse" style="width:20px;fill:#44a8fa" viewBox="0 0 448 512"><path d="M225.9 32C103.3 32 0 130.5 0 252.1 0 256 .1 480 .1 480l225.8-.2c122.7 0 222.1-102.3 222.1-223.9C448 134.3 348.6 32 225.9 32zM224 384c-19.4 0-37.9-4.3-54.4-12.1L88.5 392l22.9-75c-9.8-18.1-15.4-38.9-15.4-61 0-70.7 57.3-128 128-128s128 57.3 128 128-57.3 128-128 128z"></path> </svg></i> <span class="simple">Simple<span class="foc">FOC</span> Community</span></h2>
 
