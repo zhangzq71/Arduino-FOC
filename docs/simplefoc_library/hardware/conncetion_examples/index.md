@@ -29,3 +29,9 @@ grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>lib
         <i class="fa fa-external-link-square fa-2x"></i>
     </a>
 </div>
+<div class="image_icon">
+    <a href="nucleo_connection">
+        <img src="extras/Images/nucleo_foc_shield_connection.jpg">
+        <i class="fa fa-external-link-square fa-2x"></i>
+    </a>
+</div>
