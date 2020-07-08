@@ -17,8 +17,9 @@ Therefore this is an attempt to:
 - Demystify FOC algorithm and make a robust but simple Arduino library: [Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> ](#arduino-simplefoclibrary)
 - Develop a modular BLDC driver board: [Arduino <span class="simple">Simple<span class="foc">FOC</span>Shiled</span> ](arduino_simplefoc_shield_showcase).
 
-> ***UPDATE:*** Arduino *SimpleFOClibrary* now supports STM32 boards such as [Nucleo](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) and [Bluepill](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html).<br>
-Check the [supported microcontrollers](microcontrollers) page to see more info.
+
+> ***UPDATE:*** Arduino *SimpleFOClibrary* now supports high performance DRV8302 driver boards (60V, 15A, 30$). [YouTube link](https://www.youtube.com/watch?v=RI4nNMF608I).
+> You can find the board by clicking on [Aliexpress link](https://bit.ly/2BZZ5fG) and the  Arduino code example in the examples folder!
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
 <iframe class="youtube"  src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
