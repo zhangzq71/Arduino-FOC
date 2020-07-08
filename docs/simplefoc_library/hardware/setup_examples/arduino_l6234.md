@@ -1,7 +1,7 @@
 ---
 layout: default
 title: L6234 Breakout Board
-parent: Connection examples
+parent: Setup examples
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 2
 permalink: /arduino_l6234

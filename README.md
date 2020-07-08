@@ -10,8 +10,8 @@ Therefore this is an attempt to:
 - Demystify FOC algorithm and make a robust but simple Arduino library: [Arduino *SimpleFOClibrary*](https://docs.simplefoc.com/arduino_simplefoc_library_showcase)
 - Develop a modular BLDC driver board: [Arduino *SimpleFOCShield*](https://docs.simplefoc.com/arduino_simplefoc_shield_showcase).
 
-
-> ***UPDATE:*** Arduino *SimpleFOClibrary* now supports STM32 boards such as [Nucleo](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) and [Bluepill](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html).
+> ***UPDATE:*** Arduino *SimpleFOClibrary* now supports high performance DRV8302 driver boards (60V, 15A, 30$). [YouTube link](https://www.youtube.com/watch?v=RI4nNMF608I).
+> You can find the board by clicking on [Aliexpress link](https://bit.ly/2BZZ5fG) and the  Arduino code example in the examples folder!
 
 ## Arduino *SimpleFOCShield*
 
@@ -56,6 +56,7 @@ This video demonstrates the Simple FOC library basic usage, electronic connectio
   - Supports multiple [MCU architectures](https://docs.simplefoc.com/microcontrollers):
      - Arduino: UNO, MEGA, any board with ATMega328 chips
      - STM32 boards: [Nucleo](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) and [Bluepill](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html)
+     - ESP32 (very soon)
 - **Plug & play**: Arduino *SimpleFOCShield*
 
 <p align=""> <img src="https://docs.simplefoc.com/extras/Images/uno_l6234.jpg"  height="170px">  <img src="https://docs.simplefoc.com/extras/Images/hmbgc_v22.jpg" height="170px">  <img src="https://docs.simplefoc.com/extras/Images/foc_shield_v13.jpg"  height="170px"></p>
@@ -156,7 +157,7 @@ void loop() {
   motor.monitor();
 }
 ```
-You can find more details in the [documentation](https://docs.simplefoc.com/).
+You can find more details in the [SimpleFOC documentation](https://docs.simplefoc.com/).
 
 ## Example projects
 Here are some of the SimpleFOC application examples. 

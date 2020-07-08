@@ -1,7 +1,7 @@
 ---
 layout: default
 title: <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
-parent: Connection examples
+parent: Setup examples
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 1
 permalink: /arduino_simplefoc_shield

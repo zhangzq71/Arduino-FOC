@@ -1,7 +1,7 @@
 ---
 layout: default
 title: STM32 Nucelo-64
-parent: Connection examples
+parent: Setup examples
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 nav_order: 4
 permalink: /nucleo_connection
