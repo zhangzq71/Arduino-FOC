@@ -1,20 +1,21 @@
-# Arduino Simple FOC library minimal example 
+# SimpleFOC sensor testing branch - Magnetic Sensor 
 
 ![MinimalBuild](https://github.com/askuric/Arduino-FOC/workflows/MinimalBuild/badge.svg?branch=minimal)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Simple%20FOC.svg?)](https://www.ardu-badge.com/badge/Simple%20FOC.svg)
 
-This is the minimal Arduino example of the [Simple FOC](https://github.com/askuric/Arduino-FOC) arduino library intended for mostly for easier experimentation and modification!
+This is the minimal Arduino example of the [Simple FOC](https://github.com/askuric/Arduino-FOC) arduino library intended for testing the sensor implementation in the development stage.
 
 ### Minimal repository structure
 ```shell
-├───arduino_foc_minimal_encoder    # Arduino minimal code for running a motor with Encoder
+├───motion_control_example    # Full motion control example code to test magnetic sensors 
 │
-└───arduino_foc_minimal_magnetic   # Arduino minimal code for running a motor with magnetic sensor 
-                                   # AS5048/47   
+└───sensor_test_minimal   # Magnetic sensor minimal code to test SPI and I2C communication
 ```
 
-Each of the examples will give you the opportunity to change the PI velocity parameters `P` and `I`, Low pass filter time constant `Tf`, change the control loop in real time and check the average loop execution time, all from the serial terminal. 
+
+#### Motor control example
+You will be able to change the PI velocity parameters `P` and `I`, Low pass filter time constant `Tf`, change the control loop in real time and check the average loop execution time, all from the serial terminal. 
 
 List of commands:
 - **P**: velocity PI controller P gain
@@ -37,12 +38,7 @@ List of commands:
 
 Find more information about the **motor commands** in the [docs.simplefoc.com](https://docs.simplefoc.com/communication)
 
-###  Installation
-For those willing to experiment and to modify the code I suggest using the [minimal version](https://github.com/askuric/Arduino-FOC/tree/minimal) of the code. 
- > This code is completely independent and you can run it as any other Arduino Sketch without the need for any libraries. 
-
 #### Github website download
-- Make sure you are in [minimal branch](https://github.com/askuric/Arduino-FOC/tree/minimal) 
 - Download the code by clicking on the `Clone or Download > Download ZIP`.
 - Unzip it and open the sketch in Arduino IDE. 
 
@@ -50,9 +46,12 @@ For those willing to experiment and to modify the code I suggest using the [mini
 - Open the terminal:
   ```sh
   cd *to you desired directory*
-  git clone -b minimal https://github.com/askuric/Arduino-FOC.git
+  git clone -b test_sensors https://github.com/askuric/Arduino-FOC.git
   ```
 - Then you just open it with the Arduino IDE and run it.
+
+> **NOTE**
+> In some cases this branch will not be compatible with the SimpleFOC library and you will need to remove your SimpleFOC library from the Arduino libraries folder. 
 
 ## Documentation
 Find out more information about the Arduino SimpleFOC project in [docs website](https://askuric.github.io/Arduino-FOC/) 

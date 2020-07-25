@@ -1,5 +1,5 @@
 /**
- * Comprehensive BLDC motor control example using magnetic sensor and the minimal version off the SimpleFOC library
+ * Comprehensive BLDC motor control example using sensor sensor and the minimal version off the SimpleFOC library
  * - THis code is completely stand alone and you dont need to have SimpleFOClibary installed to run it 
  * 
  * Check the docs.simplefoc.com for more information
@@ -39,34 +39,33 @@
  *
  */
 
+#include "BLDCMotor.h"
+#include "MagneticSensorSPI.h"
+#include "MagneticSensorI2C.h"
 
-#include "SimpleFOC.h"
+//  BLDCMotor( int phA, int phB, int phC, int pole_pairs, int en)
+BLDCMotor motor = BLDCMotor(9, 5, 6, 11, 7);
 
-//  BLDCMotor( int phA, int phB, int phC, int pp, int en)
-//  - phA, phB, phC - motor A,B,C phase pwm pins
-//  - pp            - pole pair number
-//  - enable pin    - (optional input)
-BLDCMotor motor = BLDCMotor(9, 5, 6, 11, 8);
+// MagneticSensorI2C(uint8_t chip_address, float _cpr, uint8_t _angle_register_msb)
+// make sure to read the chip address and the chip magnitude/angle register msb value from the datasheet
+MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 16384, 0x05);
 
-
-// MagneticSensor(int cs, float _cpr, int _angle_register)
-//  cs              - SPI chip select pin 
-//  _cpr            - count per revolution 
-// _angle_register  - (optional) angle read register - default 0x3FFF
-MagneticSensor as504x = MagneticSensor(2, 16384);
+// MagneticSensorSPI(int chip_select, float _cpr, word _angle_register)
+// most of the sensors have the same angle register but please do check in the datasheet of your sensor
+// the default value is the 0x3FFF
+// MagneticSensorSPI sensor = MagneticSensorSPI(10, 16384, 0x3FFF);
 
 void setup() { 
   // debugging port
   Serial.begin(115200);
 
-  // initialise magnetic sensor hardware
-  as504x.init();
+  // initialise sensor sensor hardware
+  sensor.init();
   // link sensor and motor
-  motor.linkSensor(&as504x);
+  motor.linkSensor(&sensor);
 
-  // choose FOC algorithm to be used:
+  // choose FOC modulation to be used:
   // FOCModulationType::SinePWM  (default)
-  // FOCModulationType::SpaceVectorPWM
   motor.foc_modulation = FOCModulationType::SpaceVectorPWM;
 
   // power supply voltage [V]
@@ -76,6 +75,10 @@ void setup() {
   // default 6V
   motor.voltage_sensor_align = 3;
   
+  
+  // All the following configuration parameters you can chanage in 
+  // real-time using motor commands 
+
   // set control loop type to be used
   // ControlType::voltage
   // ControlType::velocity
