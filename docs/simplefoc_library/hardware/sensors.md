@@ -9,9 +9,10 @@ grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>lib
 ---
 
 # Position sensors
-The library currently supports ([version 1.2.0](https://github.com/askuric/Arduino-FOC/releases)) two types of position sensors: 
+The library currently supports ([version 1.3.1](https://github.com/askuric/Arduino-FOC/releases)) two types of position sensors: 
 - [Encoder](#encoders) 
-- [Magnetic sensor (AS5048/47)](#magnetic-sensors--spi--interface).
+- [Magnetic sensor](#magnetic-sensors--spi--interface).
+- *Hall sensors (in development)*
 - *IMU (in development)*
 
 ## Encoders
@@ -36,7 +37,7 @@ If your CPR value is 10000, you will be able to spin your motor with max velocit
 </blockquote>
 
       
-## Magnetic sensors | SPI  interface
+## Magnetic sensors
 Magnetic position sensor has many benefits over the encoders:
 - Very efficient position calculation ( no counting ) 
 - Time of execution doesn't depend on velocity or number of sensors
@@ -45,7 +46,19 @@ Magnetic position sensor has many benefits over the encoders:
 - Very low price
 - Very simple to mount
 
-In the case of the <span class="simple">Simple<span class="foc">FOC</span>library</span> ([version 1.2.0](https://github.com/askuric/Arduino-FOC/releases)) we support SPI and ABI interface to the magnetic sensors. Please [let us know](contact) if you would be interested in having hte I2C interface implemented as well. 
+Magnetic sensors usually come with several different communication protocols:
+- ABI
+- SPI
+- I2C
+- PWM
+- SSI 
+- Analog (not suitable for FOC)
+- UVW (needs a lot of fine tuning - not suggested)
+
+Until this moment ([version 1.3.1](https://github.com/askuric/Arduino-FOC/releases)) <span class="simple">Simple<span class="foc">FOC</span>library</span> supports ABI interface (exactly the same as the encoder interface) and SPI communication. The I2C communication will be supported with the next release. PWM and SSI protocol will be tested for their performance and implemented in following steps. 
+Please [let us know](contact) if you would be interested in having some other communication implemented!
+
+Here are some of the supported magnetic sensors using SPI interface:
 
 Examples  | Description | Link | Price
 ---- | ---- | ---- | ----

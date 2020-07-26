@@ -35,3 +35,15 @@ grand_parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>lib
         <i class="fa fa-external-link-square fa-2x"></i>
     </a>
 </div>
+<div class="image_icon">
+    <a href="bluepill_connection">
+        <img src="extras/Images/bluepill_foc_shield_thumb.jpg">
+        <i class="fa fa-external-link-square fa-2x"></i>
+    </a>
+</div>
+<div class="image_icon">
+    <a href="drv8302_connection">
+        <img src="extras/Images/drv8302_connection_thumb.jpg">
+        <i class="fa fa-external-link-square fa-2x"></i>
+    </a>
+</div>

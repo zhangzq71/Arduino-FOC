@@ -41,7 +41,7 @@ Additionally the encoder has one more important parameter and this is the pullup
 // Pullup::INTERN - needs internal arduino pullup
 encoder.pullup = Pullup::INTERN;
 ```
-<blockquote class="warning"><p class="heading">Arduino Pullup 20kOhm</p> Be careful when using internal pullups, Arduino has relatively high valued pullups around 20kOhm, which means that you might have some problems for higher velocities (for shorted impulse durations). Recommended pull-up values are in between 1kOhm and 5kOhm.</blockquote>
+<blockquote class="warning"><p class="heading">Arduino Pullup 20kΩ</p> Be careful when using internal pullups, Arduino has relatively high valued pullups around 20kΩ, which means that you might have some problems for higher velocities (for shorted impulse durations). Recommended pull-up values are in between 1kΩ and 5kΩ.</blockquote>
 
 ## Step 3. Encoder interrupt setup
 There are two ways you can run encoders with Simple FOC library.

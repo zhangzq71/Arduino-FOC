@@ -70,7 +70,7 @@ Here is a complete list of all the components you will need to make the board:
          </tr>
          <tr>
             <td>CAP1</td>
-            <td>1 uF (Electrolytic)</td>
+            <td>100 uF (Electrolytic)</td>
             <td>1</td>
             <td><a href="https://www.mouser.fr/ProductDetail/Panasonic/EEE-HAV101XAP?qs=%2Fha2pyFadujAo14cOabh4%2FHGWJclSBJVoXpO6qVRwLQTQ6LscWsHQA%3D%3D">EEEHAV101XAP</a></td>
          </tr>
@@ -91,13 +91,13 @@ Here is a complete list of all the components you will need to make the board:
          </tr>
          <tr>
             <td>R2</td>
-            <td>4.7kOhm </td>
+            <td>4.7kΩ </td>
             <td>1</td>
             <td><a href="https://www.mouser.fr/ProductDetail/ROHM-Semiconductor/ESR25JZPJ472?qs=%2Fha2pyFaduiNPgWUgQ0Hs1BOCX7K5MmJP8E%2FEN8DWz4unDUnCffhlg%3D%3D">ESR25JZPJ472</a></td>
          </tr>
          <tr>
             <td>PULL_A, PULL_B, PULL_I</td>
-            <td>3kOhm </td>
+            <td>3kΩ </td>
             <td>3</td>
             <td><a href="https://www.mouser.fr/ProductDetail/KOA-Speer/RN73H2ETTD3001F50?qs=%2Fha2pyFadugz1PN4m8q5QBmmNYUlMOzQI3k%2FT%252B8vFrn5l%2FvB8B97FQ%3D%3D">RN73H2ETTD3001F50</a></td>
          </tr>
@@ -112,7 +112,7 @@ Here is a complete list of all the components you will need to make the board:
          </tr>
          <tr>
             <td>R1</td>
-            <td>620Ohm </td>
+            <td>620Ω </td>
             <td>1</td>
             <td><a href="https://www.mouser.fr/ProductDetail/KOA-Speer/RN73H2ETTD6200F50?qs=%2Fha2pyFadugz1PN4m8q5QKhCzpicGijTcn6N2kk6lgXhcYi6JSLlrg%3D%3D">RN73H2ETTD6200F50</a></td>
          </tr>

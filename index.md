@@ -18,29 +18,31 @@ Therefore this is an attempt to:
 - Develop a modular BLDC driver board: [Arduino <span class="simple">Simple<span class="foc">FOC</span>Shiled</span> ](arduino_simplefoc_shield_showcase).
 
 
-> ***UPDATE:*** Arduino *SimpleFOClibrary* now supports high performance DRV8302 driver boards (60V, 15A, 30$). [YouTube link](https://www.youtube.com/watch?v=RI4nNMF608I).
-> You can find the board by clicking on [Aliexpress link](https://bit.ly/2BZZ5fG) and the  Arduino code example in the examples folder!
+<blockquote class="info"> <p class="heading">UPDATE 📢</p> Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> now supports high performance DRV8302 driver boards (60V, 15A, 30$). <a href="https://www.youtube.com/watch?v=RI4nNMF608I">YouTube link</a>.<br>
+You can find the board by clicking on <a href="https://bit.ly/2BZZ5fG">Aliexpress link</a> and the  Arduino code example in the examples folder!
+</blockquote>
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
 <iframe class="youtube"  src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Features
 - **Plug & play**: In combination with Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
-- **Low-cost**: Price of €20 - [Check the pricing](https://www.simplefoc.com/simplefoc_shield_product) 
-- **Open Source**: Fully available fabrication files - [how to make it yourself](arduino_simplefoc_shield_fabrication)
+- **Low-cost**: Price of €15 - [Check the pricing](https://www.simplefoc.com/simplefoc_shield_product) 
+- **Max power 120W** - max current 5A, power-supply 12-24V
+   - Designed for Gimbal motors with the internal resistance >10 Ωs. 
 - **Stackable**: running 2 motors in the same time
-- **Encoder interface**: Integrated 3kOhm pullups (configurable)
+- **Encoder interface**: Integrated 3kΩ pullups (configurable)
 - **Configurable pinout**: Hardware configuration - soldering connections
 - **Arduino headers**: Arduino UNO, Arduino MEGA, STM32 Nucleo boards...
+- **Open Source**: Fully available fabrication files - [how to make it yourself](arduino_simplefoc_shield_fabrication)
 
-##### If you are interested in this board as a product, find more information on this link: [Arduino Simple FOC Shield](https://simplefoc.com/simplefoc_shield_product)
+##### If you are interested in this board as a product, find more information on this link: [Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>](https://simplefoc.com/simplefoc_shield_product)
 
 <p><img src="extras/Images/simple_foc_shield_v13_small.gif" class="img200" ><img src="extras/Images/shield_to_v13.jpg" class="img200 img_half" ><img src="extras/Images/shield_bo_v13.jpg" class="img200 img_half" ></p>
 
 ## Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span>
 <iframe class="youtube"  src="https://www.youtube.com/embed/Y5kLeqTc6Zk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 This video demonstrates the Simple FOC library basic usage, electronic connections and shows its capabilities.
-
 
 ### Features
 - **Arduino compatible**: Arduino library code
@@ -49,10 +51,10 @@ This video demonstrates the Simple FOC library basic usage, electronic connectio
   - Easy [tuning the control loops](motion_control)
 - **Modular**:
   - Supports as many [sensors ,  BLDC motors  and  driver boards](supported_hardware) as possible
-  - Supports as many application requirements as possible
   - Supports multiple [MCU architectures](microcontrollers):
      - Arduino: UNO, MEGA, any board with ATMega328 chips
      - STM32 boards: [Nucleo](https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html) and [Bluepill](https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html)
+     - *ESP32 (soon)*
 - **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> 
 
 

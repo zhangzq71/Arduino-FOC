@@ -19,13 +19,15 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
 <iframe class="youtube" src="https://www.youtube.com/embed/G5pbo0C6ujE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Features
-- **Plug & play**: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
-- **Low-cost**: Price of €20 - [Check the pricing](https://simplefoc.com/simplefoc_shield_product) 
-- **Open Source**: Fully available [Gerber files and BOM](arduino_simplefoc_shield_fabrication)
+- **Plug & play**: In combination with Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
+- **Low-cost**: Price of €15 - [Check the pricing](https://www.simplefoc.com/simplefoc_shield_product) 
+- **Max power 120W** - max current 5A, power-supply 12-24V
+   - Designed for Gimbal motors with the internal resistance >10 Ωs. 
 - **Stackable**: running 2 motors in the same time
-- **Encoder interface**: Integrated 3kOhm pullups (configurable)
+- **Encoder interface**: Integrated 3kΩ pullups (configurable)
 - **Configurable pinout**: Hardware configuration - soldering connections
-- **Low-power**: Maximum current of 5A
+- **Arduino headers**: Arduino UNO, Arduino MEGA, STM32 Nucleo boards...
+- **Open Source**: Fully available fabrication files - [how to make it yourself](arduino_simplefoc_shield_fabrication)
   
 
 <p><img src="extras/Images/shield_bo_v13.jpg" class="img300 img_half"><img src="extras/Images/shield_to_v13.jpg" class="img300  img_half"></p>
