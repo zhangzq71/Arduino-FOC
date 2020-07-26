@@ -15,7 +15,7 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, being 
 
 Here is the Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> connection scheme:
 
-<p><img src="extras/Images/foc_shield_v13.png" class="img400"></p>
+<p><img src="extras/Images/foc_shield_v13_nucleo.png" class="img400"></p>
 
 ## Connector types
  - Terminal connectors 
@@ -29,6 +29,8 @@ More information on this link: [Arduino Simple FOC Shield](arduino_simplefoc_shi
 ## Encoder 
 - Channels `A` and `B` are connected to the encoder connector `P_ENC`, terminals `A` and `B`. 
 - If your encoder has `index` signal you can connect it to the encoder connector as well, terminal `I`.
+
+<blockquote class="info"><p class="heading">NOTE</p> Any digital pin can be external interrupt pin on STM32 boards.</blockquote>
 
 ## Motor
 - Motor phases `a`, `b` and `c` are connected directly the motor terminal connector `TB_M1`
