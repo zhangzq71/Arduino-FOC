@@ -24,6 +24,7 @@ This library supports *off-the-shelf* two types of position sensors:
     - In this library we implement **only SPI interface** for the moment up to the [version 1.3.0](https://github.com/askuric/Arduino-FOC/releases).
     - Examples SPI sensors:  [AS5048A <i class="fa fa-external-link"></i>](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) [AS5047U <i class="fa fa-external-link"></i>](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) 
 
+<blockquote class="info"><p class="heading">NEWS 📢</p> From the version 1.4.0 the library will support magnetic sensors using I2C communication. The code is already in the master branch if you are interested in testing. The release will be made in few days once when the docs are updated. For now, you can check the library examples to test the code and see the configuration procedure. It is very easy. :D </blockquote>
 
 Both classes of sensors are implemented in generic way in order to support as many of their versions as possible.
 
