@@ -62,4 +62,4 @@ Examples | Description | Specifications | Link | Price
 [<img src="extras/Images/c2216.png" style="height:100px">](https://ebay.to/2ZZTT4S) | C2216 880KV |  - 7-18V <br> - (max)22A  <br> - 0.108Ω <br> - 28 x 34mm| [Ebay](https://ebay.to/2ZZTT4S) | 20$
   [<img src="extras/Images/ml4114.png" style="height:100px">](https://amzn.to/3f38b9p) | GARTT ML4114 330KV |  - 36V <br> - (max)25A  <br> - 0.1082Ω <br> - 40 x 20mm| [Amazon](https://amzn.to/3f38b9p) | 40$
  [<img src="extras/Images/jk42.png" style="height:100px">](https://amzn.to/3hB7h5r) | WJN-Motor JK42BL |  - 24V <br> - (max)15A  <br> - 0.8Ω <br> - 42 x 61mm| [Amazon](https://amzn.to/3hB7h5r) | 60$
- [<img src="extras/Images/mad5008.png" style="height:100px">](https://amzn.to/2OWwgE3) | MAD5008-240KV |  - 36V <br> - (max)22A  <br> - 0.08Ω <br> - 56 x 25mm|  [OnedronAmazone](https://amzn.to/2OWwgE3) | 60$
+ [<img src="extras/Images/mad5008.png" style="height:100px">](https://amzn.to/2OWwgE3) | MAD5008-240KV |  - 36V <br> - (max)22A  <br> - 0.08Ω <br> - 56 x 25mm|  [Amazon](https://amzn.to/2OWwgE3) | 60$
