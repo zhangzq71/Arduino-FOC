@@ -2,15 +2,25 @@
 
 // MagneticSensorI2C(uint8_t _chip_address, float _cpr, uint8_t _angle_register_msb)
 //  @param _chip_address  I2C chip address
-//  @param _cpr  counts per revolution 
+//  @param _bit_resolution  bit resolution of the sensor  
 //  @param _angle_register_msb  angle read register
-MagneticSensorI2C::MagneticSensorI2C(uint8_t _chip_address, float _cpr, uint8_t _angle_register_msb){
+MagneticSensorI2C::MagneticSensorI2C(uint8_t _chip_address, int _bit_resolution, uint8_t _angle_register_msb, int _bits_used_msb){
   // chip I2C address
   chip_address = _chip_address; 
   // angle read register of the magnetic sensor
   angle_register_msb = _angle_register_msb;
   // register maximum value (counts per revolution)
-  cpr = _cpr;
+  cpr = pow(2,_bit_resolution);
+  
+  // depending on the sensor architecture there are different combinations of
+  // LSB and MSB register used bits
+  // AS5600 uses 0..7 LSB and 8..11 MSB
+  // AS5048 uses 0..5 LSB and 6..13 MSB 
+  // used bits in LSB
+  lsb_used = _bit_resolution - _bits_used_msb;
+  // extraction masks
+  lsb_mask = (uint8_t)( (2 << lsb_used) - 1 );
+  msb_mask = (uint8_t)( (2 << _bits_used_msb) - 1 );
 }
 
 
@@ -32,24 +42,25 @@ void MagneticSensorI2C::init(){
 //  Shaft angle calculation
 //  angle is in radians [rad]
 float MagneticSensorI2C::getAngle(){
-  // raw data from the sensor
-  float angle_data = getRawCount(); 
-
-  // tracking the number of rotations 
-  // in order to expand angle range form [0,2PI] 
-  // to basically infinity
-  float d_angle = angle_data - angle_data_prev;
-  // if overflow happened track it as full rotation
-  if(abs(d_angle) > (0.8*cpr) ) full_rotation_offset += d_angle > 0 ? -_2PI : _2PI; 
-  // save the current angle value for the next steps
-  // in order to know if overflow happened
-  angle_data_prev = angle_data;
-
-  // zero offset adding
-  angle_data -= (int)zero_offset;
-  // return the full angle 
-  // (number of full rotations)*2PI + current sensor angle
-  return full_rotation_offset + ( angle_data / (float)cpr) * _2PI;
+//  // raw data from the sensor
+//  float angle_data = getRawCount(); 
+//
+//  // tracking the number of rotations 
+//  // in order to expand angle range form [0,2PI] 
+//  // to basically infinity
+//  float d_angle = angle_data - angle_data_prev;
+//  // if overflow happened track it as full rotation
+//  if(abs(d_angle) > (0.8*cpr) ) full_rotation_offset += d_angle > 0 ? -_2PI : _2PI; 
+//  // save the current angle value for the next steps
+//  // in order to know if overflow happened
+//  angle_data_prev = angle_data;
+//
+//  // zero offset adding
+//  angle_data -= (int)zero_offset;
+//  // return the full angle 
+//  // (number of full rotations)*2PI + current sensor angle
+//  return full_rotation_offset + ( angle_data / (float)cpr) * _2PI;
+return getRawCount();
 }
 
 // Shaft velocity calculation
@@ -117,22 +128,27 @@ int MagneticSensorI2C::getRawCount(){
 * Takes the address of the register as a uint8_t
 * Returns the value of the register
 */
-word MagneticSensorI2C::read(uint8_t angle_reg_msb) {
-	//16 bit value got from 2 8bits registers (7..0 MSB + 5..0 LSB) => 14 bits value
+int MagneticSensorI2C::read(uint8_t angle_reg_msb) {
+  // read the angle register first MSB then LSB
 	byte readArray[2];
 	uint16_t readValue = 0;
   // notify the device that is aboout to be read
 	Wire.beginTransmission(chip_address);
 	Wire.write(angle_reg_msb);
   Wire.endTransmission(false);
-
+  _delay(10);
   // read the data msb and lsb
 	Wire.requestFrom(chip_address, (uint8_t)2);
 	for (byte i=0; i < 2; i++) {
 		readArray[i] = Wire.read();
+  _delay(10);
 	}
-  // transform msb and lab to uint16 number
-	readValue = (((uint16_t) readArray[0]) << 6);
-	readValue += (readArray[1] & 0x3F);
+
+  // depending on the sensor architecture there are different combinations of 
+  // LSB and MSB register used bits
+  // AS5600 uses 0..7 LSB and 8..11 MSB
+  // AS5048 uses 0..5 LSB and 6..13 MSB
+  readValue = ( readArray[1] &  lsb_mask );
+	readValue += ( ( readArray[0] & msb_mask ) << lsb_used );
 	return readValue;
 }

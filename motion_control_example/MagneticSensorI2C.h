@@ -6,15 +6,17 @@
 #include "FOCutils.h"
 #include "Sensor.h"
 
+
 class MagneticSensorI2C: public Sensor{
  public:
     /**
      * MagneticSensorI2C class constructor
      * @param chip_address  I2C chip address
-     * @param cpr  counts per revolution 
+     * @param bits number of bits of the sensor resolution 
      * @param angle_register_msb  angle read register msb
+     * @param _bits_used_msb number of used bits in msb
      */
-    MagneticSensorI2C(uint8_t chip_address, float cpr, uint8_t angle_register_msb);
+    MagneticSensorI2C(uint8_t _chip_address, int _bit_resolution, uint8_t _angle_register_msb, int _msb_bits_used);
     
 
     /** sensor initialise pins */
@@ -43,13 +45,17 @@ class MagneticSensorI2C: public Sensor{
 
   private:
     float cpr; //!< Maximum range of the magnetic sensor
+    uint16_t lsb_used; //!< Number of bits used in LSB register
+    uint8_t lsb_mask;
+    uint8_t msb_mask;
+    
     // I2C variables
     uint8_t angle_register_msb; //!< I2C angle register to read
     uint8_t chip_address; //!< I2C chip select pins
 
     // I2C functions
     /** Read one I2C register value */
-    word read(uint8_t angle_register_msb);
+    int read(uint8_t angle_register_msb);
 
     word zero_offset; //!< user defined zero offset
     /**

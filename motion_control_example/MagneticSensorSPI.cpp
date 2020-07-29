@@ -1,16 +1,16 @@
 #include "MagneticSensorSPI.h"
 
-// MagneticSensorSPI(int cs, float _cpr, int _angle_register)
+// MagneticSensorSPI(int cs, float _bit_resolution, int _angle_register)
 //  cs              - SPI chip select pin 
-//  _cpr            - count per revolution 
+//  _bit_resolution   sensor resolution bit number
 // _angle_register  - (optional) angle read register - default 0x3FFF
-MagneticSensorSPI::MagneticSensorSPI(int cs, float _cpr, int _angle_register){
+MagneticSensorSPI::MagneticSensorSPI(int cs, float _bit_resolution, int _angle_register){
   // chip select pin
   chip_select_pin = cs; 
   // angle read register of the magnetic sensor
   angle_register = _angle_register ? _angle_register : DEF_ANGLE_REGISTAR;
   // register maximum value (counts per revolution)
-  cpr = _cpr;
+  cpr = pow(2,_bit_resolution);
 
 }
 

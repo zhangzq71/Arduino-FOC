@@ -13,10 +13,10 @@ class MagneticSensorSPI: public Sensor{
     /**
      *  MagneticSensorSPI class constructor
      * @param cs  SPI chip select pin 
-     * @param cpr  counts per revolution 
+     * @param bit_resolution   sensor resolution bit number
      * @param angle_register  (optional) angle read register - default 0x3FFF
      */
-    MagneticSensorSPI(int cs, float cpr, int angle_register = 0);
+    MagneticSensorSPI(int cs, float bit_resolution, int angle_register = 0);
     
 
     /** sensor initialise pins */

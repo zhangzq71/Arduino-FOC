@@ -44,16 +44,16 @@
 #include "MagneticSensorI2C.h"
 
 //  BLDCMotor( int phA, int phB, int phC, int pole_pairs, int en)
-BLDCMotor motor = BLDCMotor(9, 5, 6, 11, 7);
+BLDCMotor motor = BLDCMotor(9, 6, 5, 11, 7);
 
-// MagneticSensorI2C(uint8_t chip_address, float _cpr, uint8_t _angle_register_msb)
-// make sure to read the chip address and the chip magnitude/angle register msb value from the datasheet
-MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 16384, 0x05);
+// MagneticSensorI2C(uint8_t _chip_address, int _bit_resolution, uint8_t _angle_register_msb, int _bits_used_msb)
+// make sure to read the chip address and the chip angle register msb value from the datasheet
+MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 12, 0x0E, 4);
 
-// MagneticSensorSPI(int chip_select, float _cpr, word _angle_register)
+// MagneticSensorSPI(int cs, float bit_resolution, int angle_register)
 // most of the sensors have the same angle register but please do check in the datasheet of your sensor
 // the default value is the 0x3FFF
-// MagneticSensorSPI sensor = MagneticSensorSPI(10, 16384, 0x3FFF);
+// MagneticSensorSPI sensor = MagneticSensorSPI(8, 14, 0x3FFF);
 
 void setup() { 
   // debugging port
@@ -132,6 +132,7 @@ unsigned long  t = 0;
 long timestamp = _micros();
 
 void loop() {
+  t++;
   // iterative setting FOC phase voltage
   motor.loopFOC();
 
@@ -142,6 +143,12 @@ void loop() {
 
   // user communication
   motor.command(serialReceiveUserCommand());
+
+  t = t > 10000 ? 0 : t+1;
+  if(!t){
+    Serial.println((_micros() - timestamp)/10000);
+    timestamp = _micros(); 
+  }
 }
 
 // utility function enabling serial communication the user

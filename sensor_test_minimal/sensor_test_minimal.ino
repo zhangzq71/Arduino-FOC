@@ -13,7 +13,7 @@
 //  @param _angle_register_msb  angle read register
 // 
 // make sure to read the chip address and the chip magnitude/angle register msb value from the datasheet
-//MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 16384, 0x05);
+MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 12, 0x0E, 4);
 
 
 // MagneticSensorSPI(int cs, float _cpr, int _angle_register)
@@ -23,7 +23,7 @@
 //
 // most of the sensors have the same angle register but please do check in the datasheet of your sensor
 // the default value is the 0x3FFF
- MagneticSensorSPI sensor = MagneticSensorSPI(10, 16384, 0x3FFF);
+// MagneticSensorSPI sensor = MagneticSensorSPI(10, 16384, 0x3FFF);
 
 void setup() {
   // monitoring port
@@ -38,6 +38,8 @@ void setup() {
 
 void loop() {
   // display the angle and the angular velocity to the terminal
+  Serial.print((uint16_t)sensor.getAngle(),BIN);
+  Serial.print("\t");
   Serial.print(sensor.getAngle());
   Serial.print("\t");
   Serial.println(sensor.getVelocity());
