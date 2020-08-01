@@ -15,23 +15,30 @@ permalink: /magnetic_sensor
 <img src="extras/Images/mag0.jpg" style="width:32%;display:inline"><img src="extras/Images/mag.jpg" style="width:32%;display:inline"><img src="extras/Images/mag2.jpg" style="width:32%;display:inline">
 </div>
 
-Magnetic sensors implementation in this library is based only on **SPI** communication. If you wish to use the sensor with its **ABI interface** you will use it as any other `Encoder` sensor.
 
-Now in order to use your magnetic position sensor with <span class="simple">Simple<span class="foc">FOC</span>library</span> first create an instance of the `MagneticSensor` class:
+Magnetic sensors implementation in this library ([version 1.4.0 <i class="fa fa-tag"></i>](https://github.com/askuric/Arduino-FOC/releases)) support communications:
+- **SPI** - [MagneticSensorSPI](#spi-communication-magneticsensorspi)
+- **I2C** - [MagneticSensorI2C](#i2c-communication-magneticsensori2c)
+- **ABI** - *equivalent to encoder sensors* - [encoder docs <i class="fa fa-external-link"></i>](encoder).
+
+
+## SPI communication `MagneticSensorSPI`
+In order to use your SPI magnetic position sensor with <span class="simple">Simple<span class="foc">FOC</span>library</span> first create an instance of the `MagneticSensorSPI` class:
 ```cpp
-// MagneticSensor(int cs, float _cpr, int _angle_register)
+// MagneticSensorSPI(int cs, float _cpr, int _angle_register)
 //  cs              - SPI chip select pin 
-//  _cpr            - counts per revolution 
-// _angle_register  - (optional) angle read register - default 0x3FFF
-MagneticSensor sensor = MagneticSensor(10, 16384, 0x3FFF);
+//  bit_resolution - magnetic sensor resolution
+//  angle_register  - (optional) angle read register - default 0x3FFF
+MagneticSensorSPI sensor = MagneticSensorSPI(10, 14, 0x3FFF);
 ```
-The parameters of the class is the `chip_select` pin number you connected your sensor to be used with the SPI communication, the range of your sensor (counter value for full rotation) and your `angle register` number telling the library which register value should it ask the sensor for in order to retrieve the angle value. The default `angle_register` number is set to `0x3FFF` as it is the angle register for most of the low cost AS5048/AS5047 sensors. 
-
-<blockquote class="warning"><p class="heading">Magnetic sensor CPR</p> Usually when talking about magnetic position sensors we don't talk about the counts per revolution (CPR) but about the number of bits in the counter register.  Which means:<ul><li> - 12bit sensor has CPR = 2^12 = 4096</li><li>- 16bit sensor has CPR = 2^14 = 16384</li></ul > </blockquote>
+The parameters of the class are
+- `chip_select` - pin number you connected your sensor to be used with the SPI communication, 
+- `bit_resolution` - resolution of your sensor (number of bits of the sensor internal counter register) and your
+- `angle register` - register number containing angle value. <br>The default `angle_register` number is set to `0x3FFF` as it is the angle register for most of the low cost AS5048/AS5047 sensors. 
 
 Finally after the initialization the only thing you need to do afterwards is to call the `init()` function. This function prepares the SPI interface and initializes the sensor hardware. So your magnetic sensor initialization code will look like:
 ```cpp
-MagneticSensor sensor = MagneticSensor(10, 16384, 0x3FFF);
+MagneticSensorSPI sensor = MagneticSensorSPI(10, 14, 0x3FFF);
 
 void loop(){
   ...
@@ -40,10 +47,10 @@ void loop(){
 }
 ```
 
-If you wish to use more than one magnetic sensor, make sure you connect their `chip select` pins to different arduino pins and follow the same idea as above, here is a simple example:
+If you wish to use more than one magnetic sensor, make sure you connect their `chip_select` pins to different arduino pins and follow the same idea as above, here is a simple example:
 ```cpp
-MagneticSensor sensor1 = MagneticSensor(10, 16384, 0x3FFF);
-MagneticSensor sensor1 = MagneticSensor(9, 16384, 0x3FFF);
+MagneticSensorSPI sensor1 = MagneticSensorSPI(10, 14, 0x3FFF);
+MagneticSensorSPI sensor1 = MagneticSensorSPI(9, 14, 0x3FFF);
 
 void loop(){
   ...
@@ -53,8 +60,72 @@ void loop(){
 }
 ```
 
-Please check the `magnetic_sensor_example.ino` example to see more about it.
+Please check the `magnetic_sensor_spi_example.ino` example to see more about it.
 
+
+## I2C communication `MagneticSensorI2C`
+Now in order to use your I2C magnetic position sensor with <span class="simple">Simple<span class="foc">FOC</span>library</span> first create an instance of the `MagneticSensorI2C` class:
+```cpp
+// MagneticSensorI2C(uint8_t _chip_address, float _cpr, uint8_t _angle_register_msb)
+//  chip_address         - I2C chip address
+//  bit_resolution       - resolution of the sensor
+//  angle_register_msb   - angle read register msb
+//  bits_used_msb        - number of used bits in msb register
+MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 12, 0x0E, 4);
+```
+
+The parameters of the class are:
+ - `chip_address` - I2C address of the magnetic sensor 
+ - `bit_resolution` - resolution of your sensor (number of bits of the sensor internal counter register) and your
+ - `angle_register_msb` - register number containing the MSB part of the angle value. ( ex. AS5600 - `0x0E`, AS5048 - `0xFE` ) 
+ - `bits_used_msb` - number of used bits in MSB register
+
+<blockquote class="info"> <p class="heading">How to find the MSB register values and used bits value?</p>
+
+Since I2C registers are Byte(8-bit) registers they contain the 12-14 bit angle representation separated in two Byte addresses,  MSB(most significant byte) and LSB(least significant byte).
+To instantiate the I2C magnetic sensor you need to provide the MSB register address and tell the library how is the angle value separated in the two registers. By specifying the number of bits used in the MSB register and specifying the <code class="highlighter-rouge">bit_resolution</code> value the library can calculate how many bits are used in the LSB register and can reconstruct the complete angle value.
+<br>
+Example MSB/LSB division:
+<ul>
+<li>AS5600 (12 bit) - MSB (4bit), LSB (8bit)</li>
+<li>AS5048B (14bit): - MSB (8bit), LSB(6bit)</li>
+</ul>
+</blockquote>
+<blockquote class="info">
+<p class="heading">AS5600 example</p>
+<ul>
+  <li> First we open AS5600 sensor's <a href="https://ams.com/documents/20143/36005/AS5600_DS000365_5-00.pdf" target="_blank"> datasheet <i class="fa fa-external-link"></i></a>.</li>
+  <li> In the datasheet we find the table of I2C registers (page 18)</li>
+  <li> The <code class="highlighter-rouge">angle_register_msb</code> value is the first (upper in datasheet) register value - <code class="highlighter-rouge">0x0E</code></li>
+  <li> The <code class="highlighter-rouge">bits_used_msb</code> value is number of bits in the MSB register - <code class="highlighter-rouge">4</code></li>
+</ul>
+</blockquote>
+
+Finally after the initialization the only thing you need to do afterwards is to call the `init()` function. This function prepares the SPI interface and initializes the sensor hardware. So your magnetic sensor initialization code will look like:
+```cpp
+MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 12, 0x0E, 4);
+
+void loop(){
+  ...
+  sensor.init();
+  ...
+}
+```
+
+If you wish to use more than one magnetic sensor using SPI interface, make sure your sensors have different addresses, here is a simple example:
+```cpp
+MagneticSensorI2C sensor1 = MagneticSensorI2C(0x36, 12, 0x0E, 4);
+MagneticSensorI2C sensor2 = MagneticSensorI2C(0x37, 12, 0x0E, 4);
+
+void loop(){
+  ...
+  sensor1.init();
+  sensor2.init();
+  ...
+}
+```
+
+Please check the `magnetic_sensor_i2_example.ino` example to see more about it.
 
 ## Using magnetic sensor in real-time
 
@@ -73,7 +144,15 @@ motor.linkSensor(&sensor);
 
 To get the magnetic sensor angle and velocity at any given time you can use the public methods:
 ```cpp
-class MagneticSensor{
+class MagneticSensorSPI{
+ public:
+    // shaft velocity getter
+    float getVelocity();
+  	// shaft angle getter
+    float getAngle();
+}
+
+class MagneticSensorI2C{
  public:
     // shaft velocity getter
     float getVelocity();
@@ -82,32 +161,61 @@ class MagneticSensor{
 }
 ```
 
-Here is a quick example:
+Here is a quick example for the AS5047U magnetic sensor with SPI communication:
 ```cpp
-  
 #include <SimpleFOC.h>
 
-// MagneticSensor(int cs, float _cpr, int _angle_register)
-//  cs              - SPI chip select pin 
-//  _cpr            - counts per revolution 
-// _angle_register  - (optional) angle read register - default 0x3FFF
-MagneticSensor AS5x4x = MagneticSensor(10, 16384, 0x3FFF);
+// MagneticSensorSPI(int cs, float _cpr, int _angle_register)
+// cs              - SPI chip select pin 
+// bit_resolution  - sensor resolution
+// angle_register  - (optional) angle read register - default 0x3FFF
+MagneticSensorSPI as5047u = MagneticSensorSPI(10, 14, 0x3FFF);
 
 void setup() {
   // monitoring port
   Serial.begin(115200);
 
   // initialise magnetic sensor hardware
-  AS5x4x.init();
+  as5047u.init();
 
-  Serial.println("AS5x4x ready");
+  Serial.println("as5047u ready");
   _delay(1000);
 }
 
 void loop() {
   // display the angle and the angular velocity to the terminal
-  Serial.print(AS5x4x.getAngle());
+  Serial.print(as5047u.getAngle());
   Serial.print("\t");
-  Serial.println(AS5x4x.getVelocity());
+  Serial.println(as5047u.getVelocity());
+}
+```
+
+Here is a quick example for AS5600 magnetic sensor with I2C communication:
+```cpp
+#include <SimpleFOC.h>
+
+// MagneticSensorI2C(uint8_t _chip_address, float _cpr, uint8_t _angle_register_msb)
+//  chip_address         - I2C chip address
+//  bit_resolution       - resolution of the sensor
+//  angle_register_msb   - angle read register msb
+//  bits_used_msb        - number of used bits in msb register
+MagneticSensorI2C as5600 = MagneticSensorI2C(0x36, 12, 0x0E, 4);
+
+void setup() {
+  // monitoring port
+  Serial.begin(115200);
+
+  // init magnetic sensor hardware
+  as5600.init();
+
+  Serial.println("AS5600 ready");
+  _delay(1000);
+}
+
+void loop() {
+  // display the angle and the angular velocity to the terminal
+  Serial.print(as5600.getAngle());
+  Serial.print("\t");
+  Serial.println(as5600.getVelocity());
 }
 ```

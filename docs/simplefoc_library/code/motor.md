@@ -40,7 +40,7 @@ When you have your `motor` defined you can start the configuration.
 Once when you have the `motor` defined and the sensor initialized you need to link the `motor` and the `sensor` by executing:    
 ```cpp
 // link the motor to the sensor
-// either Encoder class or MagneticSensor class
+// either Encoder class, MagneticSensorSPI class or MagneticSensorI2C class
 motor.linkSensor(&sensor);
 ```
 
@@ -116,6 +116,8 @@ motor.PI_velocity.P = 0.2;
 motor.PI_velocity.I = 20;
 // default voltage_power_supply
 motor.PI_velocity.voltage_limit = 12;
+// default value 1000 V/s
+motor.PI_velocity.voltage_ramp = 500;
 
 // velocity low pass filtering time constant
 motor.LPF_velocity.Tf = 0.01;

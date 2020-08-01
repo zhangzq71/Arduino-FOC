@@ -140,7 +140,7 @@ motor.command(serialReceiveUserCommand());
 #include <SimpleFOC.h>
 
 // magnetic sensor instance
-MagneticSensor AS5x4x = MagneticSensor(10, 16384, 0x3FFF);
+MagneticSensorSPI AS5x4x = MagneticSensorSPI(10, 14, 0x3FFF);
 
 // motor instance
 BLDCMotor motor = BLDCMotor(9, 5, 6, 11, 8);

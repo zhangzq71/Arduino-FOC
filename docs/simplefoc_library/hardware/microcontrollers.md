@@ -31,12 +31,12 @@ Please check the [STM32Duino wiki](https://github.com/stm32duino/wiki/wiki/Getti
 ## Choosing the microcontroller
 Even though all the MCUs from the table above (and many more) are supported in the library and all of the will work with most of the BLDC motors+BLDC driver+sensor combinations, their performance will not be the same. So here is a quick guide how to choose which MCU to use.
 
-MCU | `loopFOC() + move()` execution time encoder | `loopFOC() + move()` execution time magnetic sensor SPI
---- | --- | --- |
-HMBGC V2.2 | 800us (ipr = 0),  ~10ms (ipr > 10000) | (doesn't support SPI)
-Arduino UNO | 800us (ipr = 0),  ~10ms (ipr > 20000) | 1200us 
-Stm32 Bluepill | 400us (ipr = 0), ~1ms (ipr > 50000) | 800us
-Stm32 Nucleo-64 | 200us (ipr = 0), ~500us (ipr > 50000) | 300us 
+MCU | `loopFOC() + move()` - encoder | `loopFOC() + move()` - magnetic sensor SPI | `loopFOC() + move()` - magnetic sensor I2C
+--- | --- | --- | --- |
+HMBGC V2.2 | 800us (ipr = 0),  ~10ms (ipr > 10000) | (doesn't support SPI) | 1100us
+Arduino UNO | 800us (ipr = 0),  ~10ms (ipr > 20000) | 1200us | 1100us
+Stm32 Bluepill | 200us (ipr = 0), ~1ms (ipr > 50000) | 300us | to be tested
+Stm32 Nucleo-64 | 100us (ipr = 0), ~500us (ipr > 50000) | 200us | to be tested
 
 *ipr = interrupt callbacks per second.
 

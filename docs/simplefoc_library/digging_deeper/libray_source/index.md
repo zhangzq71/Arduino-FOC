@@ -12,7 +12,7 @@ has_toc: false
 
 # Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> source code
 The arduino library code is organized into the standard [Arduino library structure](https://github.com/arduino/Arduino/wiki/Library-Manager-FAQ). 
-The library contains main BLDC motor class `BLDCMotor` and  two sensor classes `Encoder` and `MagneticSensor` implementing the `Sensor`. Furthermore it has `FOCutils` file with all the necessary utility functions and `defaults.h` with all the default configuration variables.
+The library contains main BLDC motor class `BLDCMotor` and  three sensor classes `Encoder`, `MagneticSensorSPI` and `MagneticSensorI2C` implementing the `Sensor` interface. Furthermore it has `FOCutils` file with all the necessary utility functions and `defaults.h` with all the default configuration variables.
 
 ## Arduino library source structure
 ```sh
@@ -23,7 +23,8 @@ The library contains main BLDC motor class `BLDCMotor` and  two sensor classes `
 │ │ 
 │ ├─ Sensor.h                  # Abstract Sensor class that all the sensors implement
 │ ├─ Encoder.cpp/h             # Encoder class implementing the Quadrature encoder operations
-│ ├─ MagneticSensor.cpp/h      # class implementing SPI angle read and interface for AS5047/8 type sensors
+│ ├─ MagneticSensorSPI.cpp/h   # class implementing SPI communication for Magnetic sensors
+│ ├─ MagneticSensorI2C.cpp/h   # class implementing I2C communication for Magnetic sensors
 | |
 | ├─ FOCutils.cpp/h            # Utility functions 
 | |
@@ -85,13 +86,20 @@ Quadrature Encoder class implementation
 - Calculates motor angle and velocity ( using the [Mixed Time Frequency Method](https://github.com/askuric/Arduino-Mixed-Time-Frequency-Method)). 
 - Support any type of optical and magnetic encoder. 
 
-### `MagneticSensor.cpp/h`
+### `MagneticSensorSPI.cpp/h` 
 Absolute Magnetic sensor(encoder) class implementation
 - Extends `Sensor` class
-- SPI communication
+- SPI communication 
 - Calculates motor angle and velocity
-- Supports magnetic position sensors such as AS5048, AS5047 and similar. 
-  
+- Supports magnetic position sensors such as AS5048A, AS5047 and similar. 
+
+### `MagneticSensorI2C.cpp/h`
+Absolute Magnetic sensor(encoder) class implementation
+- Extends `Sensor` class
+- I2C communication
+- Calculates motor angle and velocity
+- Supports magnetic position sensors such as AS5048B, AS5600 and similar 
+   
 
 ### `FOCutils.cpp/h`
 This is implementation of all the necessary hardware specific and FOC utility functions.
@@ -146,7 +154,8 @@ The main library include file, its contents is:
 #include "FOCutils.h"
 #include "Sensor.h"
 #include "Encoder.h"
-#include "MagneticSensor.h"
+#include "MagneticSensorSPI.h"
+#include "MagneticSensorI2C.h"
 #include "BLDCMotor.h"
 ```
 
@@ -159,7 +168,7 @@ For documentation of the motion control algorithms and code implementation choic
 
 The library comes with a lot of motor control examples for different microcontrollers. See more on [library examples <i class="fa fa-external-link"></i>](library_examples)
 
-To dig deeper in the source code please visit <a href="http://source.simplefoc.com/" target="_blank"> doxygen generated code documentation <i class="fa fa-external-link fa-sm"></i></a>
+To dig deeper in the source code please visit <a href="http://source.simplefoc.com/" target="_blank"> Doxygen generated code documentation <i class="fa fa-external-link fa-sm"></i></a>
 
 <div class="image_icon width80" >
     <a href="http://source.simplefoc.com/" target="_blank">

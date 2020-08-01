@@ -43,25 +43,26 @@ Magnetic position sensor has many benefits over the encoders:
 - Time of execution doesn't depend on velocity or number of sensors
 - No need for interrupt hardware
 - Absolute position value
-- Very low price
-- Very simple to mount
+- Lower price then encoders
+- Simple to mount
 
 Magnetic sensors usually come with several different communication protocols:
-- ABI
-- SPI
-- I2C
+- ABI (✔️ supported) - *exactly the same as the encoder interface* 
+- SPI (✔️ supported)
+- I2C (✔️ supported)
 - PWM
 - SSI 
 - Analog (not suitable for FOC)
 - UVW (needs a lot of fine tuning - not suggested)
 
-Until this moment ([version 1.3.1](https://github.com/askuric/Arduino-FOC/releases)) <span class="simple">Simple<span class="foc">FOC</span>library</span> supports ABI interface (exactly the same as the encoder interface) and SPI communication. The I2C communication will be supported with the next release. PWM and SSI protocol will be tested for their performance and implemented in following steps. 
+PWM and SSI protocol will be tested for their performance and implemented in following steps. 
 Please [let us know](contact) if you would be interested in having some other communication implemented!
 
-Here are some of the supported magnetic sensors using SPI interface:
+Here are some of the supported magnetic sensors:
 
 Examples  | Description | Link | Price
 ---- | ---- | ---- | ----
-[<img src="extras/Images/mag.jpg"  style="height:100px">](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) | Margetic encoder <br> AS5047<br> absolute <br>16384cpr |  [Mouser](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) | 15$
-[<img src="extras/Images/mag2.jpg"  style="height:100px">](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | Magnetic encoder <br> AS5048<br> absolute <br>16384cpr |  [Ebay](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | 10$
+[<img src="extras/Images/mag.jpg"  style="height:100px">](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) | AS5047<br> SPI/ABI/PWM/UVW <br> 14bit |  [Mouser](https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D) | 15$
+[<img src="extras/Images/mag2.jpg"  style="height:100px">](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | AS5048A<br> SPI/PWM <br> absolute <br> 14bit |  [Ebay](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | 10$
+[<img src="extras/Images/as5600.jpg"  style="height:100px">](https://www.ebay.com/itm/1PC-New-AS5600-magnetic-encoder-sensor-module-12bit-high-precision/303401254431?hash=item46a41fbe1f:g:nVwAAOSwTJJd8zRK) | AS5600 <br> I2C/PWM <br> 12bit | [Ebay](https://www.ebay.com/itm/1PC-New-AS5600-magnetic-encoder-sensor-module-12bit-high-precision/303401254431?hash=item46a41fbe1f:g:nVwAAOSwTJJd8zRK) | 5$ 
 

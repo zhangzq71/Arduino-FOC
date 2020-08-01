@@ -63,7 +63,7 @@ Here is one basic example of the velocity motion control with the complete confi
 BLDCMotor motor = BLDCMotor(pwmA, pwmB, pwmC, pp, enable);
 
 // Magnetic sensor instance
-MagneticSensor AS5x4x = MagneticSensor(chip_select, 16384, 0x3FFF);
+MagneticSensorSPI AS5x4x = MagneticSensorSPI(chip_select, 14, 0x3FFF);
 
 void setup() {
  

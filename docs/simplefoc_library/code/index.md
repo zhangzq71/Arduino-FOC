@@ -62,8 +62,13 @@ void loop() {
 ```c++
 #include <SimpleFOC.h>
 
-// MagneticSensor(int cs, float _cpr, int _angle_register)
-MagneticSensor sensor = MagneticSensor(10, 16384, 0x3FFF);
+// SPI example
+// MagneticSensorSPI(int cs, float bit_resolution, int angle_register)
+MagneticSensorSPI sensor = MagneticSensorSPI(10, 14, 0x3FFF);
+
+// I2C example
+// MagneticSensorI2C(uint8_t _chip_address, float _cpr, uint8_t _angle_register_msb)
+MagneticSensorI2C sensor = MagneticSensorI2C(0x36, 12, 0x0E, 4);
 
 void setup() {
   // initialize magnetic sensor hardware
@@ -86,7 +91,7 @@ Encoders as position sensors are implemented in the class <code class="highlight
 
 <div id="mag_p" class="hide_p">
 In this example we will be using teh setup of a 14 bit magnetic sensor such as <a href="https://www.mouser.fr/ProductDetail/ams/AS5X47U-TS_EK_AB?qs=sGAEpiMZZMve4%2FbfQkoj%252BBDLPCj82ZLyYIPEtADg0FE%3D">AS5047u <i class="fa fa-external-link"></i></a>, connected to the pin <code class="highlighter-rouge">10</code>.<br>
-Magnetic sensors using the SPI communication are implemented in the class <code class="highlighter-rouge">MagneticSensor</code>and are defined by its
+Magnetic sensors using the SPI communication are implemented in the class <code class="highlighter-rouge">MagneticSensorSPI</code>and are defined by its
   <ul>
     <li><code class="highlighter-rouge">chip_select</code> pin: <code class="highlighter-rouge">10</code> </li>
     <li> the overall <code class="highlighter-rouge">CPR</code> of the sensor:   <code class="highlighter-rouge">CPR = 2^14bit =16384</code></li>
@@ -359,7 +364,7 @@ This is the code of the library example `motor_full_control_serial_examples/magn
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;SimpleFOC.h&gt;
 </span><span class="mag_s">
 <span class="c1">// magnetic sensor instance</span>
-<span class="n">MagneticSensor</span> <span class="n">AS5x4x</span> <span class="o">=</span> <span class="n">MagneticSensor</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">16384</span><span class="p">,</span> <span class="mh">0x3FFF</span><span class="p">);</span></span>
+<span class="n">MagneticSensorSPI</span> <span class="n">AS5x4x</span> <span class="o">=</span> <span class="n">MagneticSensorSPI</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mh">0x3FFF</span><span class="p">);</span></span>
 <span class="mot_s">
 <span class="c1">// motor instance</span>
 <span class="n">BLDCMotor</span> <span class="n">motor</span> <span class="o">=</span> <span class="n">BLDCMotor</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>

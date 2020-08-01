@@ -6,6 +6,8 @@ var libraires =[
     "FOCutils.h",
     "BLDCMotor.h",
     "MagneticSensor.h",
+    "MagneticSensorSPI.h",
+    "MagneticSensorI2C.h",
     "MySensor.h",
     "Sensor.h"
 ]
@@ -26,6 +28,8 @@ var classNames = [
     "BLDCMotor",
     "Encoder",
     "MagneticSensor",
+    "MagneticSensorSPI",
+    "MagneticSensorI2C",
     "PciListenerImp",
     "PciManager",
     "Serial",
