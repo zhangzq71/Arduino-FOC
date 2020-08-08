@@ -30,7 +30,7 @@ The quotation marks `" "` are used when the header files are in the same directo
 First step when writing the code is initializing and configuring the position sensor.
 The library supports two types of position sensors:
  - [Encoders](encoder): Optical, Capacitive, Magnetic encoders (ABI)
- - [Magnetic sensors](magnetic_sensor): SPI communication
+ - [Magnetic sensors](magnetic_sensor): SPI or I2C communication
 
 Choose position sensor to use with this example:
 
