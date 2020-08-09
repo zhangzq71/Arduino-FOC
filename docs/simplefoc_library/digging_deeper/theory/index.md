@@ -12,11 +12,32 @@ has_toc: False
 
 # Theory lovers corner
 
-Hey guys, this is the section Iam going to explain some interesting theoretical features of the Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> implementation. For now, I have briefly written only about few topics, but I plan to make this properly very soon:
+This is the section intended to explain some interesting theoretical features of the Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> implementation. For now, I have briefly written only about few topics, but the plan is to cover much more topics and much more in depth.
 
-- [Torque control using voltage](voltage_torque_control)
-- [Low pass filter theory](low_pass_filter)
-- [PI controller theory](pi_controller)
-- [FOC algorithm](foc_theory) 
 
-<blockquote class="warning"><p class="heading">Still under construction!</p></blockquote>
+<div style="display:grid; width:100%">
+    <div >
+        <a href="voltage_torque_control">
+            <h3 style="color:inherit"> <i class="fa fa-lg fa-graduation-cap" style="padding:10px"></i> Torque control using voltage</h3>
+        </a>
+        <p> Short explanation and justification of the torque control using voltage instead current. </p>
+    </div>
+    <div>
+        <a href="foc_theory">
+            <h3 style="color:inherit"> <i class="fa fa-lg fa-graduation-cap" style="padding:10px"></i> Field Oriented Control algorithm</h3>
+        </a>
+        <p> A brief overview of implemented modulation methods and the main principles of the FOC algorithms for BLDC motors.</p>
+    </div>
+    <div>
+        <a href="low_pass_filter">
+            <h3 style="color:inherit"> <i class="fa fa-lg fa-graduation-cap" style="padding:10px"></i> Low pass filter theory</h3>
+        </a>
+        <p> Low pass filter differential equation and implementation details.</p>
+    </div>
+    <div>
+        <a href="pi_controller">
+            <h3 style="color:inherit"> <i class="fa fa-lg fa-graduation-cap" style="padding:10px"></i> PI controller theory</h3>
+        </a>
+        <p> PI controller differential equation and implementation details.</p>
+    </div>
+<div>

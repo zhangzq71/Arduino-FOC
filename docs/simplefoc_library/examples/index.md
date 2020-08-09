@@ -40,3 +40,15 @@ parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>library</
         <i class="fa fa-external-link-square fa-2x"></i>
     </a>
 </div>
+<div class="image_icon">
+     <a href="drv8302_example">
+        <img src="extras/Images/drv8302_example.jpg">
+        <i class="fa fa-external-link-square fa-2x"></i>
+    </a>
+</div>
+<div class="image_icon">
+     <a href="haptics_examples">
+        <img src="extras/Images/haptics.png">
+        <i class="fa fa-external-link-square fa-2x"></i>
+    </a>
+</div>

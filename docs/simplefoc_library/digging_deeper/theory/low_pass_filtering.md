@@ -35,3 +35,31 @@ alpha = 0.01/(0.01 + 0.001) = 0.91
 
 Which means that your actual velocity measurement <i>v</i> will influence the filtered value <i>v<sub>f</sub><i> with the coefficient `1-alpha = 0.09` which is going to smooth the velocity values considerably (maybe even too much, depends of the application).
 
+
+## Implementation details
+
+Velocity filtering function implemented in the <span class="simple">Simple<span class="foc">FOC</span>library</span>:
+```cpp
+// shaft velocity calculation
+float BLDCMotor::shaftVelocity() {
+  float Ts = (_micros() - LPF_velocity.timestamp) * 1e-6;
+  // quick fix for strange cases (micros overflow)
+  if(Ts <= 0 || Ts > 0.5) Ts = 1e-3; 
+  // calculate the filtering 
+  float alpha = LPF_velocity.Tf/(LPF_velocity.Tf + Ts);
+  float vel = alpha*LPF_velocity.prev + (1-alpha)*sensor->getVelocity();
+  // save the variables
+  LPF_velocity.prev = vel;
+  LPF_velocity.timestamp = _micros();
+  return vel;
+}
+```
+The low pass filter is configured with `motor.LPF_velocity`structure:
+```cpp
+// Low pass filter structure
+struct LPF_s{
+  float Tf; // Low pass filter time constant
+  long timestamp; // Last execution timestamp
+  float prev; // filtered value in previous execution step 
+};
+```

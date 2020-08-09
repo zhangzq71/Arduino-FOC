@@ -21,7 +21,14 @@ var defines =[
     "DEF_P_ANGLE_VEL_LIM",
     "DEF_INDEX_SEARCH_TARGET_VELOCITY",
     "DEF_VOLTAGE_SENSOR_ALIGN",
-    "DEF_VEL_FILTER_Tf"
+    "DEF_VEL_FILTER_Tf",
+    "INH_A",
+    "INH_B",
+    "INH_C",
+    "EN_GATE ",
+    "M_PWM",
+    "M_OC",
+    "OC_ADJ "
 ]
 
 var classNames = [
@@ -96,7 +103,9 @@ var funcNames = [
     "velocityPI",
     "controllerPI",
     "serialReceiveUserCommand",
-    "disable"
+    "disable",
+    "pinMode",
+    "digitalWrite"
 
 ];
 var structNames = [

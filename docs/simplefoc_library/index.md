@@ -78,6 +78,37 @@ BLDC Gimbal Motor GBM5108-120T <a class="pull-right" href="https://www.onedrone.
 </li>
 </ul> 
 
+<iframe class="youtube" src="https://www.youtube.com/embed/xTlv1rPEqv4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This video demonstrates <span class="simple">Simple<span class="foc">FOC</span>library</span> support for Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span> and using multiple motors with Arduino UNO. The project examples are based on bidirectional haptic control. 
+
+**The video hardware setup consists of:**
+<ul class="width60">
+<li>
+<b>Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span></b> <a class="pull-right" href="arduino_simplefoc_shield_showcase">More info <span class="fa fa-link"></span></a>
+</li>
+<li> 
+Arduino UNO <a class="pull-right" href="https://www.ebay.com/itm/HMBGC-V2-0-3-Axle-Gimbal-Controller-Control-Plate-Board-Module-with-Sensor/351497840990?hash=item51d6e7695e:g:BAsAAOSw0QFXBxrZ">Ebay link <span class="fa fa-link"></span></a>
+</li>
+<li> 
+Nucleo-64 F401RE<a class="pull-right" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=fK8dlpkaUMvGeToFJ6rzdA%3D%3D">Mouser link <span class="fa fa-link"></span></a>
+</li>
+<li> 
+AS5600  <a class="pull-right" href="https://www.ebay.com/itm/1PC-New-AS5600-magnetic-encoder-sensor-module-12bit-high-precision/303401254431?hash=item46a41fbe1f:g:nVwAAOSwTJJd8zRK">Ebay link <span class="fa fa-link"></span></a>
+</li>
+<li>
+AMT 103 CUI <a class="pull-right" href="https://www.mouser.fr/ProductDetail/CUI-Devices/AMT103-V?qs=%2Fha2pyFaduivK%252B0pk7%2Fn5JVYn0KI22hXp9BVM%2FOAA64YDfmI%2FUQlRWDW0CMgz3WfQ6GDou4mx58%3D">Mouser link <span class="fa fa-link"></span></a>
+</li>
+<li>
+USA-DIGITAL E3-8192  <a class="pull-right" href="https://www.usdigital.com/products/encoders/incremental/kit/E3">USA Digital link <span class="fa fa-link"></span></a>
+</li>
+<li>
+GBM5108-120T <a class="pull-right" href="https://www.onedrone.com/store/ipower-gbm5108-120t-gimbal-motor.html">iPower store <span class="fa fa-link"></span></a>
+</li>
+<li>
+GBM4108-120T <a class="pull-right" href="https://www.robotshop.com/en/ipower-gbm4108h-120t-gimbal-motor.html">Robotshop <span class="fa fa-link"></span></a>
+</li>
+</ul> 
 
 
 ## Installation
