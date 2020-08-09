@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Board Fabrication
+title: Getting Started
 description: "Arduino Simple Field Oriented Control (FOC) library ."
 parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>
-nav_order: 2
-permalink: /arduino_simplefoc_shield_fabrication
+nav_order: 1
+permalink: /arduino_simplefoc_shield_getting_started
 ---
-# Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  fabrication 
+# Getting Started with Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  
 Here is a quick guide how to fabricate the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> version V1.3. 
 
 

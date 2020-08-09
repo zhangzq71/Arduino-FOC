@@ -21,15 +21,20 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
 - **Plug & play**: In combination with Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> 
 - **Low-cost**: Price of €15 - [Check the pricing](https://www.simplefoc.com/simplefoc_shield_product) 
 - **Max power 120W** - max current 5A, power-supply 12-24V
-   - Designed for Gimbal motors with the internal resistance >10 Ωs. 
+   - Designed for Gimbal motors with the internal resistance >10 Ω. 
 - **Stackable**: running 2 motors in the same time
 - **Encoder interface**: Integrated 3kΩ pullups (configurable)
 - **Configurable pinout**: Hardware configuration - soldering connections
 - **Arduino headers**: Arduino UNO, Arduino MEGA, STM32 Nucleo boards...
 - **Open Source**: Fully available fabrication files - [how to make it yourself](arduino_simplefoc_shield_fabrication)
   
+<blockquote class="warning"> 
+<p class="heading">BEWARE</p>
+This BLDC driver board is primarily designed for gimbal motors with the internal resistance of R >10 Ω. Please make sure that your motor fits in this category before deciding to use the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> .
+</blockquote>
 
-<p><img src="extras/Images/shield_bo_v13.jpg" class="img300 img_half"><img src="extras/Images/shield_to_v13.jpg" class="img300  img_half"></p>
+<img src="extras/Images/shield_bo_v13.jpg" class="img300 img_half"><img src="extras/Images/shield_to_v13.jpg" class="img300  img_half">
+
 ### Connection schematic
 An electrical connection example of a BLDC motor with an encoder as position sensor. 
 <p><img src="extras/Images/foc_shield_v13.jpg" class="width60"></p>

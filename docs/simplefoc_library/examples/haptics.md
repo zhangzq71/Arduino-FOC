@@ -119,7 +119,7 @@ Here is a picture of the setup used in this project. Check the Arduino code to s
 
 ## Arduino code
 
-In this example we will be using the Nucleo-64 board and two BLDC motors with encoders. Since Nucleo doesn't have problems with hardware interrupts (every pin can be external interrupt pin), there is no complications in code due to usage of 6 pwm pins. The only difference in between Nucleo and Arduino UNO is that Nucleo pin cannot use its pin `9` for PWM so we need to use pin `13` instead. The rest of the code is very straight forward.
+In this example we will be using the Nucleo-64 board and two BLDC motors with encoders. Since Nucleo doesn't have problems with hardware interrupts (every pin can be external interrupt pin), there is no complications in code due to usage of 6 pwm pins. The only difference in between Nucleo and Arduino UNO is that Nucleo pin cannot use its pin `11` for PWM so we need to use pin `13` instead. The rest of the code is very straight forward.
 
 We define two motors and two encoders and link them together. 
 ```cpp
