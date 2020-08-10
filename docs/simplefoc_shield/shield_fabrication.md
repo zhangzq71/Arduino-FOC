@@ -6,7 +6,7 @@ parent: Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</s
 nav_order: 2
 permalink: /arduino_simplefoc_shield_fabrication
 ---
-# Arduino <span class="simple">Simple<span class="foc">FOC</span>Shield</span>  fabrication 
+# Fabrication guide for <span class="simple">Simple<span class="foc">FOC</span>Shield</span> <small><i>v1.3</i></small> 
 Here is a quick guide how to fabricate the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> version V1.3. 
 
 

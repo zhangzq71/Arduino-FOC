@@ -30,7 +30,7 @@ The <span class="simple">Simple<span class="foc">FOC</span>Shield</span>, in com
   
 <blockquote class="warning"> 
 <p class="heading">BEWARE</p>
-This BLDC driver board is primarily designed for gimbal motors with the internal resistance of R >10 Ω. Please make sure that your motor fits in this category before deciding to use the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> .
+This BLDC driver board is primarily designed for gimbal motors with the internal resistance of R >10 Ω. Please make sure that your motor fits in this category before deciding to use the <span class="simple">Simple<span class="foc">FOC</span>Shield</span>.
 </blockquote>
 
 <img src="extras/Images/shield_bo_v13.jpg" class="img300 img_half"><img src="extras/Images/shield_to_v13.jpg" class="img300  img_half">
@@ -63,6 +63,11 @@ The control algorithms implemented in this project are :
 
 For full documentation of the projects setup and the code please visit the [project docs](haptics_examples).
 
+
+## Getting started
+
+You already have your own <span class="simple">Simple<span class="foc">FOC</span>Shield</span>? <br>
+[Here is a simple guide how to start preparing your setup](arduino_simplefoc_shield_getting_started)
 
 
 

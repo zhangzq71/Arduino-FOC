@@ -66,3 +66,10 @@ Examples  | Description | Link | Price
 [<img src="extras/Images/mag2.jpg"  style="height:100px">](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | AS5048A<br> SPI/PWM <br> absolute <br> 14bit |  [Ebay](https://www.ebay.com/itm/AS5048-Magnetic-Encoder-PWM-SPI-Interface-14-Bit-Precision-For-Brushless-Motor/153636871434?hash=item23c5789d0a:g:oOMAAOSwd-5ddaWQ) | 10$
 [<img src="extras/Images/as5600.jpg"  style="height:100px">](https://www.ebay.com/itm/1PC-New-AS5600-magnetic-encoder-sensor-module-12bit-high-precision/303401254431?hash=item46a41fbe1f:g:nVwAAOSwTJJd8zRK) | AS5600 <br> I2C/PWM <br> 12bit | [Ebay](https://www.ebay.com/itm/1PC-New-AS5600-magnetic-encoder-sensor-module-12bit-high-precision/303401254431?hash=item46a41fbe1f:g:nVwAAOSwTJJd8zRK) | 5$ 
 
+
+<blockquote class="warning"><p class="heading">I2C Pull-ups</p>
+Not all the I2C buses need pull-ups. But in some cases they might be necessary. Especially when using STM32 boards. In those cases, you will not be able to communicate with the sensor. 
+To enable communication usually 4.7kOhm resistors will be needed in between 5V/3.3V and SCL and SDA channels. Here is a good stack overflow question about this issue :<a href="https://electronics.stackexchange.com/questions/102611/what-happens-if-i-omit-the-pullup-resistors-on-i2c-lines"> link </a>. 
+<br>
+In the future versions of the <span class="simple">Simple<span class="foc">FOC</span>Shield</span> I will try to include those pullups as well.
+</blockquote>

@@ -116,17 +116,23 @@ There are two ways to install this Arduino library, depending of your plans with
 - [Full library installation](library_download) - for plug & play functionality with many examples 
 - [Minimal sketch installation](minimal_download) - Arduino sketch with integrated complete library
     - Easier experimentation and interaction with the library code directly
-<p><img src="extras/Images/alm.gif" class="width50"></p>  
+
+<img src="extras/Images/alm.gif" class="width50">
+
+[Find out more <i class="fa  fa-external-link"></i>](installation)
 
 
 ## Supported hardware
 Arduino <span class="simple">Simple<span class="foc">FOC</span>library</span> is made modular and will support most of the motor + sensor combinations out there, as well as many low-cost bldc driver boards.
-Please see the [supported hardware documentation](supported_hardware) to learn more!
 <p><img src="extras/Images/connection.gif" class="width50"></p>
+
+[Find out more <i class="fa  fa-external-link"></i>](supported_hardware)
 
 ## Using the code
 This library code is written in a way to be as simple sa possible to use and to leave a lot of space for configuration and fine tuning for specific applications. 
-Please see the api [code documentation](code) to learn how simple it is to use!
+
+[Find out more <i class="fa  fa-external-link"></i>](code)
+
 
 ## Project Examples 
 We are very happy to provide you with several projects multiple hardware configurations and fully documented and explained code!
